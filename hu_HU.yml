@@ -3,6 +3,8 @@
 # Author: montlikadani
 
 prefix: "&7&l[&b&lL&3&lP&7&l] &c"
+view-available-commands-prompt: "&3Használd &a/{0} help &3a rendelkezésre álló parancsok megtekintéséhez."
+no-permission-for-subcommands: "&3Nincs jogod semmilyen parancsot használni."
 empty: "{0}"
 player-online: "&aOnline"
 player-offline: "&cOffline"
@@ -12,7 +14,9 @@ op-disabled-sponge: "&2Kérjük, vegye figyelembe, hogy a kiszolgálói operáto
 log-info: "&7&l[&bL&3P&7&l] &3{0}"
 log-warn: "&7&l[&bLuck&3Perms&7&l] &c[FIGYELEM] {0}"
 log-error: "&7&l[&bLuck&3Perms&7&l] &4[HIBA] {0}"
-log: "&3LOG &3&l> {0}"
+log: >
+  {PREFIX}&3NAPLÓ &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
+  {PREFIX}&3NAPLÓ &3&l> &f{3}
 verbose-log: "&3VB &3&l> {0}"
 export-log: "&3EXPORT &3&l> &f{0}"
 export-log-progress: "&3EXPORT &3&l> &7{0}"
@@ -23,10 +27,10 @@ command-no-permission: "&cNincs jogosultságod a használatára!"
 user-not-found: "&cEgy felhasználó számára &4{0}&c nem található."
 user-not-online: "&b{0}&a felhasználó nem elérhető."
 user-save-error: "&cHiba történt a felhasználói adatok mentése közben &4{0}&c."
-group-not-found: "&cEgy nevű csoport &4{0}&c nem található."
+group-not-found: "&cEgy csoport &4{0}&c nevű nem található."
 group-save-error: "&cHiba történt a csoportadatok mentése közben &4{0}&c."
-track-not-found: "&cEgy nevű sáv &4{0}&c nem található."
-track-save-error: "&cHiba történt a track adatok mentése közben &4{0}&c."
+track-not-found: "&cEgy nyomvonal &4{0}&c nevű nem található."
+track-save-error: "&cHiba történt a nyomvonal adatok mentése közben &4{0}&c."
 user-invalid-entry: "&4{0}&c nem érvényes felhasználónév/uuid."
 group-invalid-entry: "&4{0}&c nem érvényes csoportnév."
 track-invalid-entry: "&4{0}&c nem érvényes track név."
@@ -112,14 +116,13 @@ groups-list-entry: "&f-  &3{0} &7- &b{1}"
 groups-list-entry-with-tracks: "&f-  &3{0} &7- &b{1} &7- [&3{2}&7]"
 tracks-list: "&aPályák: {0}"
 listnodes: "&b{0} jogai:"
-listnodes-with-page: "&b{0} Jogai:  {1}"
-listnodes-temp: "&b{0} Ideiglenes engedélyei:"
-listnodes-temp-with-page: "&b{0} Ideiglenes engedélyei:  {1}"
-listparents: "&b{0} Szülői csoportok:"
-listparents-temp: "&b{0} Ideiglenes szülői csoportok:"
-list-tracks: >
-  &b{0} Pályái:\n
-  {1}
+listnodes-with-page: "&b{0} jogai:  {1}"
+listnodes-temp: "&b{0} ideiglenes engedélyei:"
+listnodes-temp-with-page: "&b{0} ideiglenes engedélyei:  {1}"
+listparents: "&b{0} szülői csoportok:"
+listparents-temp: "&b{0} ideiglenes szülői csoportok:"
+list-tracks: "&b{0} nyomvonalai:"
+list-tracks-entry: "&a{0}: {1}"
 list-tracks-empty: "&b{0}&a nincs rajta."
 context-pair-inline: "&3{0}=&b{1}"
 context-pair--global-inline: "&eglobális"
@@ -151,8 +154,8 @@ meta-clear-success: "&b{0}&a meta egyezéstípusa &b{1}&a összefüggésben {2}&
 meta-clear-success-singular: "&b{0}&a meta egyezéstípusa &b{1}&a összefüggésben {2}&a. (&b{3}&a csomópontot eltávolítottuk.)"
 illegal-date-error: "&cNem sikerült elemezni a dátumot &4{0}&c."
 past-date-error: "&cNem állíthat be dátumot a múltban!"
-chat-meta-prefix-header: "&b{0} Előtagjai"
-chat-meta-suffix-header: "&b{0} Utótagja"
+chat-meta-prefix-header: "&b{0} előtagjai"
+chat-meta-suffix-header: "&b{0} utótagja"
 meta-header: "&b{0} Metája"
 chat-meta-entry: "&b-> {0} &f- &f'{1}&f' &8(&7örökölt &a{2}&8)"
 chat-meta-entry-with-context: "&b-> {0} &f- &f'{1}&f' &8(&7örökölt &a{2}&8){3}"
@@ -244,17 +247,19 @@ group-set-display-name-removed: "&aA kijelölt megjelenített név a(z) &b{0}&a 
 track-info: >
   {PREFIX}&b&l> &bPálya megjelenítése: &f{0}\n
   {PREFIX}&f- &7Pálya: &f{1}
-track-clear: "&b{0}&a csoportok nyomvonalát törölték."
+track-clear: "&b{0}&a csoportok nyomvonala törölve."
 track-append-success: "&aCsoport &b{0}&a csatolták a követéshez &b{1}&a."
-track-insert-success: "&aCsoport &b{0}&a beillesztésre került a pályára &b{1}&a helyzetben &b{2}&a."
+track-insert-success: "&aCsoport &b{0}&a beillesztésre került &b{1}&a pályára &b{2}&a helyzetben."
 track-insert-error-number: "&cVárható szám, de helyette beérkezett: {0}"
 track-insert-error-invalid-pos: "&cNem helyezhető be a pozícióba &4{0}&c. &7(érvénytelen pozíció)"
-track-remove-success: "&aCsoport &b{0}&a eltávolították a pályáról &b{1}&a."
+track-remove-success: "&aCsoport &b{0}&a eltávolítva a pályáról &b{1}&a."
 log-load-error: "&cA napló nem tölthető be."
 log-invalid-page: "&cÉrvénytelen oldalszám."
-log-invalid-page-range: "&cÉrvénytelen oldalszám. Kérjük, adjon meg egy értéket &41&c és &4{0}&c."
+log-invalid-page-range: "&cÉrvénytelen oldalszám. Kérjük, adj meg egy értéket &41&c és &4{0}&c."
 log-no-entries: "&bNincs megjeleníthető naplóbejegyzés."
-log-entry: "&b#{0} -> &8(&7{1} ezelőtt&8) {2}"
+log-entry: >
+  {PREFIX}&b#{0} &8(&7{1} ezelőtt&8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
+  {PREFIX}&7> &f{5}
 log-notify-console: "&cA konzolra vonatkozó értesítések átváltása nem lehetséges."
 log-notify-toggle-on: "&aEngedélyezve a&b naplózási kimenet."
 log-notify-toggle-off: "&cLetiltva a&b naplózási kimenet."
