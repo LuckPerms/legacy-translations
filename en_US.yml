@@ -96,18 +96,17 @@ info-top: >
   {PREFIX}&2Running &bLuckPerms v{0}&2 by &bLuck&2.\n
   {PREFIX}&f-  &3Platform: &f{1}\n
   {PREFIX}&f-  &3Server Brand: &f{2}\n
-  {PREFIX}&f-  &3Server Version: &f{3}
+  {PREFIX}&f-  &3Server Version:\n
+  {PREFIX}&f-  {3}
 info-middle: >
-  {PREFIX}&f-  &bMessaging Type: &f{0}\n
+  {PREFIX}&f-  &bMessaging: &f{0}\n
   {PREFIX}&f-  &bInstance:\n
-  {PREFIX}&f-     &3Server Name: &f{1}\n
-  {PREFIX}&f-     &3Online Players: &a{2}\n
-  {PREFIX}&f-     &3Unique Connections: &a{3}\n
+  {PREFIX}&f-     &3Static contexts: &f{1}\n
+  {PREFIX}&f-     &3Online Players: &a{2} &7(&a{3}&7 unique)\n
   {PREFIX}&f-     &3Uptime: &7{4}\n
-  {PREFIX}&f-     &3Local Data: &a{5} &7users, &a{6} &7groups, &a{7} &7tracks\n
-  {PREFIX}&f-     &3Context Calculators: &a{8}\n
-  {PREFIX}&f-     &3Known permissions: &a{9}\n
-  {PREFIX}&f-     &3Active processors: &7{10}
+  {PREFIX}&f-     &3Local Data: &a{5} &7users, &a{6} &7groups, &a{7} &7tracks
+debug-start: "&bGenerating debugging output..."
+debug-url: "&aDebug data URL:"
 create-error: "&cThere was an error whilst creating &4{0}&c."
 delete-error: "&cThere was an error whilst deleting &4{0}&c."
 delete-group-error-default: "&cYou cannot delete the default group."
@@ -194,19 +193,14 @@ user-info-general: >
   {PREFIX}&b&l> &bUser Info: &f{0}\n
   {PREFIX}&f- &3UUID: &f{1}\n
   {PREFIX}&f- &3Status: {2}\n
-  {PREFIX}&f- &3Primary Group: &f{3}\n
-  {PREFIX}&f- &aCounts:\n
-  {PREFIX}&f-    &3Nodes: &a{4}\n
-  {PREFIX}&f-    &3Permissions: &a{5}\n
-  {PREFIX}&f-    &3Prefixes: &a{6}\n
-  {PREFIX}&f-    &3Suffixes: &a{7}\n
-  {PREFIX}&f-    &3Meta: &a{8}
+  {PREFIX}&f- &3Primary Group: &f{3}
 user-info-data: >
-  {PREFIX}&f- &aCached Data:\n
+  {PREFIX}&f- &aContextual Data:\n
   {PREFIX}&f-    &3Has contextual data: {0}\n
-  {PREFIX}&f-    &3Current Contexts: {1}\n
-  {PREFIX}&f-    &3Current Prefix: {2}\n
-  {PREFIX}&f-    &3Current Suffix: {3}
+  {PREFIX}&f-    &3Applicable contexts: {1}\n
+  {PREFIX}&f-    &3Prefix: {2}\n
+  {PREFIX}&f-    &3Suffix: {3}\n
+  {PREFIX}&f-    &3Meta: {4}
 info-parent-header: "&f- &aParent Groups:"
 info-temp-parent-header: "&f- &aTemporary Parent Groups:"
 user-removegroup-error-primary: "&aYou cannot remove a user from their primary group."
@@ -229,13 +223,7 @@ user-demote-error-malformed: >
 group-info-general: >
   {PREFIX}&b&l> &bGroup Info: &f{0}\n
   {PREFIX}&f- &3Display Name: &f{1}\n
-  {PREFIX}&f- &3Weight: &f{2}\n
-  {PREFIX}&f- &aCounts:\n
-  {PREFIX}&f-    &3Nodes: &a{3}\n
-  {PREFIX}&f-    &3Permissions: &a{4}\n
-  {PREFIX}&f-    &3Prefixes: &a{5}\n
-  {PREFIX}&f-    &3Suffixes: &a{6}\n
-  {PREFIX}&f-    &3Meta: &a{7}
+  {PREFIX}&f- &3Weight: &f{2}
 group-set-weight: "&aSet weight to &b{0}&a for group &b{1}&a."
 group-set-display-name-doesnt-have: "&b{0}&a doesn't have a display name set."
 group-set-display-name-already-has: "&b{0}&a already has a display name of &b{1}&a."
@@ -314,6 +302,9 @@ command-specs:
   info:
     description: "Print general plugin info"
     usage: "/%s info"
+  debug:
+    description: "Produce debugging output"
+    usage: "/%s debug"
   verbose:
     description: "Manage verbose permission checking"
     usage: "/%s verbose <true|false> [filter]"
