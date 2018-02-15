@@ -53,7 +53,7 @@ search-showing-users: "&bShowing user entries:    &7(page &f{0}&7 of &f{1}&7 - &
 search-showing-groups: "&bShowing group entries:    &7(page &f{0}&7 of &f{1}&7 - &f{2}&7 entries)"
 apply-edits-invalid-code: "&cInvalid code. &7({0})"
 apply-edits-unable-to-read: "&cUnable to read data using the given code. &7({0})"
-apply-edits-no-target: "&cUnable to parse the target of the edit. Please supply it as an extra argument."
+apply-edits-no-target: "&cUnable to parse the target of the edit."
 apply-edits-target-group-not-exists: "&cTarget group &4{0}&c does not exist."
 apply-edits-target-user-not-uuid: "&cTarget user &4{0}&c is not a valid uuid."
 apply-edits-target-user-unable-to-load: "&cUnable to load target user &4{0}&c."
