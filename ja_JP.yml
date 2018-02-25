@@ -1,31 +1,31 @@
 # LuckPerms Language File
-# Locale: en_US (English)
-# Author: Luck
+# Locale: ja_JP (English)
+# Author: Luck, syokkendesuyo
 
 prefix: "&7&l[&b&lL&3&lP&7&l] "
-view-available-commands-prompt: "&3Use &a/{0} help &3to view available commands."
-no-permission-for-subcommands: "&3You do not have permission to use any sub commands."
+view-available-commands-prompt: "&a/{0} help &3を実行すると使用可能なコマンドを表示します"
+no-permission-for-subcommands: "&3サブコマンドを実行する権限がありません。"
 empty: "{0}"
-player-online: "&aOnline"
-player-offline: "&cOffline"
-loading-error: "&cPermissions data could not be loaded. Please try again later."
-op-disabled: "&bThe vanilla OP system is disabled on this server."
+player-online: "&aオンライン"
+player-offline: "&cオフライン"
+loading-error: "&c権限データの読み込みに失敗しました。後ほどお試しください。"
+op-disabled: "&bこのサーバーではバニラのOPシステムが無効にされています。"
 op-disabled-sponge: "&2Please note that Server Operator status has no effect on Sponge permission checks when a permission plugin is installed. Please edit user data directly."
 log-info: "&7&l[&bL&3P&7&l] &3{0}"
-log-warn: "&7&l[&bLuck&3Perms&7&l] &c[WARN] {0}"
-log-error: "&7&l[&bLuck&3Perms&7&l] &4[ERROR] {0}"
+log-warn: "&7&l[&bLuck&3Perms&7&l] &c[警告] {0}"
+log-error: "&7&l[&bLuck&3Perms&7&l] &4[エラー] {0}"
 log: >
-  {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
-  {PREFIX}&3LOG &3&l> &f{3}
+  {PREFIX}&3ログ &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
+  {PREFIX}&3ログ &3&l> &f{3}
 verbose-log: "&3VB &3&l> {0}"
 export-log: "&3EXPORT &3&l> &f{0}"
 export-log-progress: "&3EXPORT &3&l> &7{0}"
 migration-log: "&3MIGRATION &7[&3{0}&7] &3&l> &f{1}"
 migration-log-progress: "&3MIGRATION &7[&3{0}&7] &3&l> &7{1}"
 command-not-recognised: "&cCommand not recognised."
-command-no-permission: "&cYou do not have permission to use this command!"
-user-not-found: "&cA user for &4{0}&c could not be found."
-user-not-online: "&aUser &b{0}&a is not online."
+command-no-permission: "&cこのコマンドを実行する権限がありません！"
+user-not-found: "&4{0}&c は見つかりませんでした。"
+user-not-online: "&b{0}&a はオンラインではありません。"
 user-save-error: "&cThere was an error whilst saving user data for &4{0}&c."
 group-not-found: "&cA group named &4{0}&c could not be found."
 group-save-error: "&cThere was an error whilst saving group data for &4{0}&c."
@@ -58,13 +58,13 @@ apply-edits-target-group-not-exists: "&cTarget group &4{0}&c does not exist."
 apply-edits-target-user-not-uuid: "&cTarget user &4{0}&c is not a valid uuid."
 apply-edits-target-user-unable-to-load: "&cUnable to load target user &4{0}&c."
 apply-edits-target-unknown: "&cInvalid target. &7({0})"
-apply-edits-success: "&aWeb editor data was applied to &b{0}&a successfully."
+apply-edits-success: "&b{0}&a にWEBエディタデータを適用しました。"
 apply-edits-success-summary: "&7(&a{0} &7{1} and &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
-editor-start: "&7Preparing a new editor session. Please wait..."
-editor-upload-failure: "&cUnable to upload permission data to the editor."
-editor-url: "&aClick the link below to open the editor:"
+editor-start: "&7エディタセッションを準備中です。しばらくお待ちください..."
+editor-upload-failure: "&c権限データのアップロードに失敗しました。"
+editor-url: "&aエディタリンク:"
 check-result: "&aPermission check result on user &b{0}&a for permission &b{1}&a: &f{2}"
 create-success: "&b{0}&a was successfully created."
 delete-success: "&b{0}&a was successfully deleted."
@@ -85,40 +85,40 @@ groups-load-error: "&cAn unexpected error occurred. Unable to load all groups."
 track-load-error: "&cAn unexpected error occurred. Track not loaded."
 tracks-load-error: "&cAn unexpected error occurred. Unable to load all tracks."
 track-empty: "&4{0}&c cannot be used as it is empty or contains only one group."
-update-task-request: "&bAn update task has been requested. Please wait..."
-update-task-complete: "&aUpdate task complete."
-update-task-complete-network: "&aUpdate task complete. Now attempting to push to other servers."
-update-task-push-success: "&aOther servers were notified via &b{0} Messaging &asuccessfully."
-update-task-push-failure: "&cError whilst pushing changes to other servers."
-update-task-push-failure-not-setup: "&cError whilst pushing changes to other servers. &7(a messaging service has not been configured)"
-reload-config-success: "&aThe configuration file was reloaded. &7(some options will only apply after the server has restarted)"
+update-task-request: "&b更新を開始しました。しばらくお待ちください...
+update-task-complete: "&a更新が完了しました。"
+update-task-complete-network: "&a更新が完了しました。他のサーバーに設定を送信しています..."
+update-task-push-success: "&b{0} メッセージング &aを経由して設定の更新が行われました。"
+update-task-push-failure: "&他のサーバーに設定を送信中にエラーが発生しました。"
+update-task-push-failure-not-setup: "&c他のサーバーに設定を送信中にエラーが発生しました。 &7(メッセージングサービスが設定されていません)"
+reload-config-success: "&a設定ファイルが再読み込みされました。 &7(一部設定は再起動が必要です)"
 info-top: >
-  {PREFIX}&2Running &bLuckPerms v{0}&2 by &bLuck&2.\n
-  {PREFIX}&f-  &3Platform: &f{1}\n
-  {PREFIX}&f-  &3Server Brand: &f{2}\n
-  {PREFIX}&f-  &3Server Version:\n
+  {PREFIX}&bLuckPerms v{0}&2 &7(by &bLuck&7)&2.\n
+  {PREFIX}&f-  &3プラットフォーム: &f{1}\n
+  {PREFIX}&f-  &3サーバーブランド: &f{2}\n
+  {PREFIX}&f-  &3サーバーバージョン:\n
   {PREFIX}&f-  {3}
 info-middle: >
-  {PREFIX}&f-  &bMessaging: &f{0}\n
-  {PREFIX}&f-  &bInstance:\n
-  {PREFIX}&f-     &3Static contexts: &f{1}\n
-  {PREFIX}&f-     &3Online Players: &a{2} &7(&a{3}&7 unique)\n
-  {PREFIX}&f-     &3Uptime: &7{4}\n
-  {PREFIX}&f-     &3Local Data: &a{5} &7users, &a{6} &7groups, &a{7} &7tracks
-debug-start: "&bGenerating debugging output..."
+  {PREFIX}&f-  &bメッセージング: &f{0}\n
+  {PREFIX}&f-  &bインスタンス:\n
+  {PREFIX}&f-     &3静的コンテキスト: &f{1}\n
+  {PREFIX}&f-     &3オンラインプレイヤー数: &a{2} &7(&a{3}&7 ユニークプレイヤー)\n
+  {PREFIX}&f-     &3稼働時間: &7{4}\n
+  {PREFIX}&f-     &3ローカルデータ: &a{5} &7ユーザー, &a{6} &7グループ, &a{7} &7トラック
+debug-start: "&bデバッグを開始しました...
 debug-url: "&aDebug data URL:"
 create-error: "&cThere was an error whilst creating &4{0}&c."
 delete-error: "&cThere was an error whilst deleting &4{0}&c."
 delete-group-error-default: "&cYou cannot delete the default group."
-groups-list: "&aGroups: &7(name, weight, tracks)"
+groups-list: "&aグループ: &7(名前, weight, tracks)"
 groups-list-entry: "&f-  &3{0} &7- &b{1}"
 groups-list-entry-with-tracks: "&f-  &3{0} &7- &b{1} &7- [&3{2}&7]"
-tracks-list: "&aTracks: {0}"
+tracks-list: "&aトラック: {0}"
 permission-info: "&b{0}'s Permissions:  &7(page &f{1}&7 of &f{2}&7 - &f{3}&7 entries)"
 permission-info-no-data: "&b{0}&a does not have any permissions set."
 parent-info: "&b{0}'s Parents:  &7(page &f{1}&7 of &f{2}&7 - &f{3}&7 entries)"
 parent-info-no-data: "&b{0}&a does not have any parents defined."
-list-tracks: "&b{0}'s Tracks:"
+list-tracks: "&b{0} のトラック:"
 list-tracks-entry: "&a{0}: {1}"
 list-tracks-empty: "&b{0}&a is not on any tracks."
 context-pair-inline: "&3{0}=&b{1}"
@@ -190,19 +190,19 @@ bulk-update-starting: "&aRunning bulk update."
 bulk-update-success: "&bBulk update completed successfully."
 bulk-update-failure: "&cBulk update failed. Check the console for errors."
 user-info-general: >
-  {PREFIX}&b&l> &bUser Info: &f{0}\n
+  {PREFIX}&b&l> &bユーザー情報 &f{0}\n
   {PREFIX}&f- &3UUID: &f{1}\n
-  {PREFIX}&f- &3Status: {2}\n
-  {PREFIX}&f- &3Primary Group: &f{3}
+  {PREFIX}&f- &3ステイタス: {2}\n
+  {PREFIX}&f- &3プライマリグループ &f{3}
 user-info-data: >
-  {PREFIX}&f- &aContextual Data:\n
-  {PREFIX}&f-    &3Has contextual data: {0}\n
-  {PREFIX}&f-    &3Applicable contexts: {1}\n
-  {PREFIX}&f-    &3Prefix: {2}\n
-  {PREFIX}&f-    &3Suffix: {3}\n
-  {PREFIX}&f-    &3Meta: {4}
-info-parent-header: "&f- &aParent Groups:"
-info-temp-parent-header: "&f- &aTemporary Parent Groups:"
+  {PREFIX}&f- &aコンテキストデータ:\n
+  {PREFIX}&f-    &3コンテキストデータの保有状態{0}\n
+  {PREFIX}&f-    &3適用可能なコンテキスト: {1}\n
+  {PREFIX}&f-    &3接頭辞: {2}\n
+  {PREFIX}&f-    &3接尾辞: {3}\n
+  {PREFIX}&f-    &3メタ: {4}
+info-parent-header: "&f- &a親グループ:"
+info-temp-parent-header: "&f- &a一時的な親グループ:"
 user-removegroup-error-primary: "&aYou cannot remove a user from their primary group."
 user-primarygroup-success: "&b{0}&a's primary group was set to &b{1}&a."
 user-primarygroup-warn-option: "&aWarning: The primary group calculation method being used by this server &7({0}) &amay not reflect this change."
@@ -221,8 +221,8 @@ user-demote-error-malformed: >
   {PREFIX}&aThe previous group on the track, &b{0}&a, no longer exists. Unable to demote user.\n
   {PREFIX}&aEither create the group, or remove it from the track and try again.
 group-info-general: >
-  {PREFIX}&b&l> &bGroup Info: &f{0}\n
-  {PREFIX}&f- &3Display Name: &f{1}\n
+  {PREFIX}&b&l> &bグループ情報&f{0}\n
+  {PREFIX}&f- &3表示名: &f{1}\n
   {PREFIX}&f- &3Weight: &f{2}
 group-set-weight: "&aSet weight to &b{0}&a for group &b{1}&a."
 group-set-display-name-doesnt-have: "&b{0}&a doesn't have a display name set."
@@ -285,25 +285,25 @@ import-end-error-footer: "&b(Import) &7<----------------------------------------
 
 command-specs:
   user:
-    description: "User commands"
-    usage: "/%s user <user>"
+    description: "ユーザーコマンド"
+    usage: "/%s user <ユーザー>"
   group:
-    description: "Group commands"
-    usage: "/%s group <group>"
+    description: "グループコマンド"
+    usage: "/%s group <グループ>"
   track:
-    description: "Track commands"
-    usage: "/%s track <track>"
+    description: "トラックコマンド"
+    usage: "/%s track <トラック>"
   log:
-    description: "Log commands"
+    description: "ログコマンド"
     usage: "/%s log"
   sync:
-    description: "Sync changes with the storage"
+    description: "ストレージとの同期を変更"
     usage: "/%s sync"
   info:
-    description: "Print general plugin info"
+    description: "プラグイン情報を表示"
     usage: "/%s info"
   debug:
-    description: "Produce debugging output"
+    description: "デバッグ出力を生成"
     usage: "/%s debug"
   verbose:
     description: "Manage verbose permission checking"
@@ -313,12 +313,12 @@ command-specs:
       "filter": "the filter to match entries against"
       "--slim": "add \"--slim\" to exclude trace data from the pasted output"
   tree:
-    description: "Generate a tree view of permissions"
-    usage: "/%s tree [selection] [max level] [player]"
+    description: "パーミッションのツリーを表示"
+    usage: "/%s tree [絞り込み] [最大レベル] [プレイヤー]"
     args:
       "selection": "the root of the tree. specify \".\" to include all permissions"
-      "max level": "how many branch levels should be returned"
-      "player": "the name of an online player to check against"
+      "max level": "分岐レベル"
+      "player": "確認するオンラインプレーヤー"
   search:
     description: "Search for users/groups with a specific permission"
     usage: "/%s search <permission>"
