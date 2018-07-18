@@ -322,11 +322,15 @@ command-specs:
     usage: "/%s log"
   sync:
     description: "Változtatások szinkronizálása az adattárral"
-
     usage: "/%s sync"
   info:
     description: "Általános plugin információk kiírása"
     usage: "/%s info"
+  editor:
+    description: "Új webszerkesztő munkát készít"
+    usage: "/%s editor [type]"
+    args:
+      "type": "a szerkesztőbe betölteni kívánt típusok. ('all', 'users' vagy 'groups')"
   debug:
     description: "Hibakeresési kimenet"
     usage: "/%s debug"
@@ -510,6 +514,10 @@ command-specs:
     args:
       "node": "ellenőrizendő jog"
       "context...": "ellenörzési kontextus"
+  permission-clear:
+    description: "Összes jog törlése"
+    args:
+      "context": "a szövegszűrés körülményei"
   parent-info:
     description: "Csoportok listázása, amitől a célobjektum örököl"
     args:
