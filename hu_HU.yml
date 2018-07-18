@@ -1,16 +1,23 @@
 # LuckPerms Language File
 # Locale: hu_HU (Hungarian)
-# Author: montlikadani,gbalint
+# Author: montlikadani, gbalint
 
 prefix: "&7&l[&b&lL&3&lP&7&l] &c"
 view-available-commands-prompt: "&3Használd &a/{0} help &3a rendelkezésre álló parancsok megtekintéséhez."
 no-permission-for-subcommands: "&3Nincs jogod semmilyen parancsot használni."
+first-time-setup: >
+  {PREFIX}&3Úgy tűnik, hogy még nincsenek jogok!\n
+  {PREFIX}&3Mielőtt bármelyik LuckPerms parancsot használod a játékban, a konzol használatához saját hozzáférést kell biztosítani.\n
+  {PREFIX}&3Nyisd meg a konzolt és futtasd:\n
+  {PREFIX} &3&l> &a{0} user {1} permission set luckperms.* true\n\n
+  {PREFIX}&3Miután elvégezted ezt a műveletet, elkezdheted meghatalmazásaid és csoportjaidat.\n
+  {PREFIX}&3Nem tudom, hol kezdjem? Nézd meg itt: &7https://github.com/lucko/LuckPerms/wiki/Usage
 empty: "{0}"
 player-online: "&aOnline"
 player-offline: "&cOffline"
 loading-error: "&cNem sikerült betölteni az jogosultsági adatokat. Kérlek, próbáld újra később."
 op-disabled: "&bA vanilla OP rendszer le van tiltva ezen a szerveren."
-op-disabled-sponge: "&2Vedd figyelembe, hogy a Szerver Operátor státusz nem befolyásolja a Sponge engedély-ellenőrzéseket, ha jogkezelő plugin van telepítve. Közvetlenül módosítsd a felhasználói adatokat."
+op-disabled-sponge: "&2Kérlek, vedd figyelembe, hogy a Szerver Operátor státusz nem befolyásolja a Sponge engedély-ellenőrzéseket, ha jogkezelő plugin van telepítve. Közvetlenül módosítsd a felhasználói adatokat."
 log-info: "&7&l[&bL&3P&7&l] &3{0}"
 log-warn: "&7&l[&bLuck&3Perms&7&l] &c[FIGYELEM] {0}"
 log-error: "&7&l[&bLuck&3Perms&7&l] &4[HIBA] {0}"
@@ -24,7 +31,17 @@ migration-log: "&3ÁTHELYEZÉS &7[&3{0}&7] &3&l> &f{1}"
 migration-log-progress: "&3ÁTHELYEZÉS &7[&3{0}&7] &3&l> &7{1}"
 command-not-recognised: "&cIsmeretlen parancs."
 command-no-permission: "&cNincs jogod a parancs használatára!"
-user-not-found: "&c &4{0}&c nevű felhasználó nem található."
+main-command-usage-header: "&b{0} Al-parancsok: &7({1} ...)"
+command-usage-argument-join: "&3 - &7"
+command-usage-brief: "&3> &a{0}{1}"
+command-usage-detailed-header: >
+  {PREFIX}&3&lParancs használat &3- &b{0}\n
+  {PREFIX}&b> &7{1}
+command-usage-detailed-args-header: "&3Argumentumok:"
+command-usage-detailed-arg: "&b- {0}&3 -> &7{1}"
+required-argument: "&8<&7{0}&8>"
+optional-argument: "&8[&7{0}&8]"
+user-not-found: "&c{0}&c nevű felhasználó nem található."
 user-not-online: "&b{0}&a nevű felhasználó jelenleg nincs a szerveren."
 user-save-error: "&cHiba történt &4{0}&c adatainak mentése közben."
 group-not-found: "A(z) &4{0}&c nevű csoport nem található."
@@ -46,27 +63,26 @@ verbose-results-url: "&aRészletes naplózás URL-je:"
 tree-upload-start: "&bJogosultsági fa létrehozása..."
 tree-empty: "&cNem lehet létrehozni a fát. Nincs találat."
 tree-url: "&aJogosultsági fa URL:"
-search-searching: "&aFelhasználók és csoportok keresése a következővel: &b{0}&a..."
+search-searching: "&aFelhasználók és csoportok keresése a következő &bjoggal: &b{0}&a..."
 search-searching-members: "&aFelhasználók és csoportok keresése, akik öröklik &b{0}&a-t..."
 search-result: "&b{0}&a találat, &b{1}&a felhasználó és &b{2}&a csoport."
 search-showing-users: "&bFelhasználók megjelenítése:    &7(&f{0}&7. oldal a &f{1}&7-ból - &f{2}&7 elem)"
 search-showing-groups: "&bCsoportok megjelenítése:    &7(&f{0}&7. oldal a &f{1}&7-ból - &f{2}&7 elem)"
-search-showing-users-with-page: "&bFelhasználói bejegyzések megjelenítése:  {0}"
-search-showing-groups-with-page: "&bCsoportbejegyzések megjelenítése:  {0}"
 apply-edits-invalid-code: "&cÉrvénytelen kód: &7({0})"
 apply-edits-unable-to-read: "&cA megadott kóddal nem lehet adatokat olvasni: &7({0})"
-apply-edits-no-target: "&cA szerkesztési cél nem értelmezhetó."
-apply-edits-target-group-not-exists: "&cCélcsoport &4{0}&c nem létezik."
-apply-edits-target-user-not-uuid: "&cCél felhasználó uuidje, &4{0}&c nem érvényes."
+apply-edits-no-target: "&cA szerkesztési cél nem értelmezhető."
+apply-edits-target-group-not-exists: "&cA célcsoport &4{0}&c nem létezik."
+apply-edits-target-user-not-uuid: "&cCél felhasználó uuid-je, &4{0}&c nem érvényes."
 apply-edits-target-user-unable-to-load: "&cA célfelhasználó nem tölthető be: &4{0}&c."
 apply-edits-target-unknown: "&cÉrvénytelen cél: &7({0})"
 apply-edits-success: "&aWebszerkesztő adatok sikeresen alkalmazva &b{0}&a-nak/nek."
 apply-edits-success-summary: "&7(&a{0} &7{1} és &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
-editor-start: "&7Új szerkesztő előkészítése. Kérlek várj..."
-editor-url: "&aSzerkesztő URL-je:"
+editor-no-match: "&cNem sikerült megnyitni a szerkesztőt. Egyetlen objektum sem illeszkedett a kívánt típushoz."
+editor-start: "&7Új szerkesztő előkészítése. Kérlek, várj..."
 editor-upload-failure: "&cNem sikerült feltölteni az jogosultsági adatokat a szerkesztőbe."
+editor-url: "&aA szerkesztő megnyitásához kattints az alábbi linkre:"
 check-result: "&aJogosultság lekérdezés &b{0}&a-nak/nek &b{1}&a joghoz: &f{2}"
 create-success: "&b{0}&a sikeresen létrehozva."
 delete-success: "&b{0}&a sikeresen törölve."
@@ -87,27 +103,30 @@ groups-load-error: "&cVáratlan hiba történt. Csoportok betöltése sikertelen
 track-load-error: "&cVáratlan hiba történt. Ranglétra nincs betöltve."
 tracks-load-error: "&cVáratlan hiba történt. Ranglétrák betöltése sikertelen."
 track-empty: "&4{0}&c nem használható, mert üres, vagy egyetlen csoportot tartalmaz csak."
-update-task-request: "&bFrissítési feladat elkezdve. Kérlek várj..."
+update-task-request: "&bFrissítési feladat elkezdve. Kérlek, várj..."
 update-task-complete: "&aFrissítési feladat kész."
 update-task-complete-network: "&aFrissítési feladat kész. Érvényesítés a többi szerveren."
 update-task-push-success: "&aA többi szerver sikeresen értesítve &b{0}-val."
 update-task-push-failure: "&cHiba a szervereken történő érvényesítés közben."
 update-task-push-failure-not-setup: "&cHiba a szervereken történő érvényesítés közben. &7(üzenetkezelés nincs beállítva)"
-reload-config-success: "&aKonfigurációs fájl újratöltve. &7(egyes beállítások újraindítás után érvényesülnek csak)"
+reload-config-success: "&aA konfigurációs fájl újratöltve. &7(egyes beállítások újraindítás után érvényesülnek csak)"
 info-top: >
   {PREFIX}&2&bLuckPerms v{0}&2 by &bLuck&2.\n
   {PREFIX}&f-  &3Platform: &f{1}\n
   {PREFIX}&f-  &3Szerver típusa: &f{2}\n
   {PREFIX}&f-  &3Szerver verzió:\n
   {PREFIX}&f-  {3}
+info-storage: >
+  {PREFIX}&f-  &bTárhely:\n
+  {PREFIX}&f-     &3Típus: &f{0}
+info-storage-meta: "&f-     &3{0}: {1}"
 info-middle: >
   {PREFIX}&f-  &bÜzenetkezelő: &f{0}\n
-  {PREFIX}&f-  &bPlugin:\n
+  {PREFIX}&f-  &bPélda:\n
   {PREFIX}&f-     &3Statikus kontextusok: &f{1}\n
   {PREFIX}&f-     &3Elérhető játékosok: &a{2}\n
-  {PREFIX}&f-     &3Egyedi kapcsolatok: &a{3}\n
-  {PREFIX}&f-     &3Futásidő: &7{4}\n
-  {PREFIX}&f-     &3Helyi adatok: &a{5} &7felhasználó, &a{6} &7csoport, &a{7} &7ranglétra
+  {PREFIX}&f-     &3Futásidő: &7{3}\n
+  {PREFIX}&f-     &3Helyi adatok: &a{4} &7felhasználó, &a{5} &7csoport, &a{6} &7ranglétra
 debug-start: "&bHibakeresési adatok létrehozása..."
 debug-url: "&aHibakeresési adatok URL-je:"
 create-error: "&cHiba &4{0}&c létrehozása közben."
@@ -121,12 +140,6 @@ permission-info: "&b{0} jogai:  &7(&f{1}&7. oldal a &f{2}&7-ból - &f{3}&7 elem)
 permission-info-no-data: "&b{0}&a-nak/nek nincsenek egyedi jogai."
 parent-info: "&b{0} szülő-csoportjai:  &7(&f{1}&7. oldal a &f{2}&7-ból - &f{3}&7 elem"
 parent-info-no-data: "&b{0}&a-nak/nek nincs szülő-csoport beállítva."
-listnodes: "&b{0} jogai:"
-listnodes-with-page: "&b{0} jogai:  {1}"
-listnodes-temp: "&b{0} ideiglenes jogai:"
-listnodes-temp-with-page: "&b{0} ideiglenes jogai:  {1}"
-listparents: "&b{0} szülő-csoportok:"
-listparents-temp: "&b{0} ideiglenes szülő-csoportjai:"
 list-tracks: "&b{0} ranglétrái:"
 list-tracks-entry: "&a{0}: {1}"
 list-tracks-empty: "&b{0}&a nincs egyik ranglétrán sem."
@@ -152,23 +165,25 @@ unset-inherit-success: "&b{0}&a nem örököl már &b{1}&a-tól/től {2}&a konte
 unset-temp-inherit-success: "&b{0}&a nem örököl már ideiglenesen &b{1}&a-tól/től {2}&a kontextusban."
 clear-success: "&b{0}&ajogai törölve {1}&a kontextusban. (&b{2}&a jog eltávolítva.)"
 clear-success-singular: "&b{0}&ajogai törölve {1}&a kontextusban. (&b{2}&a jog eltávolítva.)"
+permission-clear-success: "&b{0}&a jogai a(z) {1}&a kontextusban törölve. (&b{2}&a csomópont törölve."
+permission-clear-success-singular: "&b{0}&a jogai a(z) {1}&a kontextusban törölve. (&b{2}&a csomópont törölve."
 parent-clear-success: "&b{0}&a szülő-csoportjai törölve {1}&a kontextusban. (&b{2}&a csoport eltávolítva.)"
 parent-clear-success-singular: "&b{0}&a szülő-csoportjai törölve {1}&a kontextusban. (&b{2}&a csoport eltávolítva.)"
 parent-clear-track-success: "&b{0}&a szülő-csoportjai a(z) &b{1}&a ranglétrán törölve {2}&a kontextusban. (&b{3}&a csoport eltávolítva.)"
-parent-clear-track-success-singular: "&b{0}&a szülő-csoportjai a(z) &b{1}&a ranglétrán törölve {2}&a kontextusban. (&b{3}&a jocsoportg eltávolítva.)"
+parent-clear-track-success-singular: "&b{0}&a szülő-csoportjai a(z) &b{1}&a ranglétrán törölve {2}&a kontextusban. (&b{3}&a jogcsoport eltávolítva.)"
 meta-clear-success: "&b{0}&a, &b{1}&a típusú metaadatai törölve {2}&a kontextusban. (&b{3}&a metaadat eltávolítva.)"
 meta-clear-success-singular: "&b{0}&a, &b{1}&a típusú metaadatai törölve {2}&a kontextusban. (&b{3}&a metaadat eltávolítva.)"
 illegal-date-error: "&cÉrtelmezhetetlen dátum formátum: &4{0}&c."
 past-date-error: "&cNem állíthatsz be múltbeli dátumot!"
-chat-meta-prefix-header: "&b{0} prefixei"
-chat-meta-suffix-header: "&b{0} suffixei"
+chat-meta-prefix-header: "&b{0} előtagjai"
+chat-meta-suffix-header: "&b{0} utótagjai"
 meta-header: "&b{0} metaadatai"
 chat-meta-entry: "&b-> {0} &f- &f'{1}&f' &8(&a{2}&7-tól/től örökölve&8)"
 chat-meta-entry-with-context: "&b-> {0} &f- &f'{1}&f' &8(&a{2}&7-tól/től örökölve&8){3}"
 meta-entry: "&b-> &a{0} &f= &f'{1}&f' &8(&a{2}&7-től örökölve&8)"
 meta-entry-with-context: "&b-> &a{0} &f= &f'{1}&f' &8(&a{2}&7-től örökölve&8){3}"
-chat-meta-prefix-none: "&b{0}-nak/nek nincsenek prefixei."
-chat-meta-suffix-none: "&b{0}-nak/nek nincsenek suffixei."
+chat-meta-prefix-none: "&b{0}-nak/nek nincsenek előtagjai."
+chat-meta-suffix-none: "&b{0}-nak/nek nincsenek utótagjai."
 meta-none: "&b{0}-nak/nek nincsenek metaadatai."
 meta-invalid-priority: "&cÉrvénytelen prioritás: &4{0}&c. Számnak kell lennie."
 already-has-chat-meta: "&b{0}&a-nak/nek már van {1} &f'{2}&f'&a metaadata &b{3}&a prioritással {4}&a kontextusban."
@@ -176,10 +191,10 @@ already-has-temp-chat-meta: "&b{0}&a-nak/nek már van {1} &f'{2}&f'&a ideiglenes
 does-not-have-chat-meta: "&b{0}&a-nak/nek nincs {1} &f'{2}&f'&a metaadata &b{3}&a pritorítással {4}&a kontextusban."
 does-not-have-temp-chat-meta: "&b{0}&a-nak/nek nincs {1} &f'{2}&f'&a ideiglenes metaadata &b{3}&a pritorítással {4}&a kontextusban."
 add-chatmeta-success: "&b{0}&a-nak/nek {1} &f'{2}&f'&a metaadata &b{3}&a priorítással beállítva {4}&a kontextusban."
-add-temp-chatmeta-success: "&b{0}&a-nak/nek {1} &f'{2}&f'&a metaadata &b{3}&a priorítással ideiglenesen beállítva &b{4}&a időre {5}&a kontextusban."
+add-temp-chatmeta-success: "&b{0}&a-nak/nek {1} &f'{2}&f'&a metaadata &b{3}&a prioritással ideiglenesen beállítva &b{4}&a időre {5}&a kontextusban."
 remove-chatmeta-success: "&b{0}&a-nak/nek {1} &f'{2}&f'&a metaadata &b{3}&a prioritással eltávolítva {4}&a kontextusban."
 bulk-remove-chatmeta-success: "&b{0}&a-nak/nek minden {1} metaadata &b{2}&a prioritással eltávolítva {3}&a kontextusban."
-remove-temp-chatmeta-success: "&b{0}&a had temporary {1} &f'{2}&f'&a at priority &b{3}&a removed {4}&a kontextusban."
+remove-temp-chatmeta-success: "&b{0}&a ideiglenes volt {1} &f'{2}&f'&a prioritással &b{3}&a eltávolítva {4}&a kontextusban."
 bulk-remove-temp-chatmeta-success: "&b{0}&a-nak/nek minden {1} ideiglenes metaadata &b{2}&a prioritással eltávolítva {3}&a kontextusban."
 already-has-meta: "&b{0}&a &f'{1}&f'&a nevű metaadat kulcsa &f'{2}&f'&a-ra/re van már állítva {3}&a kontextusban."
 already-has-temp-meta: "&b{0}&a &f'{1}&f'&a nevű metaadat kulcsa ideiglenesen &f'{2}&f'&a-ra/re van már állítva {3}&a kontextusban."
@@ -193,34 +208,34 @@ bulk-update-invalid-data-type: "&cÉrvénytelen típus. Érvényes: 'all', 'user
 bulk-update-invalid-constraint: "&cÉrvénytelen megszorítás &4{0}&c. Érvényes formátum: '&f<field> <comparison operator> <value>&c'."
 bulk-update-invalid-comparison: "&cÉrvénytelen hasonlító operátor '&4{0}&c'. Érvényesek: &f==  !=  ~~  ~!"
 bulk-update-queued: "&aKötegelt módosítás a feldolgozási sorban. &7(&f{0}&7)"
-bulk-update-confirm: "&aFuttasd a &b/{0} bulkupdate confirm {1} &aparancsot ha biztos vagy benne."
+bulk-update-confirm: "&aFuttasd a &b/{0} bulkupdate confirm {1} &aparancsot, ha biztos vagy benne."
 bulk-update-unknown-id: "A(z) &b{0}&a sorszámú feladat nem létezik, vagy lejárt."
 bulk-update-starting: "&aKötegelt módosítás végrehajtása."
 bulk-update-success: "&bKötegelt módosítás sikeresen végrehajtva."
 bulk-update-failure: "&cKötegelt módosítási hiba. Nézd meg a konzolt a hibákért."
 user-info-general: >
-  {PREFIX}&b&l> &bGelhasználói infó: &f{0}\n
-  {PREFIX}&f- &3UUID: &f{1}\n
-  {PREFIX}&f- &3Online: {2}\n
-  {PREFIX}&f- &3Elsődleges csoport: &f{3}\n
+  {PREFIX}&b&l> &bFelhasználói infó: &f{0}\n
+  {PREFIX}&f- &3UUID: &f{1} &7(típus: {2}&7)\n
+  {PREFIX}&f- &3Online: {3}\n
+  {PREFIX}&f- &3Elsődleges csoport: &f{4}
 user-info-data: >
   {PREFIX}&f- &aKontextus adatok:\n
   {PREFIX}&f-    &3Létezik: {0}\n
   {PREFIX}&f-    &3Kontextusok: {1}\n
-  {PREFIX}&f-    &3Prefix: {2}\n
-  {PREFIX}&f-    &3Suffix: {3}\n
+  {PREFIX}&f-    &3Előtag: {2}\n
+  {PREFIX}&f-    &3Utótag: {3}\n
   {PREFIX}&f-    &3Metaadatok: {4}
 info-parent-header: "&f- &aSzülő-csoportok:"
 info-temp-parent-header: "&f- &aIdeiglenes szülő-csoportok:"
 user-removegroup-error-primary: "&aNem veheted el a felhasználó elsődleges csoportját."
 user-primarygroup-success: "&b{0}&a elsődleges csoportja &b{1}&a-ra/re állítva."
-user-primarygroup-warn-option: "&aFigyelem: Az elsődleges csoport számítási módja &7({0}) &anem feltétlen mutatja a változást"
+user-primarygroup-warn-option: "&aFigyelem: Az elsődleges csoport számítási módja &7({0}) &anem feltétlen mutatja a változást."
 user-primarygroup-error-alreadyhas: "&b{0}&a elsődleges csoportja már &b{1}&a."
 user-primarygroup-error-notmember: "&b{0}&a nem volt tagja a(z) &b{1}&a-nak/nek, hozzáadás most."
 user-track-error-not-contain-group: "&b{0}&a nincs benne egyetlen csoportban sem a(z) &b{1}&a ranglétrán."
 user-track-added-to-first: "&b{0}&a nincs benne egyetlen csoportban sem ezen a ranglétrán, ezért hozzá lett adva az első csoporthoz, &b{1}&a - {4}&a kontextusban."
 user-promote-success: "&b{0}&a előléptetése a(z) &b{1}&a ranglétrán &b{2}&a-ból/ből &b{3}&a-ba/be {4}&a kontextusban."
-user-promote-error-endoftrack: "A &b{0}&a véget ért, ezért &b{1}&a nem léptethető tovább elő"
+user-promote-error-endoftrack: "A &b{0}&a véget ért, ezért &b{1}&a nem léptethető tovább elő."
 user-promote-error-malformed: >
   {PREFIX}&aAz előző csoport, &b{0}&a, nem létezik. Sikertelen előléptetés.\n
   {PREFIX}&aHozd létre a csoportot, vagy távolítsd el a ranglétrából.
@@ -232,7 +247,7 @@ user-demote-error-malformed: >
 group-info-general: >
   {PREFIX}&b&l> &bCsoport infó: &f{0}\n
   {PREFIX}&f- &3Megjelenítési név: &f{1}\n
-  {PREFIX}&f- &3Súly: &f{2}\n
+  {PREFIX}&f- &3Súly: &f{2}
 group-set-weight: "&aSúly beállítva &b{0}&a-ra/re a(z) &b{1}&a csoportnak."
 group-set-display-name-doesnt-have: "&b{0}&a-nak/nek nincs beállítva megjelenítési neve."
 group-set-display-name-already-has: "&b{0}&a már rendelkezik ezzel a névvel: &b{1}&a."
@@ -244,16 +259,16 @@ track-info: >
   {PREFIX}&f- &7Útvonal: &f{1}
 track-clear: "&b{0}&a ranglétrája ürítve."
 track-append-success: "&aA csoport &b{0}&a be lett illesztve a(z) &b{1}&a ranglétra végére."
-track-insert-success: "&aA csoport &b{0}&a be lett ilesztve a(z) &b{1}&a ranglétrára a(z) &b{2}&a.helyre."
+track-insert-success: "&aA csoport &b{0}&a be lett ilesztve a(z) &b{1}&a ranglétrára a(z) &b{2}&a. helyre."
 track-insert-error-number: "&cSzám helyett a következő értéket adtad meg: {0}"
-track-insert-error-invalid-pos: "&cNem lehetett beillesztni a(z) &4{0}&c helyre. &7(érvénytelen helyzet)"
+track-insert-error-invalid-pos: "&cNem lehetett beillesztni a(z) &4{0}&c. helyre. &7(érvénytelen helyzet)"
 track-remove-success: "&aA csoport &b{0}&a el lett távolítva a(z) &b{1}&a ranglétráról."
 log-load-error: "&cA naplót nem lehetett betölteni."
 log-invalid-page: "&cÉrvénytelen oldalszám."
 log-invalid-page-range: "&cÉrvénytelen oldalszám. Csak &41&c és &4{0}&c között érvényes."
 log-no-entries: "&bNincsenek naplóbejegyzések."
 log-entry: >
-  {PREFIX}&b#{0} &8(&7{1} -val/vel ezelőtt&8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
+  {PREFIX}&b#{0} &8(&7{1}-val/vel ezelőtt&8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
   {PREFIX}&7> &f{5}
 log-notify-console: "&cKonzol értesítések nem módosíthatóak."
 log-notify-toggle-on: "&bNaplózási kiírások &aengedélyezve&b."
@@ -272,14 +287,15 @@ log-export-not-writable: "&cHiba: &4{0}&c nem írható."
 log-export-empty: "&cA napló üres, ezért nem exportálható."
 log-export-failure: "&cIsmeretlen hiba a fájl írása közben."
 log-export-success: "&aNaplófájl sikeresen mentve: &b{0}&a."
-import-already-running: "&cEgy importálási folyamat már fut, kérlek várd meg végez"
-export-already-running: "&cEgy exportálási folyamat már fut, kérlek várd meg végez"
+import-already-running: "&cEgy importálási folyamat már fut, kérlek, várd meg végez"
+export-already-running: "&cEgy exportálási folyamat már fut, kérlek, várd meg végez"
 import-log-doesnt-exist: "&cHiba: &4{0}&c nem létezik."
 import-log-not-readable: "&cHiba: &4{0}&c nem olvasható."
 import-log-failure: "&cHiba történt a naplófájl olvasása közben."
 import-progress: "&b(Import) &b-> &f{0}&f% kész &7- &b{1}&f/&b{2} &fművelet kész &c{3} &fhibával."
 import-progress-sin: "&b(Import) &b-> &f{0}&f% kész &7- &b{1}&f/&b{2} &fművelet kész &c{3} &fhibával."
 import-start: "&b(Import) &b-> &fImportálás indítása."
+import-info: "&b(Import) &b-> &f{0}."
 import-end-complete: "&b(Import) &a&lELKÉSZÜLT &7- &b{0} &7másodperc alatt - &cNem volt hiba."
 import-end-complete-err: "&b(Import) &a&lELKÉSZÜLT &7- &b{0} &7másodperc alatt - &c{1} hiba."
 import-end-complete-err-sin: "&b(Import) &a&lELKÉSZÜLT &7- &b{0} &7másodperc alatt - &c{1} hiba."
@@ -306,11 +322,15 @@ command-specs:
     usage: "/%s log"
   sync:
     description: "Változtatások szinkronizálása az adattárral"
-
     usage: "/%s sync"
   info:
     description: "Általános plugin információk kiírása"
     usage: "/%s info"
+  editor:
+    description: "Új webszerkesztő munkát készít"
+    usage: "/%s editor [type]"
+    args:
+      "type": "a szerkesztőbe betölteni kívánt típusok. ('all', 'users' vagy 'groups')"
   debug:
     description: "Hibakeresési kimenet"
     usage: "/%s debug"
@@ -451,29 +471,29 @@ command-specs:
     args:
       "context...": "szűrési kontextus"
   permission:
-    description: "Jogosultságok szerkesztése"
+    description: "Jogok szerkesztése"
   parent:
     description: "Öröklések szerkesztése"
   meta:
     description: "Metaadatok szerkesztése"
   permission-info:
-    description: "Célobjektum jogosultságainak listázása"
+    description: "Célobjektum jogainak listázása"
     args:
-      "page": "oldalszám
+      "page": "oldalszám"
       "sort mode": "rendezés módja"
   permission-set:
-    description: "Célobjektum jogosultságának módosítása"
+    description: "Célobjektum jogának módosítása"
     args:
       "node": "módosítandó jog"
       "true|false": "a jog értéke"
       "context...": "kontextus, amiben módosítanád"
   permission-unset:
-    description: "Jogosultság eltávolítása"
+    description: "Jog eltávolítása"
     args:
       "node": "eltávolítandó jog"
       "context...": "eltávolítási kontextus"
   permission-settemp:
-    description: "Ideiglenes jogosultság hozzáadása"
+    description: "Ideiglenes jog hozzáadása"
     args:
       "node": "hozzáadandó jog"
       "true|false": "a jog értéke"
@@ -494,6 +514,10 @@ command-specs:
     args:
       "node": "ellenőrizendő jog"
       "context...": "ellenörzési kontextus"
+  permission-clear:
+    description: "Összes jog törlése"
+    args:
+      "context": "a szövegszűrés körülményei"
   parent-info:
     description: "Csoportok listázása, amitől a célobjektum örököl"
     args:
@@ -515,7 +539,7 @@ command-specs:
       "group": "eltávolítandó csoport"
       "context...": "kontextus, amiben eltávolítanád a csoportot"
   parent-set-track:
-    description: "Eltávolít minden csoportot a célobjektum megadott öröklési fájából és a célra cseréli cseréli"
+    description: "Eltávolít minden csoportot a célobjektum megadott öröklési fájából és a célra cseréli"
     args:
       "track": "módosítandó ranglétra"
       "group": "cél csoport"
@@ -552,14 +576,14 @@ command-specs:
     description: "Metaadat eltávolítása"
     args:
       "key": "eltávolítandó kulcs"
-      "context...": "kontextus, amiben eltávolítanád"y
+      "context...": "kontextus, amiben eltávolítanád"
   meta-settemp:
     description: "Ideiglenes metaadat hozzáadása"
     args:
       "key": "hozzáadandó kulcs"
       "value": "hozzáadandó érték"
       "duration": "lejárati idő"
-      "context...": "the contexts to add the meta pair in"
+      "context...": "a meta-pár beillesztésének kontextusai"
   meta-unsettemp:
     description: "Ideiglenes metaadat eltávolítása"
     args:
@@ -577,6 +601,18 @@ command-specs:
       "priority": "suffix prioritási szintje"
       "suffix": "maga a suffix"
       "context...": "kontextus, amiben hozzáadnád"
+  meta-setprefix:
+    description: "Prefix beállítás"
+    args:
+      "priority": "prefix prioritási szintje"
+      "suffix": "a prefix karakterlánc"
+      "context...": "kontextus, amiben hozzáadnád a prefixet"
+  meta-setsuffix:
+    description: "Suffix beállítás"
+    args:
+      "priority": "suffix prioritási szintje"
+      "suffix": "a suffix karakterlánc"
+      "context...": "kontextus, amiben hozzáadnád a suffixot"
   meta-removeprefix:
     description: "Prefix eltávolítása"
     args:
@@ -603,6 +639,20 @@ command-specs:
       "suffix": "maga a suffix"
       "duration": "lejárati idő"
       "context...": "kontextus, amiben hozzáadnád"
+  meta-settemp-prefix:
+    description: "Ideiglenes prefix beállítása"
+    args:
+      "priority": "prefix prioritási szintje"
+      "suffix": "maga a prefix"
+      "duration": "lejárati idő"
+      "context...": "kontextus, amiben beállítanád"
+  meta-settemp-suffix:
+    description: "Ideiglenes suffix beállítása"
+    args:
+      "priority": "suffix prioritási szintje"
+      "suffix": "maga a suffix"
+      "duration": "lejárati idő"
+      "context...": "kontextus, amiben beállítanád"
   meta-removetemp-prefix:
     description: "Ideiglenes prefix eltávolítása"
     args:
