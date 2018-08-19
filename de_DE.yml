@@ -8,7 +8,7 @@ no-permission-for-subcommands: "&3Du hast keine Rechte zur Nutzung der Unterbefe
 empty: "{0}"
 player-online: "&aOnline"
 player-offline: "&cOffline"
-loading-error: "&cPermissions-Daten konnten nicht geladen werden, bitte später erneut versuchen."
+loading-error: "&cPermissions-Daten konnten nicht geladen werden, bitte versuch es später erneut."
 op-disabled: "&bDas Vanilla OP-System ist auf diesem Server deaktiviert."
 op-disabled-sponge: "&2Bitte beachte, dass der Server-Betreiber keine Wirkung auf die Sponge Permission-Checks hat, wenn ein Permissions-Plugin installiert ist. Bitte bearbeite die Nutzerdaten direkt."
 log-info: "&7&l[&bL&3P&7&l] &3{0}"
