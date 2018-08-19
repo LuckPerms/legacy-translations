@@ -5,25 +5,42 @@
 prefix: "&7&l[&b&lL&3&lP&7&l] "
 view-available-commands-prompt: "&3Nutze &a/{0} help&3, um verfügbare Befehle zu sehen."
 no-permission-for-subcommands: "&3Du hast keine Rechte zur Nutzung der Unterbefehle."
+first-time-setup: >
+  {PREFIX}&3Es scheint als wären noch keine Rechte gesetzt worden!\n
+  {PREFIX}&3Befor du eine der LuckPerms-Befehle verwenden kannst, musst du dir zuerst per Konsole rechte geben.\n
+  {PREFIX}&3Öffne deine Konsole und verwende:\n
+  {PREFIX} &3&l> &a{0} user {1} permission set luckperms.* true\n
+  \n
+  {PREFIX}&3Nachdem du das gemacht hast, kannst du anfangen, Rechte und Gruppen zu geben.\n
+  {PREFIX}&3Weist nicht, wo anfangen? Schau hier: &7https://github.com/lucko/LuckPerms/wiki/Usage
 empty: "{0}"
 player-online: "&aOnline"
 player-offline: "&cOffline"
-loading-error: "&cPermissions-Daten konnten nicht geladen werden, bitte versuch es später erneut."
+loading-database-error: "&cEin Datenbankfehler ist während dem laden der Rechte aufgetreten. Bitte versuch es später erneut."
+loading-state-error: "&cRechte für deinen Benutzer konnte während dem Pre-login nicht geladen werden - Unmöglich fortzufahren. Bitte versuch es später erneut."
+loading-setup-error: "&cEin unerwarteter Fehler ist beim erstellen der Rechte aufgetreten. Bitte versuch es später erneut."
 op-disabled: "&bDas Vanilla OP-System ist auf diesem Server deaktiviert."
 op-disabled-sponge: "&2Bitte beachte, dass der Server-Betreiber keine Wirkung auf die Sponge Permission-Checks hat, wenn ein Permissions-Plugin installiert ist. Bitte bearbeite die Nutzerdaten direkt."
-log-info: "&7&l[&bL&3P&7&l] &3{0}"
-log-warn: "&7&l[&bLuck&3Perms&7&l] &c[WARN] {0}"
-log-error: "&7&l[&bLuck&3Perms&7&l] &4[ERROR] {0}"
 log: >
   {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
   {PREFIX}&3LOG &3&l> &f{3}
-verbose-log: "&3VB &3&l> {0}"
+verbose-log: "&3VB &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
 export-log: "&3EXPORT &3&l> &f{0}"
 export-log-progress: "&3EXPORT &3&l> &7{0}"
 migration-log: "&3MIGRATION &7[&3{0}&7] &3&l> &f{1}"
 migration-log-progress: "&3MIGRATION &7[&3{0}&7] &3&l> &7{1}"
 command-not-recognised: "&cUnbekannter Befehl."
 command-no-permission: "&cKeine Rechte auf diesen Befehl!"
+main-command-usage-header: "&b{0} Unterbefehl: &7({1} ...)"
+command-usage-argument-join: "&3 - &7"
+command-usage-brief: "&3> &a{0}{1}"
+command-usage-detailed-header: >
+  {PREFIX}&3&lBefehlsverwendung &3- &b{0}\n
+  {PREFIX}&b> &7{1}
+command-usage-detailed-args-header: "&3Argumente:"
+command-usage-detailed-arg: "&b- {0}&3 -> &7{1}"
+required-argument: "&8<&7{0}&8>"
+optional-argument: "&8[&7{0}&8]"
 user-not-found: "&cKein Nutzer für &4{0}&c gefunden."
 user-not-online: "&aNutzer &b{0}&a ist nicht online."
 user-save-error: "&cFehler beim speichern der Nutzer-Daten für &4{0}&c."
@@ -46,7 +63,7 @@ verbose-results-url: "&aUEL der Verbose-Ergebnisse:"
 tree-upload-start: "&bErstelle Permission-Baum..."
 tree-empty: "&cBerechtigungs-Baum konnte nicht erstellt werden. Keine Ergebnisse gefunden."
 tree-url: "&aURL des Berechtigungs-Baumes:"
-search-searching: "&aSuche nach Nutzern und Gruppen mit &b{0}&a..."
+search-searching: "&aSuche nach Nutzern und Gruppen mit &bberechtigung {0}&a..."
 search-searching-members: "&aSuche nach Nutzern und Gruppen, die von &b{0}&a erben..."
 search-result: "&aEs wurden &b{0}&a Einträge von &b{1}&a Nutzern und &b{2}&a Gruppen gefunden."
 search-showing-users: "&bZeige Nutzer-Einträge:    &7(Seite &f{0}&7 von &f{1}&7 - &f{2}&7 Einträge)"
@@ -58,10 +75,12 @@ apply-edits-target-group-not-exists: "&cZiel-Gruppe &4{0}&c existiert nicht."
 apply-edits-target-user-not-uuid: "&cZiel-Nutzer &4{0}&c îst keine gültige UUID."
 apply-edits-target-user-unable-to-load: "&cZiel-Nutzer &4{0}&c konnte nicht geladen werden."
 apply-edits-target-unknown: "&cUngültiges Ziel. &7({0})"
+apply-edits-target-no-changes-present: "&aKeine Änderungen wurden vom Web-Editor übernommen. Die erhaltenen Daten enthielten keine Bearbeitungen."
 apply-edits-success: "&aWeb-Editor-Daten wurden erfolgreich auf &b{0}&a angewendet."
 apply-edits-success-summary: "&7(&a{0} &7{1} und &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
+editor-no-match: "&cEditor kann nicht geöffnet werden. Kein Objekt entspricht dem verlangten Typ."
 editor-start: "&7Bereite neue Editor-Sitzung vor. Bitte warten..."
 editor-upload-failure: "&cPermissions-Daten konnten nicht zum Editor hochgeladen werden"
 editor-url: "&aKlicke auf den unten stehenden Link, um den Editor zu öffnen:"
@@ -98,6 +117,10 @@ info-top: >
   {PREFIX}&f-  &3Server-Brand: &f{2}\n
   {PREFIX}&f-  &3Server-Version:\n
   {PREFIX}&f-  {3}
+info-storage: >
+  {PREFIX}&f-  &bSpeicher:\n
+  {PREFIX}&f-     &3Typ: &f{0}
+info-storage-meta: "&f-     &3{0}: {1}"
 info-middle: >
   {PREFIX}&f-  &bMessaging: &f{0}\n
   {PREFIX}&f-  &bInstanz:\n
@@ -141,8 +164,10 @@ set-parent-success: "&b{0}&a hat existierende 'Eltern'-Gruppen entfernt bekommen
 set-track-parent-success: "&b{0}&a hat existierende 'Eltern'-Gruppen auf Track &b{1}&a entfernt bekommen, und erbt jetzt nur noch Permissions von &b{2}&a im Kontext {3}&a."
 unset-inherit-success: "&b{0}&a erbt keine Rechte mehr von &b{1}&a im Kontext {2}&a."
 unset-temp-inherit-success: "&b{0}&a erbt keine temporären Permissions mehr von &b{1}&a im Kontext {2}&a."
-clear-success: "&b{0}&as Permissions wurden im Kontext {1}&a gelöscht. (&b{2}&a Perm-Nodes wurden entfernt.)"
-clear-success-singular: "&b{0}&as Permissions wurden im Kontext {1}&a gelöscht. (&b{2}&a Perm-Node wurde entfernt.)"
+clear-success: "&b{0}&a's Einträge im kontext {1}&a wurden entfernt. (&b{2}&a Einträge wurden entfernt.)"
+clear-success-singular: "&b{0}&a's Einträge im Kontext {1}&a wurden entfernt. (&b{2}&a Eintrag wurde entfernt.)"
+permission-clear-success: "&b{0}&a's Rechte im Kontext {1}&a wurden entfernt. (&b{2}&a Einträge wurden entfernt.)"
+permission-clear-success-singular: "&b{0}&a's Rechte im Kontext {1}&a wurden entfernt. (&b{2}&a Eintrag wurde entfernt.)"
 parent-clear-success: "&b{0}&as 'Eltern' wurden im Kontext {1}&a gelöscht. (&b{2}&a Perm-Nodes wurden entfernt.)"
 parent-clear-success-singular: "&b{0}&as 'Eltern' wurden im Kontext {1}&a gelöscht. {1}&a. (&b{2}&a Perm-Node wurde entfernt.)"
 parent-clear-track-success: "&b{0}&as 'Eltern' in Track &b{1}&a wurden im Kontext {2}&a gelöscht. (&b{3}&a Perm-Nodes wurden entfernt.)"
@@ -191,9 +216,9 @@ bulk-update-success: "&bBulk Update erfolgreich ausgeführt."
 bulk-update-failure: "&cBulk Update fehlgeschlagen. Für Fehler-Details in der Konsole nachsehen."
 user-info-general: >
   {PREFIX}&b&l> &bNutzer-Info: &f{0}\n
-  {PREFIX}&f- &3UUID: &f{1}\n
-  {PREFIX}&f- &3Status: {2}\n
-  {PREFIX}&f- &3Primäre Gruppe: &f{3}
+  {PREFIX}&f- &3UUID: &f{1} &7(Typ: {2}&7)\n
+  {PREFIX}&f- &3Status: {3}\n
+  {PREFIX}&f- &3Primäre Gruppe: &f{4}
 user-info-data: >
   {PREFIX}&f- &aContextuale Daten:\n
   {PREFIX}&f-    &3Hat kontextuale Daten: {0}\n
@@ -203,6 +228,8 @@ user-info-data: >
   {PREFIX}&f-    &3Meta: {4}
 info-parent-header: "&f- &a'Eltern'-Gruppen:"
 info-temp-parent-header: "&f- &aTemporäre 'Eltern'-Gruppen:"
+info-parent-entry: "&f-    &3> &f{0}{1}"
+info-parent-entry-expiry: "&f-    &2-    endet in {0}"
 user-removegroup-error-primary: "&aDu kannst einen Nutzer nicht von seiner Primärgruppe entfernen."
 user-primarygroup-success: "&b{0}&as Primärgruppe wurde auf &b{1}&a gesetzt."
 user-primarygroup-warn-option: "&aWarnung: Die primäre Gruppen-Kalkulations-Methode die von diesm Server &7({0}) &averwendet wird, reflektiert diese Änderung evtl. nicht."
@@ -228,8 +255,8 @@ group-set-weight: "&aGewichtung für Gruppe &b{1}&a auf &b{0}&a gesetzt."
 group-set-display-name-doesnt-have: "&b{0}&a Hat keinen Anzeigenamen gesetzt."
 group-set-display-name-already-has: "&b{0}&a hat bereits den Anzeigenamen &b{1}&a."
 group-set-display-name-already-in-use: "&aDer Anzeigename &b{0}&a wird bereits von &b{1}&a verwendet."
-group-set-display-name: "&aAnzeigename für Gruppe &b{1}&a wurde auf &b{0}&a gesetzt."
-group-set-display-name-removed: "&aAnzeigename für Gruppe &b{0}&a wurde entfernt."
+group-set-display-name: "&aAnzeigename für Gruppe &b{1}&a wurde auf &b{0}&a im Kontext {2}&a gesetzt."
+group-set-display-name-removed: "&aAnzeigename für Gruppe &b{0}&a im Kontext {2}&a entfernt."
 track-info: >
   {PREFIX}&b&l> &bZeige Track: &f{0}\n
   {PREFIX}&f- &7Pfad: &f{1}
@@ -271,6 +298,7 @@ import-log-failure: "&cUnerwarteter Fehler beim einlesen der Log-Datei."
 import-progress: "&b(Import) &b-> &f{0}&f% abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehlern fertiggestellt."
 import-progress-sin: "&b(Import) &b-> &f{0}&f% abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehler fertiggestellt."
 import-start: "&b(Import) &b-> &fStarte Import-Prozess."
+import-info: "&b(Import) &b-> &f{0}."
 import-end-complete: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden - &7Keine Fehler."
 import-end-complete-err: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden -  &c{1} Fehler."
 import-end-complete-err-sin: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden - &c{1} Fehler."
