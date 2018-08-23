@@ -452,7 +452,7 @@ command-specs:
   group-set-display-name:
     description: "设置组的显示名称"
     args:
-      "name": "设置的名称""
+      "name": "设置的名称"
   group-rename:
     description: "重命名组"
     args:
