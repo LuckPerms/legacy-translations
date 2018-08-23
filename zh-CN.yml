@@ -479,7 +479,7 @@ command-specs:
     description: "列出对象拥有的权限节点"
     args:
       "page": "页面查看"
-      "sort mode": "排序方式""
+      "sort mode": "排序方式"
   permission-set:
     description: "设置对象的权限"
     args:
@@ -516,7 +516,7 @@ command-specs:
   parent-info:
     description: "列出此对象从哪里继承的组"
     args:
-      "page": "要查看的页数""
+      "page": "要查看的页数"
       "sort mode": "排序方式"
   parent-set:
     description: "删除对象已经继承的所有其他组，并将其添加到给定的对象组中。"
