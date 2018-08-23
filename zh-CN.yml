@@ -1,18 +1,29 @@
 # LuckPerms Language File
 # Locale: zh-CN (Simplified Chinese)
-# Author: EuropeJing
+# Author: EuropeJing & HIGAN
 
 prefix: "&7&l[&b&lL&3&lP&7&l] &c"
+view-available-commands-prompt: "&使用 &a/{0} help &3来查看可用的命令。"
+no-permission-for-subcommands: "&3你没有权限使用任何子命令。"
+first-time-setup: >
+  {PREFIX}&3看起来你还没有设置任何权限！\n
+  {PREFIX}&3在你可以使用任何 LuckPerms 命令之前，你需要使用控制台来给你自己访问 LuckPerms 的权限。\n
+  {PREFIX}&3在你的控制台上输入下面命令：\n
+  {PREFIX} &3&l> &a{0} user {1} permission set luckperms.* true\n
+  \n
+  {PREFIX}&3当你完成这些操作，你就能定义你自己的权限分配和组了。\n
+  {PREFIX}&3还不知道如何操作？点击这里：&7https://github.com/lucko/LuckPerms/wiki/Usage
 empty: "{0}"
 player-online: "&a在线"
 player-offline: "&c离线"
-loading-error: "&c权限数据无法加载，请稍后再试。"
-op-disabled: "&b此服务器上禁用了vanilla OP系统。"
-op-disabled-sponge: "&2请注意，当安装权限插件时，服务器OP状态无效。请直接编辑用户数据。"
-log-info: "&7&l[&bL&3P&7&l] &3{0}"
-log-warn: "&7&l[&bLuck&3Perms&7&l] &c[警告] {0}"
-log-error: "&7&l[&bLuck&3Perms&7&l] &4[错误] {0}"
-log: "&3日志 &3&l> {0}"
+loading-database-error: "&c加载权限时发生数据库错误，请稍后尝试。"
+loading-state-error: "&c在预登录阶段未能成功加载用户的权限数据 - 无法继续，请稍后尝试。"
+loading-setup-error: "&c设置权限数据时发生意外错误，请稍后再试。"
+op-disabled: "&b此服务器上禁用了原生 OP 系统。"
+op-disabled-sponge: "&2请注意，当安装权限插件时，服务器 OP 状态无效。请直接编辑用户数据。"
+log: >
+  {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
+  {PREFIX}&3LOG &3&l> &f{3}
 verbose-log: "&3详细 &3&l> {0}"
 export-log: "&3输出 &3&l> &f{0}"
 export-log-progress: "&3输出 &3&l> &7{0}"
@@ -20,6 +31,16 @@ migration-log: "&3移动 &7[&3{0}&7] &3&l> &f{1}"
 migration-log-progress: "&3移动 &7[&3{0}&7] &3&l> &7{1}"
 command-not-recognised: "&c命令未被识别。"
 command-no-permission: "&c你没有权限使用这个命令!"
+main-command-usage-header: "&b{0} 子命令： &7({1} ...)"
+command-usage-argument-join: "&3 - &7"
+command-usage-brief: "&3> &a{0}{1}"
+command-usage-detailed-header: >
+  {PREFIX}&3&l命令用法 &3- &b{0}\n
+  {PREFIX}&b> &7{1}
+command-usage-detailed-args-header: "&3Arguments:"
+command-usage-detailed-arg: "&b- {0}&3 -> &7{1}"
+required-argument: "&8<&7{0}&8>"
+optional-argument: "&8[&7{0}&8]"
 user-not-found: "&c找不到用户&4{0}&c。"
 user-not-online: "&a用户&b{0}&a不在线。"
 user-save-error: "&c保存用户&4{0}&c数据时出错。"
@@ -45,10 +66,8 @@ tree-url: "&a权限树网址:"
 search-searching: "&a使用&b{0}&a搜索用户和组..."
 search-searching-members: "&a正在搜索继承自&b{0}&a的用户和组..."
 search-result: "&a从&b{1}&a用户和&b{2}&a组找到&b{0}&a个条目。"
-search-showing-users: "&b显示用户条目:"
-search-showing-groups: "&b显示组条目:"
-search-showing-users-with-page: "&b显示用户条目: {0}"
-search-showing-groups-with-page: "&b显示组条目: {0}"
+search-showing-users: "&b显示用户条目:    &7(第 &f{0}&7/&f{1}&7页 - &f{2}&7 条目)"
+search-showing-groups: "&b显示组条目:    &7(第 &f{0}&7/&f{1}&7页 - &f{2}&7 条目)"
 apply-edits-invalid-code: "&c无效的代码。&7({0})"
 apply-edits-unable-to-read: "&c无法使用给定代码读取数据。&7({0})"
 apply-edits-no-target: "&c无法解析编辑的目标。请提供它作为一个额外的参数。"
@@ -56,12 +75,15 @@ apply-edits-target-group-not-exists: "&c目标组&4{0}&c不存在。"
 apply-edits-target-user-not-uuid: "&c目标用户&4{0}&c不是一个有效的uuid。"
 apply-edits-target-user-unable-to-load: "&c无法加载目标用户&4{0}&c。"
 apply-edits-target-unknown: "&c目标无效。&7({0})"
+apply-edits-target-no-changes-present: "&a由于返回的数据没有包含任何改动，网页编辑器没有应用任何修改。"
 apply-edits-success: "&a网页编辑器数据已成功应用于&b{0}&a。"
 apply-edits-success-summary: "&7(&a{0} &7{1} 和 &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
+editor-no-match: "&c无法打开编辑器，没有符合所需类型的对象。"
+editor-start: "&7准备新的编辑器会话，请稍候..."
 editor-upload-failure: "&c无法将权限数据上传到编辑器。"
-editor-url: "&a编辑器URL:"
+editor-url: "&a点击链接打开编辑器："
 check-result: "&a用户&b{0}&a获得允许&b{1}&a权限的检查结果&a: &f{2}"
 create-success: "&b{0}&a创建成功。"
 delete-success: "&b{0}&a删除成功。"
@@ -76,6 +98,7 @@ track-does-not-contain: "&a权限组轨道&b{0}&a不包含组&b{1}&a。"
 track-ambiguous-call: "&c用户&4{0}&c是此权限组轨道上多个组的成员，无法确定他们的位置。"
 already-exists: "&4{0}&c已存在!"
 does-not-exist: "&4{0}&c不存在!"
+user-load-error: "&c发生意外错误，用户未加载。"
 group-load-error: "&c发生意外错误，组未加载。"
 groups-load-error: "&c发生意外错误，无法加载所有组。"
 track-load-error: "&c发生意外错误。权限组轨道未加载。"
@@ -92,39 +115,39 @@ info-top: >
   {PREFIX}&2运行 &bLuckPerms v{0}&2 by &bLuck&2。\n
   {PREFIX}&f-  &3平台: &f{1}\n
   {PREFIX}&f-  &3服务器型号: &f{2}\n
-  {PREFIX}&f-  &3服务器版本: &f{3}
+  {PREFIX}&f-  &3服务器版本: &f\n
+  {PREFIX}&f-  {3}
+info-storage: >
+  {PREFIX}&f-  &b储存:\n
+  {PREFIX}&f-     &3类型: &f{0}
+info-storage-meta: "&f-     &3{0}: {1}"
 info-middle: >
   {PREFIX}&f-  &3消息类型: &f{0}\n
-  {PREFIX}&f-  &b详情:\n
-  {PREFIX}&f-     &3服务器名称: &f{1}\n
-  {PREFIX}&f-     &3在线玩家: &a{2}\n
-  {PREFIX}&f-     &3唯一连接: &a{3}\n
+  {PREFIX}&f-  &b服务器实例:\n
+  {PREFIX}&f-     &3静态的: &f{1}\n
+  {PREFIX}&f-     &3在线玩家: &a{2} &7(&a{3}&7 unique)\n
   {PREFIX}&f-     &3正常运行时间: &7{4}\n
-  {PREFIX}&f-     &3本地数据: &a{5}&7用户，&a{6}&7组，&a{7}&7权限组轨道\n
-  {PREFIX}&f-     &3环境统计: &a{8}\n
-  {PREFIX}&f-     &3已知权限: &a{9}\n
-  {PREFIX}&f-     &3活动处理器: &7{10}
-create-group-error: "&c创建组&4{0}&c时出错。"
-delete-group-error: "&c删除组&4{0}&c时出错。"
+  {PREFIX}&f-     &3本地数据: &a{5} &7用户, &a{6} &7组, &a{7} &7权限组轨道
+debug-start: "&b生成 debug 输出..."
+debug-url: "&aDebug 数据地址："
+create-error: "&c创建时出错 &4{0}&c."
+delete-error: "&c删除时出错 &4{0}&c."
 delete-group-error-default: "&c你不能删除默认组。"
 groups-list: "&a组: &7(名字，权重，权限组轨道)"
 groups-list-entry: "&f-  &3{0} &7- &b{1}"
 groups-list-entry-with-tracks: "&f-  &3{0} &7- &b{1} &7- [&3{2}&7]"
-tracks-list: "&a权限组轨道: {0}"
-listnodes: "&b{0}的权限:"
-listnodes-with-page: "&b{0}的权限:  {1}"
-listnodes-temp: "&b{0}的临时权限:"
-listnodes-temp-with-page: "&b{0}的临时权限:  {1}"
-listparents: "&b{0}的父组"
-listparents-temp: "&b{0}的临时父组:"
-list-tracks: >
-  &b{0}的权限组轨道:\n
-  {1}
-list-tracks-empty: "&b{0}&a不在任何权限组轨道上。"
+tracks-list: "&a权限组轨道：{0}"
+permission-info: "&b{0}的权限： &7(第 &f{1}&7/&f{2}&7 页 - &f{3}&7 条目)"
+permission-info-no-data: "&b{0}&a 没有任何权限设置。"
+parent-info: "&b{0}的继承信息： &7(第 &f{1}&7/&f{2}&7 页 - &f{3}&7 条目)"
+parent-info-no-data: "&b{0}&a 没有任何继承关系定义。"
+list-tracks: "&b{0}的权限组轨道："
+list-tracks-entry: "&a{0}: {1}"
+list-tracks-empty: "&b{0}&a 不在任何权限组轨道上。"
 context-pair-inline: "&3{0}=&b{1}"
 context-pair--global-inline: "&e全局"
-context-pair-sep: "&a，"
-context-pair: "&8(&7{0}=&f{1}&8)"
+context-pair-sep: "&a, "
+context-pair: "&8(&7{0}=&f{1}&8)" 
 check-permission: "&b在环境&b{3}&b中，&b{0}&b的权限&b{1}&b被设置为&b{2}&b。"
 check-inherits-permission: "&a在环境&b{3}&a中将&b{0}&a的&b{1}&a权限设置为&b{2}&a。&7(从&a{4}&7继承)"
 setpermission-success: "&a在环境&b{3}&a中将&b{2}&a的&b{0}&a权限设置为&b{1}&a。"
@@ -143,6 +166,8 @@ unset-inherit-success: "&b{0}&a不再继承环境&b{2}&a中&b{1}&a的权限。"
 unset-temp-inherit-success: "&b{0}&a在环境&b{2}&a中不再继承临时权限&b{1}&a。"
 clear-success: "&b{0}&a的权限在环境&b{1}&a中被清除。(&b{2}&a节点已被删除。)"
 clear-success-singular: "&b{0}&a的权限在环境&b{1}&a中被清除。(&b{2}&a节点已被删除。)"
+permission-clear-success: "&b{0}&a的权限在环境{1}&a中被清除。(&b{2}&a节点已被删除。)"
+permission-clear-success-singular: "&b{0}&的权限在环境{1}&a中被清除。(&b{2}&a节点已被删除。)"
 parent-clear-success: "&b{0}&a的父组在环境&b{1}&a中被清除。(&b{2}&a节点被删除。)"
 parent-clear-success-singular: "&b{0}&a的父组在环境&b{1}&a中被清除。(&b{2}&a节点被删除。)"
 parent-clear-track-success: "在权限组轨道&b{1}&a上，&b{0}&a的父组在环境&b{2}&a中被清除。(&b{3}&a节点被删除。)"
@@ -180,7 +205,7 @@ set-meta-success: "&a在环境&b{3}&a中将&b{2}&a的元信息&f'{0}&f'&a设置�
 set-meta-temp-success: "&a在环境&b{4}&a中将&b{2}&a的元信息&f'{0}&f'&a设置为&f'{1}&f'&a，持续时间为&b{3}&a。"
 unset-meta-success: "&a在环境{2}中取消设置&b{1}&a的元信息&f'{0}&f'&a。"
 unset-meta-temp-success: "&a在环境{2}中取消设置&b{1}&a的临时元信息&f'{0}&f'&a。"
-bulk-update-invalid-data-type: "&c类型无效。期望类型是'全部'、'用户'或'组'。"
+bulk-update-invalid-data-type: "&c类型无效。期望类型是'all'、'users'或'groups'。"
 bulk-update-invalid-constraint: "&c无效的约束&4{0}&c。约束的格式应该是'&f<field> <comparison operator> <value>&c'。"
 bulk-update-invalid-comparison: "&c比较运算符无效'&4{0}&c'。应该以下之一: &f==  !=  ~~  ~!"
 bulk-update-queued: "&a批量更新操作已排队。&7(&f{0}&7)"
@@ -190,24 +215,21 @@ bulk-update-starting: "&a运行批量更新。"
 bulk-update-success: "&b批量更新已成功完成。"
 bulk-update-failure: "&c批量更新失败。检查控制台是否有错误。"
 user-info-general: >
-  {PREFIX}&b&l> &b用户信息: &f{0}\n
-  {PREFIX}&f- &3UUID: &f{1}\n
-  {PREFIX}&f- &3状态: {2}\n
-  {PREFIX}&f- &3主组: &f{3}\n
-  {PREFIX}&f- &a统计:\n
-  {PREFIX}&f-    &3节点: &a{4}\n
-  {PREFIX}&f-    &3权限: &a{5}\n
-  {PREFIX}&f-    &3前缀: &a{6}\n
-  {PREFIX}&f-    &3后缀: &a{7}\n
-  {PREFIX}&f-    &3元信息: &a{8}
+  {PREFIX}&b&l> &b用户信息:&f{0}\n
+  {PREFIX}&f- &3UUID：&f{1} &7(类型：{2}&7)\n
+  {PREFIX}&f- &3状态：{3}\n
+  {PREFIX}&f- &3主组：&f{4}
 user-info-data: >
-  {PREFIX}&f- &a缓存数据:\n
-  {PREFIX}&f-    &3具有环境数据: {0}\n
-  {PREFIX}&f-    &3当前环境: {1}\n
-  {PREFIX}&f-    &3当前前缀: {2}\n
-  {PREFIX}&f-    &3当前后缀: {3}
+  {PREFIX}&f- &a环境数据：\n
+  {PREFIX}&f-    &3具有环境数据：{0}\n
+  {PREFIX}&f-    &3适用的环境：{1}\n
+  {PREFIX}&f-    &3当前前缀：{2}\n
+  {PREFIX}&f-    &3当前后缀：{3}\n
+  {PREFIX}&f-    &3元数据：{4}
 info-parent-header: "&f- &a父组:"
 info-temp-parent-header: "&f- &a临时父组:"
+info-parent-entry: "&f-    &3> &f{0}{1}"
+info-parent-entry-expiry: "&f-    &2-    将在 {0} 过期"
 user-removegroup-error-primary: "&a你不能从其主组中删除用户。"
 user-primarygroup-success: "&b{0}&a的主组已设为&b{1}&a。"
 user-primarygroup-warn-option: "&a警告：此服务器&7({0})&a使用的主组计算方法可能无法反映此更改。"
@@ -229,12 +251,6 @@ group-info-general: >
   {PREFIX}&b&l> &b组信息: &f{0}\n
   {PREFIX}&f- &3显示名称: &f{1}\n
   {PREFIX}&f- &3权重: &f{2}\n
-  {PREFIX}&f- &a统计:\n
-  {PREFIX}&f-    &3节点: &a{3}\n
-  {PREFIX}&f-    &3临时权限: &a{4}\n
-  {PREFIX}&f-    &3前缀: &a{5}\n
-  {PREFIX}&f-    &3后缀: &a{6}\n
-  {PREFIX}&f-    &3元信息: &a{7}
 group-set-weight: "&a将组&b{1}&a的权重设置为&b{0}&a。"
 group-set-display-name-doesnt-have: "&b{0}&a没有设置显示名称。"
 group-set-display-name-already-has: "&b{0}&a已经有一个显示名称&b{1}&a。"
@@ -254,7 +270,9 @@ log-load-error: "&c日志无法加载。"
 log-invalid-page: "&c页码无效。"
 log-invalid-page-range: "&c页码无效，请输入&41&c和&4{0}&c之间的值。"
 log-no-entries: "&b没有日志条目显示。"
-log-entry: "&b#{0} -> &8(&7{1} ago&8) {2}"
+log-entry: >
+  {PREFIX}&b#{0} &8(&7{1} 之前&8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
+  {PREFIX}&7> &f{5}
 log-notify-console: "&c无法切换控制台通知。"   
 log-notify-toggle-on: "&a启用&b记录输出。"
 log-notify-toggle-off: "&c禁用&b记录输出。"
@@ -280,6 +298,7 @@ import-log-failure: "&c从日志文件读取时发生意外错误。"
 import-progress: "&b(导入) &b-> &f{0}&f%完成 &7- &b{1}&f/&b{2} &f完成 &c{3}&f错误。"
 import-progress-sin: "&b(导入) &b-> &f{0}&f%完成 &7- &b{1}&f/&b{2} &f完成 &c{3}&f错误。"
 import-start: "&b(导入) &b-> &f开始导入过程。"
+import-info: "&b(导入) &b-> &f{0}."
 import-end-complete: "&b(导入) &a&l已完成 &7- 用了 &b{0} &7秒 - &7没有错误。"
 import-end-complete-err: "&b(导入) &a&l已完成 &7- 用了 &b{0} &7秒 - &c{1}错误。"
 import-end-complete-err-sin: "&b(导入) &a&l已完成 &7- 用了 &b{0} &7秒 - &c{1}错误。"
@@ -311,6 +330,9 @@ command-specs:
   info:
     description: "打印通用插件信息"
     usage: "/%s info"
+  debug:
+    description: "生成调试输出"
+    usage: "/%s debug"
   verbose:
     description: "管理详细权限检查"
     usage: "/%s verbose <true|false> [filter]"
@@ -413,6 +435,10 @@ command-specs:
     args:
       "track": "降低用户的权限组轨道"
       "context...": "降低用户使用的环境"
+  user-clone:
+    description: "复制用户"
+    args:
+      "user": "选哟复制的用户的用户名或uuid "
   group-info:
     description: "提供有关组的信息"
   group-listmembers:
@@ -423,6 +449,10 @@ command-specs:
     description: "设置组权重"
     args:
       "weight": "设定权重"
+  group-set-display-name:
+    description: "设置组的显示名称"
+    args:
+      "name": "设置的名称""
   group-rename:
     description: "重命名组"
     args:
@@ -449,7 +479,7 @@ command-specs:
     description: "列出对象拥有的权限节点"
     args:
       "page": "页面查看"
-      "filter": "要过滤的字符串"
+      "sort mode": "排序方式""
   permission-set:
     description: "设置对象的权限"
     args:
@@ -485,6 +515,9 @@ command-specs:
       "context...": "权限的环境"
   parent-info:
     description: "列出此对象从哪里继承的组"
+    args:
+      "page": "要查看的页数""
+      "sort mode": "排序方式"
   parent-set:
     description: "删除对象已经继承的所有其他组，并将其添加到给定的对象组中。"
     args:
