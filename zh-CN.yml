@@ -124,7 +124,7 @@ info-storage-meta: "&f-     &3{0}: {1}"
 info-middle: >
   {PREFIX}&f-  &3消息类型: &f{0}\n
   {PREFIX}&f-  &b服务器实例:\n
-  {PREFIX}&f-     &3静态的: &f{1}\n
+  {PREFIX}&f-     &3静态环境: &f{1}\n
   {PREFIX}&f-     &3在线玩家: &a{2} &7(&a{3}&7 unique)\n
   {PREFIX}&f-     &3正常运行时间: &7{4}\n
   {PREFIX}&f-     &3本地数据: &a{5} &7用户, &a{6} &7组, &a{7} &7权限组轨道
