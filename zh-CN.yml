@@ -3,7 +3,7 @@
 # Author: EuropeJing & HIGAN
 
 prefix: "&7&l[&b&lL&3&lP&7&l] &c"
-view-available-commands-prompt: "&使用 &a/{0} help &3来查看可用的命令。"
+view-available-commands-prompt: "&3使用 &a/{0} help &3来查看可用的命令。"
 no-permission-for-subcommands: "&3你没有权限使用任何子命令。"
 first-time-setup: >
   {PREFIX}&3看起来你还没有设置任何权限！\n
@@ -167,7 +167,7 @@ unset-temp-inherit-success: "&b{0}&a在环境&b{2}&a中不再继承临时权限&
 clear-success: "&b{0}&a的权限在环境&b{1}&a中被清除。(&b{2}&a节点已被删除。)"
 clear-success-singular: "&b{0}&a的权限在环境&b{1}&a中被清除。(&b{2}&a节点已被删除。)"
 permission-clear-success: "&b{0}&a的权限在环境{1}&a中被清除。(&b{2}&a节点已被删除。)"
-permission-clear-success-singular: "&b{0}&的权限在环境{1}&a中被清除。(&b{2}&a节点已被删除。)"
+permission-clear-success-singular: "&b{0}&a的权限在环境{1}&a中被清除。(&b{2}&a节点已被删除。)"
 parent-clear-success: "&b{0}&a的父组在环境&b{1}&a中被清除。(&b{2}&a节点被删除。)"
 parent-clear-success-singular: "&b{0}&a的父组在环境&b{1}&a中被清除。(&b{2}&a节点被删除。)"
 parent-clear-track-success: "在权限组轨道&b{1}&a上，&b{0}&a的父组在环境&b{2}&a中被清除。(&b{3}&a节点被删除。)"
