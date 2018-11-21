@@ -1,749 +1,769 @@
-# LuckPerms Language File
-# Locale: de_DE (German)
-# Author: X0=LA
+﻿# LuckPerms Language File
+# Locale: de_DE (German/Deutsch)
+# Author: Original -> itsTyrion | Revision -> X00LA
+# Date of Revision: 2018-11-21
 
 prefix: "&7&l[&b&lL&3&lP&7&l] "
-view-available-commands-prompt: "&3Use &a/{0} help &3to view available commands."
-no-permission-for-subcommands: "&3You do not have permission to use any sub commands."
+view-available-commands-prompt: "&3Nutze &a/{0} help&3, um die verfügbaren Befehle zu sehen."
+no-permission-for-subcommands: "&3Dir fehlen die nötigen Berechtigungen um Unterbefehle nutzen zu können."
+first-time-setup: >
+  {PREFIX}&3Es scheint, als wären noch keine Rechte gesetzt worden!\n
+  {PREFIX}&3Befor du die LuckPerms-Befehle verwenden kannst, musst du dir zuerst, per Konsole, die Rechte geben.\n
+  {PREFIX}&3Öffne deine Konsole und verwende:\n
+  {PREFIX} &3&l> &a{0} user {1} permission set luckperms.* true\n
+  \n
+  {PREFIX}&3Nachdem du das gemacht hast, kannst du anfangen, Rechte und Gruppen zu geben.\n
+  {PREFIX}&3Du weißt nicht wo du anfangen sollst? Schau hier: &7https://github.com/lucko/LuckPerms/wiki/Usage
 empty: "{0}"
 player-online: "&aOnline"
 player-offline: "&cOffline"
-loading-error: "&cPermissions data could not be loaded. Please try again later."
-op-disabled: "&bThe vanilla OP system is disabled on this server."
-op-disabled-sponge: "&2Please note that Server Operator status has no effect on Sponge permission checks when a permission plugin is installed. Please edit user data directly."
-log-info: "&7&l[&bL&3P&7&l] &3{0}"
-log-warn: "&7&l[&bLuck&3Perms&7&l] &c[WARN] {0}"
-log-error: "&7&l[&bLuck&3Perms&7&l] &4[ERROR] {0}"
+loading-database-error: "&cEin Datenbankfehler ist während dem laden der Berechtigungsdaten aufgetreten. Bitte versuch es später erneut."
+loading-state-error: "&cBerechtigungsdaten für deinen Spieler konnten während dem Prelogin nicht geladen werden - Unmöglich fortzufahren. Bitte versuch es später erneut."
+loading-setup-error: "&cEin unerwarteter Fehler ist beim Erstellen der Berechtigungsdaten aufgetreten. Bitte versuch es später erneut."
+op-disabled: "&bDas Vanilla OP-System ist auf diesem Server &cdeaktiviert&b."
+op-disabled-sponge: "&2Bitte beachte, dass der Serverbetreiber keine Wirkung auf die Sponge Berechtigungschecks hat, wenn ein Berechtigungsplugin installiert ist. Bitte bearbeite die Spielerdaten direkt."
 log: >
   {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
   {PREFIX}&3LOG &3&l> &f{3}
-verbose-log: "&3VB &3&l> {0}"
+verbose-log: "&3VB &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
 export-log: "&3EXPORT &3&l> &f{0}"
 export-log-progress: "&3EXPORT &3&l> &7{0}"
 migration-log: "&3MIGRATION &7[&3{0}&7] &3&l> &f{1}"
 migration-log-progress: "&3MIGRATION &7[&3{0}&7] &3&l> &7{1}"
-command-not-recognised: "&cCommand not recognised."
-command-no-permission: "&cYou do not have permission to use this command!"
-user-not-found: "&cA user for &4{0}&c could not be found."
-user-not-online: "&aUser &b{0}&a is not online."
-user-save-error: "&cThere was an error whilst saving user data for &4{0}&c."
-group-not-found: "&cA group named &4{0}&c could not be found."
-group-save-error: "&cThere was an error whilst saving group data for &4{0}&c."
-track-not-found: "&cA track named &4{0}&c could not be found."
-track-save-error: "&cThere was an error whilst saving track data for &4{0}&c."
-user-invalid-entry: "&4{0}&c is not a valid username/uuid."
-group-invalid-entry: "&4{0}&c is not a valid group name."
-track-invalid-entry: "&4{0}&c is not a valid track name."
-server-world-invalid-entry: "&cServer/world names can only contain alphanumeric characters and cannot exceed 36 characters in length."
-verbose-invalid-filter: "&4{0}&c is not a valid verbose filter."
-verbose-on: "&bVerbose logging &aenabled &bfor checks matching &aANY&b."
-verbose-on-query: "&bVerbose logging &aenabled &bfor checks matching &a{0}&b."
-verbose-off: "&bVerbose logging &cdisabled&b."
-verbose-recording-on: "&bVerbose recording &aenabled &bfor checks matching &aANY&b."
-verbose-recording-on-query: "&bVerbose recording &aenabled &bfor checks matching &a{0}&b."
-verbose-upload-start: "&bVerbose logging &cdisabled&b. Uploading results..."
-verbose-results-url: "&aVerbose results URL:"
-tree-upload-start: "&bGenerating permission tree..."
-tree-empty: "&cUnable to generate tree. No results were found."
-tree-url: "&aPermission tree URL:"
-search-searching: "&aSearching for users and groups with &b{0}&a..."
-search-searching-members: "&aSearching for users and groups who inherit from &b{0}&a..."
-search-result: "&aFound &b{0}&a entries from &b{1}&a users and &b{2}&a groups."
-search-showing-users: "&bShowing user entries:    &7(page &f{0}&7 of &f{1}&7 - &f{2}&7 entries)"
-search-showing-groups: "&bShowing group entries:    &7(page &f{0}&7 of &f{1}&7 - &f{2}&7 entries)"
-apply-edits-invalid-code: "&cInvalid code. &7({0})"
-apply-edits-unable-to-read: "&cUnable to read data using the given code. &7({0})"
-apply-edits-no-target: "&cUnable to parse the target of the edit. Please supply it as an extra argument."
-apply-edits-target-group-not-exists: "&cTarget group &4{0}&c does not exist."
-apply-edits-target-user-not-uuid: "&cTarget user &4{0}&c is not a valid uuid."
-apply-edits-target-user-unable-to-load: "&cUnable to load target user &4{0}&c."
-apply-edits-target-unknown: "&cInvalid target. &7({0})"
-apply-edits-success: "&aWeb editor data was applied to &b{0}&a successfully."
-apply-edits-success-summary: "&7(&a{0} &7{1} and &c{2} &7{3})"
+command-not-recognised: "&cUnbekannter Befehl."
+command-no-permission: "&cDir fehlen die nötigen Berechtigungen um diesen Befehl nutzen zu können!"
+main-command-usage-header: "&b{0} Unterbefehle: &7({1} ...)"
+command-usage-argument-join: "&3 - &7"
+command-usage-brief: "&3> &a{0}{1}"
+command-usage-detailed-header: >
+  {PREFIX}&3&lBefehlsverwendung &3- &b{0}\n
+  {PREFIX}&b> &7{1}
+command-usage-detailed-args-header: "&3Argumente:"
+command-usage-detailed-arg: "&b- {0}&3 -> &7{1}"
+required-argument: "&8<&7{0}&8>"
+optional-argument: "&8[&7{0}&8]"
+user-not-found: "&cKein Spieler für &4{0}&c gefunden."
+user-not-online: "&aSpieler &b{0}&a ist nicht online."
+user-save-error: "&cFehler beim speichern der Spieler-Daten für &4{0}&c."
+group-not-found: "&cEine Gruppe namens &4{0}&c konnte nicht gefunden werden."
+group-save-error: "&cFehler beim Speichern der Gruppendaten für &4{0}&c."
+track-not-found: "&cEine Laufbahn mit dem Namen &4{0}&c konnte nicht gefunden werden."
+track-save-error: "&cFehler beim speichern der Laufbahndaten für &4{0}&c."
+user-invalid-entry: "&4{0}&c ist kein/e gültige/r Name/UUID."
+group-invalid-entry: "&4{0}&c ist kein gültiger Gruppenname."
+track-invalid-entry: "&4{0}&c ist kein gülter Laufbahnname."
+server-world-invalid-entry: "&cServer- Weltnamen dürfen nur alphanumeriche Zeichen enthalten, und 36 Zeichen Länge nicht überschreiten."
+verbose-invalid-filter: "&4{0}&c ist kein gülter Verbosefilter."
+verbose-on: "&bVerboselog &bfür Überprüfungen, die mit &aALLEN &bübereinstimmen, &aaktiviert."
+verbose-on-query: "&bVerboselog &bfür Überprüfungen, die mit &a{0}&b übereinstimmen, &aaktiviert&b."
+verbose-off: "&bVerboselog &cdeaktiviert&b."
+verbose-recording-on: "&bVerboseaufzeichnung &bfür Überprüfungen, die mit &aALLEN &bübereinstimmen, &aaktiviert&b."
+verbose-recording-on-query: "&bVerboseaufzeichnung &bfür Überprüfungen, die mit &a{0}&b übereinstimmen, &aaktiviert&b."
+verbose-upload-start: "&bVerboselog &cdeaktiviert&b. Lade Ergebnisse hoch..."
+verbose-results-url: "&aURL der Verboseergebnisse:"
+tree-upload-start: "&bErstelle Berechtigungsbaum..."
+tree-empty: "&cBerechtigungsbaum konnte nicht erstellt werden. Keine Ergebnisse gefunden."
+tree-url: "&aURL des Berechtigungsbaumes:"
+search-searching: "&aSuche nach Spielern und Gruppen mit der &bBerechtigung {0}&a..."
+search-searching-members: "&aSuche nach Spielern und Gruppen, die von &b{0}&a erben..."
+search-result: "&aEs wurden &b{0}&a Einträge von &b{1}&a Spielern und &b{2}&a Gruppen gefunden."
+search-showing-users: "&bZeige Spielereinträge:    &7(Seite &f{0}&7 von &f{1}&7 - &f{2}&7 Einträge)"
+search-showing-groups: "&bZeige Gruppeneinträge:    &7(Seite &f{0}&7 von &f{1}&7 - &f{2}&7 Einträge)"
+apply-edits-invalid-code: "&cUngültiger Code: &7({0})"
+apply-edits-unable-to-read: "&cKonnte Daten mit dem angegebenen Code &7({0}) &cnicht lesen."
+apply-edits-no-target: "&cParsen des Zieles der Bearbeitung nicht möglich."
+apply-edits-target-group-not-exists: "&cZielgruppe &4{0}&c existiert nicht."
+apply-edits-target-user-not-uuid: "&cZielspieler &4{0}&c îst keine gültige UUID."
+apply-edits-target-user-unable-to-load: "&cZielspieler &4{0}&c konnte nicht geladen werden."
+apply-edits-target-unknown: "&cUngültiges Ziel. &7({0})"
+apply-edits-target-no-changes-present: "&aEs wurden keine Änderungen vom Web-Editor übernommen. Die erhaltenen Daten enthielten keine Bearbeitungen."
+apply-edits-success: "&aWebeditordaten wurden erfolgreich auf &b{0}&a angewendet."
+apply-edits-success-summary: "&7(&a{0} &7{1} und &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
-editor-start: "&7Preparing a new editor sesssion. Please wait..."
-editor-upload-failure: "&cUnable to upload permission data to the editor."
-editor-url: "&aClick the link below to open the editor:"
-check-result: "&aPermission check result on user &b{0}&a for permission &b{1}&a: &f{2}"
-create-success: "&b{0}&a was successfully created."
-delete-success: "&b{0}&a was successfully deleted."
-rename-success: "&b{0}&a was successfully renamed to &b{1}&a."
-clone-success: "&b{0}&a was successfully cloned onto &b{1}&a."
-already-inherits: "&b{0}&a already inherits from &b{1}&a in context {2}&a."
-does-not-inherit: "&b{0}&a does not inherit from &b{1}&a in context {2}&a."
-already-temp-inherits: "&b{0}&a already temporarily inherits from &b{1}&a in context {2}&a."
-does-not-temp-inherit: "&b{0}&a does not temporarily inherit from &b{1}&a in context {2}&a."
-track-already-contains: "&b{0}&a already contains &b{1}&a."
-track-does-not-contain: "&b{0}&a doesn't contain &b{1}&a."
-track-ambiguous-call: "&4{0}&c is a member of multiple groups on this track. Unable to determine their location."
-already-exists: "&4{0}&c already exists!"
-does-not-exist: "&4{0}&c does not exist!"
-user-load-error: "&cAn unexpected error occurred. User not loaded."
-group-load-error: "&cAn unexpected error occurred. Group not loaded."
-groups-load-error: "&cAn unexpected error occurred. Unable to load all groups."
-track-load-error: "&cAn unexpected error occurred. Track not loaded."
-tracks-load-error: "&cAn unexpected error occurred. Unable to load all tracks."
-track-empty: "&4{0}&c cannot be used as it is empty or contains only one group."
-update-task-request: "&bAn update task has been requested. Please wait..."
-update-task-complete: "&aUpdate task complete."
-update-task-complete-network: "&aUpdate task complete. Now attempting to push to other servers."
-update-task-push-success: "&aOther servers were notified via &b{0} Messaging &asuccessfully."
-update-task-push-failure: "&cError whilst pushing changes to other servers."
-update-task-push-failure-not-setup: "&cError whilst pushing changes to other servers. &7(a messaging service has not been configured)"
-reload-config-success: "&aThe configuration file was reloaded. &7(some options will only apply after the server has restarted)"
+editor-no-match: "&cEditor kann nicht geöffnet werden. Kein Objekt entspricht dem verlangten Typ."
+editor-start: "&7Bereite neue Editorsitzung vor. Bitte warten..."
+editor-upload-failure: "&cBerechtigungsdaten konnten nicht zum Editor hochgeladen werden"
+editor-url: "&aKlicke auf den unten stehenden Link, um den Editor zu öffnen:"
+check-result: "&aBerechtigungsprüfungsergebnis auf Spieler &b{0}&a für die Berechtigung &b{1}&a: &f{2}"
+create-success: "&b{0}&a wurde erfolgreich erstellt."
+delete-success: "&b{0}&a wurde erfolgreich gelöscht."
+rename-success: "&b{0}&a wurde erfolgreich zu &b{1}&a umbenannt."
+clone-success: "&b{0}&a wurde erfolgreich nach &b{1}&a geklont."
+already-inherits: "&b{0}&a erbt bereits von &b{1}&a, im Kontext {2}&a."
+does-not-inherit: "&b{0}&a erbt nicht, im Kontext {2} von &b{1}&a."
+already-temp-inherits: "&b{0}&a erbt bereits temporär, im Kontext {2} von &b{1}&a."
+does-not-temp-inherit: "&b{0}&a erbt, im Kontext {2} von &b{1}&a, nicht temporär."
+track-already-contains: "&b{0}&a enthält bereits &b{1}&a."
+track-does-not-contain: "&b{0}&a enthält nicht &b{1}&a."
+track-ambiguous-call: "&4{0}&c ist ein Mitglied von mehreren Gruppen auf dieser Laufbahn. Konnte die Position nicht ermitteln."
+already-exists: "&4{0}&c existiert bereits!"
+does-not-exist: "&4{0}&c existiert nicht!"
+user-load-error: "&cEin unerwarteter Fehler ist aufgetreten. Spieler nicht geladen."
+group-load-error: "&cEin unerwarteter Fehler ist aufgetreten. Gruppe nicht geladen."
+groups-load-error: "&cEin unerwarteter Fehler ist aufgetreten. Konnte nicht alle Gruppen laden."
+track-load-error: "&cEin unerwarteter Fehler ist aufgetreten. Laufbahn nicht geladen."
+tracks-load-error: "&cEin unerwarteter Fehler ist aufgetreten. Konnte nicht alle Laufbahnen laden."
+track-empty: "&4{0}&c kann nicht benutzt werden, da sie leer ist, oder nur eine Gruppe enthält."
+update-task-request: "&bEine Aktualisierungsaufgabe wurde in Auftrag gegeben. Bitte warten..."
+update-task-complete: "&aAktualisierungsaufgabe abgeschlossen."
+update-task-complete-network: "&aAktualisierungsaufgabe abgeschlossen. Versuche Verteilung auf andere Server."
+update-task-push-success: "&aDie anderen Server wurden erfolgreich, via &b{0} - Messaging, &abenachrichtigt."
+update-task-push-failure: "&cFehler beim Anwenden der Änderungen auf andere Server."
+update-task-push-failure-not-setup: "&cFehler beim Anwenden der Änderungen auf andere Server. &7(Kein Benachrichtigungsdienst konfiguriert.)"
+reload-config-success: "&aDie Konfiguration wurde neu geladen. &7(Einige Änderungen werden allerdings erst beim nächsten Server-Neustart wirksam.)"
 info-top: >
-  {PREFIX}&2Running &bLuckPerms v{0}&2 by &bLuck&2.\n
-  {PREFIX}&f-  &3Platform: &f{1}\n
-  {PREFIX}&f-  &3Server Brand: &f{2}\n
-  {PREFIX}&f-  &3Server Version: &f{3}
+  {PREFIX}&2  &bLuckPerms v{0}&2 von &bLuck&2.\n
+  {PREFIX}&f-  &3Plattform: &f{1}\n
+  {PREFIX}&f-  &3Serverart: &f{2}\n
+  {PREFIX}&f-  &3Serverversion:\n
+  {PREFIX}&f-  {3}
+info-storage: >
+  {PREFIX}&f-  &bSpeicher:\n
+  {PREFIX}&f-     &3Typ: &f{0}
+info-storage-meta: "&f-     &3{0}: {1}"
 info-middle: >
-  {PREFIX}&f-  &bMessaging Type: &f{0}\n
-  {PREFIX}&f-  &bInstance:\n
-  {PREFIX}&f-     &3Server Name: &f{1}\n
-  {PREFIX}&f-     &3Online Players: &a{2}\n
-  {PREFIX}&f-     &3Unique Connections: &a{3}\n
-  {PREFIX}&f-     &3Uptime: &7{4}\n
-  {PREFIX}&f-     &3Local Data: &a{5} &7users, &a{6} &7groups, &a{7} &7tracks\n
-  {PREFIX}&f-     &3Context Calculators: &a{8}\n
-  {PREFIX}&f-     &3Known permissions: &a{9}\n
-  {PREFIX}&f-     &3Active processors: &7{10}
-create-error: "&cThere was an error whilst creating &4{0}&c."
-delete-error: "&cThere was an error whilst deleting &4{0}&c."
-delete-group-error-default: "&cYou cannot delete the default group."
-groups-list: "&aGroups: &7(name, weight, tracks)"
+  {PREFIX}&f-  &bNachrichtenübermittlung: &f{0}\n
+  {PREFIX}&f-  &bInstanz:\n
+  {PREFIX}&f-     &3Statische Kontexte: &f{1}\n
+  {PREFIX}&f-     &3Spieler Online: &a{2} &7(&a{3}&7 unique)\n
+  {PREFIX}&f-     &3Laufzeit: &7{4}\n
+  {PREFIX}&f-     &3Lokale Daten: &a{5} &7Spieler, &a{6} &7Gruppen, &a{7} &7Laufbahnen
+debug-start: "&bGeneriere Debugausgabe..."
+debug-url: "&aURL der Debugdaten:"
+create-error: "&cEs gab einen Fehler beim Erstellen von &4{0}&c."
+delete-error: "&cEs gab einen Fehler beim Löschen von &4{0}&c."
+delete-group-error-default: "&cDie Standardgruppe darf nicht gelöscht werden."
+groups-list: "&aGruppen: &7(Name, Wichtung, Laufbahnen)"
 groups-list-entry: "&f-  &3{0} &7- &b{1}"
 groups-list-entry-with-tracks: "&f-  &3{0} &7- &b{1} &7- [&3{2}&7]"
-tracks-list: "&aTracks: {0}"
-permission-info: "&b{0}'s Permissions:  &7(page &f{1}&7 of &f{2}&7 - &f{3}&7 entries)"
-permission-info-no-data: "&b{0}&a does not have any permissions set."
-parent-info: "&b{0}'s Parents:  &7(page &f{1}&7 of &f{2}&7 - &f{3}&7 entries)"
-parent-info-no-data: "&b{0}&a does not have any parents defined."
-list-tracks: "&b{0}'s Tracks:"
+tracks-list: "&aLaufbahn(en): {0}"
+permission-info: "&b{0}`s Berechtigungen:  &7(Seite &f{1}&7 von &f{2}&7 - &f{3}&7 Einträge)"
+permission-info-no-data: "&b{0}&a hat noch keine Berechtigungen gesetzt."
+parent-info: "&b{0}`s Übergeordnete:  &7(Seite &f{1}&7 von &f{2}&7 - &f{3}&7 Einträge)"
+parent-info-no-data: "&b{0}&a hat keine Übergeordneten Berechtigungen/Gruppen definiert."
+list-tracks: "&b{0}`s Laufbahnen:"
 list-tracks-entry: "&a{0}: {1}"
-list-tracks-empty: "&b{0}&a is not on any tracks."
+list-tracks-empty: "&b{0}&a ist in keiner Laufbahn."
 context-pair-inline: "&3{0}=&b{1}"
-context-pair--global-inline: "&eglobal"
+context-pair--global-inline: "&eGlobal"
 context-pair-sep: "&a, "
 context-pair: "&8(&7{0}=&f{1}&8)"
-check-permission: "&b{0}&a has permission &b{1}&a set to {2}&a in context {3}&a."
-check-inherits-permission: "&b{0}&a has permission &b{1}&a set to {2}&a in context {3}&a. &7(inherited from &a{4}&7)"
-setpermission-success: "&aSet &b{0}&a to &b{1}&a for &b{2}&a in context {3}&a."
-already-haspermission: "&b{0}&a already has &b{1}&a set in context {2}&a."
-setpermission-temp-success: "&aSet &b{0}&a to &b{1}&a for &b{2}&a for a duration of &b{3}&a in context {4}&a."
-already-has-temp-permission: "&b{0}&a already has &b{1}&a set temporarily in context {2}&a."
-unsetpermission-success: "&aUnset &b{0}&a for &b{1}&a in context {2}&a."
-does-not-have-permission: "&b{0}&a does not have &b{1}&a set in context {2}&a."
-unset-temp-permission-success: "&aUnset temporary permission &b{0}&a for &b{1}&a in context {2}&a."
-does-not-have-temp-permission: "&b{0}&a does not have &b{1}&a set temporarily in context {2}&a."
-set-inherit-success: "&b{0}&a now inherits permissions from &b{1}&a in context {2}&a."
-set-temp-inherit-success: "&b{0}&a now inherits permissions from &b{1}&a for a duration of &b{2}&a in context {3}&a."
-set-parent-success: "&b{0}&a had their existing parent groups cleared, and now only inherits &b{1}&a in context {2}&a."
-set-track-parent-success: "&b{0}&a had their existing parent groups on track &b{1}&a cleared, and now only inherits &b{2}&a in context {3}&a."
-unset-inherit-success: "&b{0}&a no longer inherits permissions from &b{1}&a in context {2}&a."
-unset-temp-inherit-success: "&b{0}&a no longer temporarily inherits permissions from &b{1}&a in context {2}&a."
-clear-success: "&b{0}&a's permissions were cleared in context {1}&a. (&b{2}&a nodes were removed.)"
-clear-success-singular: "&b{0}&a's permissions were cleared in context {1}&a. (&b{2}&a node was removed.)"
-parent-clear-success: "&b{0}&a's parents were cleared in context {1}&a. (&b{2}&a nodes were removed.)"
-parent-clear-success-singular: "&b{0}&a's parents were cleared in context {1}&a. (&b{2}&a node was removed.)"
-parent-clear-track-success: "&b{0}&a's parents on track &b{1}&a were cleared in context {2}&a. (&b{3}&a nodes were removed.)"
-parent-clear-track-success-singular: "&b{0}&a's parents on track &b{1}&a were cleared in context {2}&a. (&b{3}&a node was removed.)"
-meta-clear-success: "&b{0}&a's meta matching type &b{1}&a was cleared in context {2}&a. (&b{3}&a nodes were removed.)"
-meta-clear-success-singular: "&b{0}&a's meta matching type &b{1}&a was cleared in context {2}&a. (&b{3}&a node was removed.)"
-illegal-date-error: "&cCould not parse date &4{0}&c."
-past-date-error: "&cYou cannot set a date in the past!"
-chat-meta-prefix-header: "&b{0}'s Prefixes"
-chat-meta-suffix-header: "&b{0}'s Suffixes"
-meta-header: "&b{0}'s Meta"
-chat-meta-entry: "&b-> {0} &f- &f'{1}&f' &8(&7inherited from &a{2}&8)"
-chat-meta-entry-with-context: "&b-> {0} &f- &f'{1}&f' &8(&7inherited from &a{2}&8){3}"
-meta-entry: "&b-> &a{0} &f= &f'{1}&f' &8(&7inherited from &a{2}&8)"
-meta-entry-with-context: "&b-> &a{0} &f= &f'{1}&f' &8(&7inherited from &a{2}&8){3}"
-chat-meta-prefix-none: "&b{0} has no prefixes."
-chat-meta-suffix-none: "&b{0} has no suffixes."
-meta-none: "&b{0} has no meta."
-meta-invalid-priority: "&cInvalid priority &4{0}&c. Expected a number."
-already-has-chat-meta: "&b{0}&a already has {1} &f'{2}&f'&a set at a priority of &b{3}&a in context {4}&a."
-already-has-temp-chat-meta: "&b{0}&a already has {1} &f'{2}&f'&a set temporarily at a priority of &b{3}&a in context {4}&a."
-does-not-have-chat-meta: "&b{0}&a doesn't have {1} &f'{2}&f'&a set at a priority of &b{3}&a in context {4}&a."
-does-not-have-temp-chat-meta: "&b{0}&a doesn't have {1} &f'{2}&f'&a set temporarily at a priority of &b{3}&a in context {4}&a."
-add-chatmeta-success: "&b{0}&a had {1} &f'{2}&f'&a set at a priority of &b{3}&a in context {4}&a."
-add-temp-chatmeta-success: "&b{0}&a had {1} &f'{2}&f'&a set at a priority of &b{3}&a for a duration of &b{4}&a in context {5}&a."
-remove-chatmeta-success: "&b{0}&a had {1} &f'{2}&f'&a at priority &b{3}&a removed in context {4}&a."
-bulk-remove-chatmeta-success: "&b{0}&a had all {1}es at priority &b{2}&a removed in context {3}&a."
-remove-temp-chatmeta-success: "&b{0}&a had temporary {1} &f'{2}&f'&a at priority &b{3}&a removed in context {4}&a."
-bulk-remove-temp-chatmeta-success: "&b{0}&a had all temporary {1}es at priority &b{2}&a removed in context {3}&a."
-already-has-meta: "&b{0}&a already has meta key &f'{1}&f'&a set to &f'{2}&f'&a in context {3}&a."
-already-has-temp-meta: "&b{0}&a already has meta key &f'{1}&f'&a temporarily set to &f'{2}&f'&a in context {3}&a."
-doesnt-have-meta: "&b{0}&a doesn't have meta key &f'{1}&f'&a set in context {2}&a."
-doesnt-have-temp-meta: "&b{0}&a doesn't have meta key &f'{1}&f'&a set temporarily in context {2}&a."
-set-meta-success: "&aSet meta key &f'{0}&f'&a to &f'{1}&f'&a for &b{2}&a in context {3}&a."
-set-meta-temp-success: "&aSet meta key &f'{0}&f'&a to &f'{1}&f'&a for &b{2}&a for a duration of &b{3}&a in context {4}&a."
-unset-meta-success: "&aUnset meta key &f'{0}&f'&a for &b{1}&a in context {2}&a."
-unset-meta-temp-success: "&aUnset temporary meta key &f'{0}&f'&a for &b{1}&a in context {2}&a."
-bulk-update-invalid-data-type: "&cInvalid type. Was expecting 'all', 'users' or 'groups'."
-bulk-update-invalid-constraint: "&cInvalid constraint &4{0}&c. Constraints should be in the format '&f<field> <comparison operator> <value>&c'."
-bulk-update-invalid-comparison: "&cInvalid comparison operator '&4{0}&c'. Expected one of the following: &f==  !=  ~~  ~!"
-bulk-update-queued: "&aBulk update operation was queued. &7(&f{0}&7)"
-bulk-update-confirm: "&aRun &b/{0} bulkupdate confirm {1} &ato execute the update."
-bulk-update-unknown-id: "&aOperation with id &b{0}&a does not exist or has expired."
-bulk-update-starting: "&aRunning bulk update."
-bulk-update-success: "&bBulk update completed successfully."
-bulk-update-failure: "&cBulk update failed. Check the console for errors."
+check-permission: "&b{0}&a hat die Berechtigung &b{1}&a, im Kontext {3}&a, auf {2}&a gesetzt."
+check-inherits-permission: "&b{0}&a hat die Berechtigung &b{1}&a, im Kontext {3}&a, auf {2}&a gesetzt. &7(geerbt von &a{4}&7)"
+setpermission-success: "&b{0}&a wurde für &b{2}&a, im Kontext {3}&a, auf &b{1}&a gesetzt."
+already-haspermission: "&b{0}&a hat &b{1}&a bereits im Kontext {2}&a gesetzt."
+setpermission-temp-success: "&b{0}&a wurde für &b{2}&a für einen Zeitraum von &b{3}&a, im Kontext {4}&a, auf &b{1}&a gesetzt."
+already-has-temp-permission: "&b{0}&a hat bereits &b{1}&a temporär im Kontext, {2}&a, gesetzt."
+unsetpermission-success: "&b{0}&a für &b{1}&a, im Kontext {2}&a, aufgehoben."
+does-not-have-permission: "&b{0}&a hat &b{1}&a, im Kontext {2}&a, nicht gesetzt."
+unset-temp-permission-success: "&aTemporäre Berechtigung &b{1}&a, für &b{0}&a, im Kontext {2}&a, aufgehoben."
+does-not-have-temp-permission: "&b{0}&a hat &b{1}&a, im Kontext {2}&a, nicht temporär gesetzt."
+set-inherit-success: "&b{0}&a erbt jetzt Berechtigungen von &b{1}&a, im Kontext {2}&a."
+set-temp-inherit-success: "&b{0}&a erbt jetzt für einen Zeitraum von &b{2}&a Berechtigungen von &b{1}&a, im Kontext {3}&a."
+set-parent-success: "&b{0}&a hat existierende übergeordnete Gruppen entfernt bekommen, und erbt jetzt nur noch Berechtigungen von &b{1}&a, im Kontext {2}&a."
+set-track-parent-success: "&b{0}&a hat existierende übergeordnete Gruppen in der Laufbahn &b{1}&a entfernt bekommen, und erbt jetzt nur noch Berechtigungen von &b{2}&a, im Kontext {3}&a."
+unset-inherit-success: "&b{0}&a erbt keine Berechtigungen mehr von &b{1}&a, im Kontext {2}&a."
+unset-temp-inherit-success: "&b{0}&a erbt keine temporären Berechtigungen mehr von &b{1}&a, im Kontext {2}&a."
+clear-success: "&b{0}&a's Knoten im Kontext {1}&a wurden entfernt. (&b{2}&a Knoten wurden entfernt.)"
+clear-success-singular: "&b{0}&a`s Knoten im Kontext {1}&a wurden entfernt. (&b{2}&a Knoten wurde entfernt.)"
+permission-clear-success: "&b{0}&a`s Berechtigungen im Kontext {1}&a wurden entfernt. (&b{2}&a Knoten wurden entfernt.)"
+permission-clear-success-singular: "&b{0}&a`s Berechtigungen im Kontext {1}&a wurden entfernt. (&b{2}&a Knoten wurde entfernt.)"
+parent-clear-success: "&b{0}&a`s übergeordnete Berechtigungen wurden im Kontext {1}&a gelöscht. (&b{2}&a Knoten wurden entfernt.)"
+parent-clear-success-singular: "&b{0}&a`s übergeordnete Berechtigungen wurden im Kontext {1}&a gelöscht. {1}&a. (&b{2}&a Knoten wurde entfernt.)"
+parent-clear-track-success: "&b{0}&a`s übergeordnete Berechtigungen in der Laufbahn &b{1}&a, wurden im Kontext {2}&a gelöscht. (&b{3}&a Knoten wurden entfernt.)"
+parent-clear-track-success-singular: "&b{0}&a`s übergeordnete Berechtigungen in der Laufbahn &b{1}&a, wurden im Kontext {2}&a gelöscht. (&b{3}&a Knoten wurde entfernt.)"
+meta-clear-success: "&b{0}&a`s Meta, welches dem Typ &b{1}&a entspricht, wurde im Kontext {2}&a gelöscht. (&b{3}&a Knoten wurden entfernt.)"
+meta-clear-success-singular: "&b{0}&a`s Meta, welches dem Typ &b{1}&a entspricht, wurde im Kontext {2}&a gelöscht. (&b{3}&a Knoten wurde entfernt.)"
+illegal-date-error: "&cDas Datum konnte nicht verarbeitet werden: &4{0}&c."
+past-date-error: "&cDu kannst kein Datum aus der Vergangenheit auswählen!"
+chat-meta-prefix-header: "&b{0}`s Präfixe"
+chat-meta-suffix-header: "&b{0}`s Suffixe"
+meta-header: "&b{0}`s Meta"
+chat-meta-entry: "&b-> {0} &f- &f'{1}&f' &8(&7geerbt von &a{2}&8)"
+chat-meta-entry-with-context: "&b-> {0} &f- &f'{1}&f' &8(&7geerbt von &a{2}&8){3}"
+meta-entry: "&b-> &a{0} &f= &f'{1}&f' &8(&7geerbt von &a{2}&8)"
+meta-entry-with-context: "&b-> &a{0} &f= &f'{1}&f' &8(&7geerbt von &a{2}&8){3}"
+chat-meta-prefix-none: "&b{0} hat keine Präfixe."
+chat-meta-suffix-none: "&b{0} hat keine Suffixe."
+meta-none: "&b{0} hat kein Meta."
+meta-invalid-priority: "&cUngültige Priotität: &4{0}&c. Zahl wurde erwartet."
+already-has-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a bereits mit einer Priorität von &b{3}&a, im Kontext {4}&a gesetzt."
+already-has-temp-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a bereits temporär mit einer Priorität von &b{3}&a, im Kontext {4}&a gesetzt."
+does-not-have-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a nicht mit einer Priorität von &b{3}&a, im Kontext {4}&a gesetzt."
+does-not-have-temp-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a nicht temporär mit einer Priorität von &b{3}&a, im Kontext {4}&a gesetzt."
+add-chatmeta-success: "&b{0}&a hat {1} &f'{2}&f'&a mit einer Priorität von &b{3}&a, im Kontext {4}&a gesetzt bekommen."
+add-temp-chatmeta-success: "&b{0}&a hat {1} &f'{2}&f'&a mit einer Priorität von &b{3}&a, für einen Zeitraum von &b{4}&a, im Kontext {5}&a gesetzt bekommen."
+remove-chatmeta-success: "&b{0}&a hat {1} &f'{2}&f'&a mit der Priorität &b{3}&a im Kontext {4}&a entfernt bekommen."
+bulk-remove-chatmeta-success: "&b{0}&a hat alle {1}es mit der Priorität &b{2}&a im Kontext {3}&a entfernt bekommen."
+remove-temp-chatmeta-success: "&b{0}&a hat temporär {1} &f'{2}&f'&a mit der Priorität &b{3}&a im Kontext {4}&a entfernt bekommen."
+bulk-remove-temp-chatmeta-success: "&b{0}&a hat alle temporären {1}es mit der Priorität &b{2}&a im Kontext {3}&a entfernt bekommen."
+already-has-meta: "&b{0}&a hat den Metaschlüssel &f'{1}&f'&a bereits im Kontext {3}&a bereits auf &f'{2}&f'&a gesetzt."
+already-has-temp-meta: "&b{0}&a hat den Metaschlüssel &f'{1}&f'&a bereits temporär im Kontext {3}&a auf &f'{2}&f'&a gesetzt."
+doesnt-have-meta: "&b{0}&a hat den Metaschlüssel &f'{1}&f'&a im Kontext {2}&a nicht gesetzt."
+doesnt-have-temp-meta: "&b{0}&a hat den Metaschlüssel &f'{1}&f'&a im Kontext {2}&a nicht temporär gesetzt."
+set-meta-success: "&aDer Metaschlüssel &f'{0}&f'&a wurde für &b{2}&a im Kontext {3}&a auf &f'{1}&f'&a gesetzt."
+set-meta-temp-success: "&aDer Metaschlüssel &f'{0}&f'&a wurde für &b{2}&a für einen Zeitraum von &b{3]&a, im Kontext {4}&a auf &f'{1}&f'&a gesetzt."
+unset-meta-success: "&aMetaschlüssel &f'{0}&f'&a für &b{1}&a im Kontext {2}&a aufgehoben."
+unset-meta-temp-success: "&aTemporärer Metaschlüssel &f'{0}&f'&a für &b{1}&a im Kontext {2}&a aufgehoben."
+bulk-update-invalid-data-type: "&cUngültiger Typ. 'all', 'users' oder 'groups' wurde erwartet."
+bulk-update-invalid-constraint: "&cUngültige Beschränkung &4{0}&c. Beschränkungen sollten im Format '&f<field> <comparison operator> <value>&c' sein."
+bulk-update-invalid-comparison: "&cUngültiger Vergleichsoperator '&4{0}&c'. Einer der folgenden wurde erwartet: &f==  !=  ~~  ~!"
+bulk-update-queued: "&aBulk-Aktualisierungs-Operation wurde zur Warteschlange hinzugefügt. &7(&f{0}&7)"
+bulk-update-confirm: "&aFühre &b/{0} bulkupdate confirm {1} &aaus, um die Aktualisierung auszuführen."
+bulk-update-unknown-id: "&aOperation mit ID &b{0}&a existiert nicht oder ist abgelaufen."
+bulk-update-starting: "&aBulkaktualisierung wird durchgeführt."
+bulk-update-success: "&aBulkaktualisierung erfolgreich ausgeführt."
+bulk-update-failure: "&cBulkaktualisierung fehlgeschlagen. Für Fehlerdetails in der Konsole nachsehen."
 user-info-general: >
-  {PREFIX}&b&l> &bUser Info: &f{0}\n
-  {PREFIX}&f- &3UUID: &f{1}\n
-  {PREFIX}&f- &3Status: {2}\n
-  {PREFIX}&f- &3Primary Group: &f{3}\n
-  {PREFIX}&f- &aCounts:\n
-  {PREFIX}&f-    &3Nodes: &a{4}\n
-  {PREFIX}&f-    &3Permissions: &a{5}\n
-  {PREFIX}&f-    &3Prefixes: &a{6}\n
-  {PREFIX}&f-    &3Suffixes: &a{7}\n
-  {PREFIX}&f-    &3Meta: &a{8}
+  {PREFIX}&b&l> &bSpielerinfo: &f{0}\n
+  {PREFIX}&f- &3UUID: &f{1} &7(Typ: {2}&7)\n
+  {PREFIX}&f- &3Status: {3}\n
+  {PREFIX}&f- &3Primärgruppe: &f{4}
 user-info-data: >
-  {PREFIX}&f- &aCached Data:\n
-  {PREFIX}&f-    &3Has contextual data: {0}\n
-  {PREFIX}&f-    &3Current Contexts: {1}\n
-  {PREFIX}&f-    &3Current Prefix: {2}\n
-  {PREFIX}&f-    &3Current Suffix: {3}
-info-parent-header: "&f- &aParent Groups:"
-info-temp-parent-header: "&f- &aTemporary Parent Groups:"
-user-removegroup-error-primary: "&aYou cannot remove a user from their primary group."
-user-primarygroup-success: "&b{0}&a's primary group was set to &b{1}&a."
-user-primarygroup-warn-option: "&aWarning: The primary group calculation method being used by this server &7({0}) &amay not reflect this change."
-user-primarygroup-error-alreadyhas: "&b{0}&a already has &b{1}&a set as their primary group."
-user-primarygroup-error-notmember: "&b{0}&a was not already a member of &b{1}&a, adding them now."
-user-track-error-not-contain-group: "&b{0}&a isn't already in any groups on &b{1}&a."
-user-track-added-to-first: "&b{0}&a isn't in any groups on this track, so they were added to the first group, &b{1}&a in context {2}&a."
-user-promote-success: "&aPromoting &b{0}&a along track &b{1}&a from &b{2}&a to &b{3}&a in context {4}&a."
-user-promote-error-endoftrack: "&aThe end of track &b{0}&a was reached. Unable to promote &b{1}&a."
+  {PREFIX}&f- &aKontextuale Daten:\n
+  {PREFIX}&f-    &3Hat kontextuale Daten: {0}\n
+  {PREFIX}&f-    &3Andwendbare Kontexte: {1}\n
+  {PREFIX}&f-    &3Präfix: {2}\n
+  {PREFIX}&f-    &3Suffix: {3}\n
+  {PREFIX}&f-    &3Meta: {4}
+info-parent-header: "&f- &aÜbergeordnete Gruppen:"
+info-temp-parent-header: "&f- &aTemporäre Übergeordnete Gruppen:"
+info-parent-entry: "&f-    &3> &f{0}{1}"
+info-parent-entry-expiry: "&f-    &2-    endet in {0}"
+user-removegroup-error-primary: "&cDu kannst einen Spieler nicht von seiner Primärgruppe entfernen."
+user-primarygroup-success: "&b{0}&a`s Primärgruppe wurde auf &b{1}&a gesetzt."
+user-primarygroup-warn-option: "&4Warnung&a: Die primäre Gruppenkalkulationsmethode die von diesm Server &7({0}) &averwendet wird, reflektiert diese Änderung evtl. nicht."
+user-primarygroup-error-alreadyhas: "&b{0}&a hat bereits &b{1}&a als primäre Gruppe gesetzt."
+user-primarygroup-error-notmember: "&b{0}&a war noch kein Mitglied von &b{1}&a, und wurde hinzugefügt."
+user-track-error-not-contain-group: "&b{0}&a ist auf &b{1}&a in noch keiner Gruppe."
+user-track-added-to-first: "&b{0}&a ist in dieser Laufbahn noch in keiner Gruppe, und wurde daher zur ersten Gruppe &b{1}&a, im Kontext {2}&a, hinzugefügt."
+user-promote-success: "&aBefördere &b{0}&a auf Laufbahn &b{1}&a von &b{2}&a zu &b{3}&a, im Kontext {4}&a."
+user-promote-error-endoftrack: "&aDas Ende der Laufbahn &b{0}&a wurde erreicht. &b{1}&a konnte nicht befördert werden."
 user-promote-error-malformed: >
-  {PREFIX}&aThe next group on the track, &b{0}&a, no longer exists. Unable to promote user.\n
-  {PREFIX}&aEither create the group, or remove it from the track and try again.
-user-demote-success: "&aDemoting &b{0}&a along track &b{1}&a from &b{2}&a to &b{3}&a in context {4}&a."
-user-demote-endoftrack: "&aThe end of track &b{0}&a was reached, so &b{1}&a was removed from &b{2}&a."
+  {PREFIX}&aDie nächste Gruppe auf der Laufbahn, &b{0}&a, existiert nicht mehr. Beförderung nicht möglich\n
+  {PREFIX}&aEntweder erstelle die Gruppe, oder entferne sie von der Laufbahn, und versuche es erneut.
+user-demote-success: "&aDegradiere &b{0}&a auf Laufbahn &b{1}&a von &b{2}&a zu &b{3}&a im Kontext {4}."
+user-demote-endoftrack: "&aDas Ende der Laufbahn &b{0}&a, wurde erreicht, &b{1}&a wurde daher von &b{2}&a entfernt."
 user-demote-error-malformed: >
-  {PREFIX}&aThe previous group on the track, &b{0}&a, no longer exists. Unable to demote user.\n
-  {PREFIX}&aEither create the group, or remove it from the track and try again.
+  {PREFIX}&aDie vorherige Gruppe auf der Laufbahn, &b{0}&a, existiert nicht mehr. &cDegradierung nicht möglich.\n
+  {PREFIX}&aEntweder erstelle die Gruppe, oder entferne sie von der Laufbahn und versuche es erneut.
 group-info-general: >
-  {PREFIX}&b&l> &bGroup Info: &f{0}\n
-  {PREFIX}&f- &3Display Name: &f{1}\n
-  {PREFIX}&f- &3Weight: &f{2}\n
-  {PREFIX}&f- &aCounts:\n
-  {PREFIX}&f-    &3Nodes: &a{3}\n
-  {PREFIX}&f-    &3Permissions: &a{4}\n
-  {PREFIX}&f-    &3Prefixes: &a{5}\n
-  {PREFIX}&f-    &3Suffixes: &a{6}\n
-  {PREFIX}&f-    &3Meta: &a{7}
-group-set-weight: "&aSet weight to &b{0}&a for group &b{1}&a."
-group-set-display-name-doesnt-have: "&b{0}&a doesn't have a display name set."
-group-set-display-name-already-has: "&b{0}&a already has a display name of &b{1}&a."
-group-set-display-name-already-in-use: "&aThe display name &b{0}&a is already being used by &b{1}&a."
-group-set-display-name: "&aSet display name to &b{0}&a for group &b{1}&a."
-group-set-display-name-removed: "&aRemoved display name for group &b{0}&a."
+  {PREFIX}&b&l> &bGruppeninfo: &f{0}\n
+  {PREFIX}&f- &3Anzeigename: &f{1}\n
+  {PREFIX}&f- &3Wichtung: &f{2}
+group-set-weight: "&aWichtung für Gruppe &b{1}&a auf &b{0}&a gesetzt."
+group-set-display-name-doesnt-have: "&b{0}&c Hat keinen Anzeigenamen gesetzt."
+group-set-display-name-already-has: "&b{0}&a hat bereits den Anzeigenamen &b{1}&a."
+group-set-display-name-already-in-use: "&aDer Anzeigename &b{0}&a wird bereits von &b{1}&a verwendet."
+group-set-display-name: "&aAnzeigename für die Gruppe &b{1}&a wurde auf &b{0}&a im Kontext {2}&a gesetzt."
+group-set-display-name-removed: "&aAnzeigename für die Gruppe &b{0}&a im Kontext {2}&a entfernt."
 track-info: >
-  {PREFIX}&b&l> &bShowing Track: &f{0}\n
-  {PREFIX}&f- &7Path: &f{1}
-track-clear: "&b{0}&a's groups track was cleared."
-track-append-success: "&aGroup &b{0}&a was appended to track &b{1}&a."
-track-insert-success: "&aGroup &b{0}&a was inserted into track &b{1}&a at position &b{2}&a."
-track-insert-error-number: "&cExpected number but instead received: {0}"
-track-insert-error-invalid-pos: "&cUnable to insert at position &4{0}&c. &7(invalid position)"
-track-remove-success: "&aGroup &b{0}&a was removed from track &b{1}&a."
-log-load-error: "&cThe log could not be loaded."
-log-invalid-page: "&cInvalid page number."
-log-invalid-page-range: "&cInvalid page number. Please enter a value between &41&c and &4{0}&c."
-log-no-entries: "&bNo log entries to show."
+  {PREFIX}&b&l> &bZeige Laufbahn: &f{0}\n
+  {PREFIX}&f- &7Pfad: &f{1}
+track-clear: "&b{0}&a Gruppenlaufbahn wurde geleert."
+track-append-success: "&aDie Gruppe &b{0}&a wurde an die Laufbahn &b{1}&a, angehängt."
+track-insert-success: "&aDie Gruppe &b{0}&a wurde auf der Laufbahn &b{1}&a, bei Position &b{2}&a eingefügt."
+track-insert-error-number: "&cZahl wurde erwartet, stattdessen empfangene Eingabe: {0}"
+track-insert-error-invalid-pos: "&cKonnte nichts bei Position &4{0}&c einfügen. &7(Ungültige Position)"
+track-remove-success: "&aGruppe &b{0}&a wurde von der Laufbahn &b{1}&a entfernt."
+log-load-error: "&cDas Log konnte nicht geladen werden."
+log-invalid-page: "&cUngültige Seiten-Zahl."
+log-invalid-page-range: "&cUngültige Seite. Bitte gib einen Wert zwischen &41&c und &4{0}&c ein."
+log-no-entries: "&bKeine anzeigbaren Log-Einträge."
 log-entry: >
-  {PREFIX}&b#{0} &8(&7{1} ago&8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
+  {PREFIX}&b#{0} &8(&7vor {1} &8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
   {PREFIX}&7> &f{5}
-log-notify-console: "&cCannot toggle notifications for console."
-log-notify-toggle-on: "&aEnabled&b logging output."
-log-notify-toggle-off: "&cDisabled&b logging output."
-log-notify-already-on: "&cYou are already receiving notifications."
-log-notify-already-off: "&cYou aren't currently receiving notifications."
-log-notify-unknown: "&cState unknown. Expecting \"on\" or \"off\"."
-log-search-header: "&aShowing recent actions for query &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-recent-header: "&aShowing recent actions  &7(page &f{0}&7 of &f{1}&7)"
-log-recent-by-header: "&aShowing recent actions by &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-history-user-header: "&aShowing history for user &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-history-group-header: "&aShowing history for group &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-history-track-header: "&aShowing history for track &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-export-already-exists: "&cError: File &4{0}&c already exists."
-log-export-not-writable: "&cError: File &4{0}&c is not writable."
-log-export-empty: "&cThe log is empty and therefore cannot be exported."
-log-export-failure: "&cAn unexpected error occured whilst writing to the file."
-log-export-success: "&aSuccessfully exported the log to &b{0}&a."
-import-already-running: "&cAnother import process is already running. Please wait for it to finish and try again."
-export-already-running: "&cAnother export process is already running. Please wait for it to finish and try again."
-import-log-doesnt-exist: "&cError: File &4{0}&c does not exist."
-import-log-not-readable: "&cError: File &4{0}&c is not readable."
-import-log-failure: "&cAn unexpected error occured whilst reading from the log file."
-import-progress: "&b(Import) &b-> &f{0}&f% complete &7- &b{1}&f/&b{2} &foperations complete with &c{3} &ferrors."
-import-progress-sin: "&b(Import) &b-> &f{0}&f% complete &7- &b{1}&f/&b{2} &foperations complete with &c{3} &ferror."
-import-start: "&b(Import) &b-> &fStarting import process."
-import-end-complete: "&b(Import) &a&lCOMPLETED &7- took &b{0} &7seconds - &7No errors."
-import-end-complete-err: "&b(Import) &a&lCOMPLETED &7- took &b{0} &7seconds - &c{1} errors."
-import-end-complete-err-sin: "&b(Import) &a&lCOMPLETED &7- took &b{0} &7seconds - &c{1} error."
+log-notify-console: "&cBenachrichtigungen können für die Konsole nicht an- oder abgestellt werden."
+log-notify-toggle-on: "&bLog-Ausgabe &aaktiviert."
+log-notify-toggle-off: "&bLog-Ausgabe &cdeaktiviert."
+log-notify-already-on: "&cDu bekommst bereits Benachrichtigungen."
+log-notify-already-off: "&cDu bekommst arktuell keine Benachrichtigunen."
+log-notify-unknown: "&cUngültiger Status. Erwartet: \"on\" or \"off\"."
+log-search-header: "&aZeige kürzliche Aktionen für die Abfrage &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
+log-recent-header: "&aZeige kürzliche Akionen &7(Seite &f{0}&7 von &f{1}&7)"
+log-recent-by-header: "&aZeige kürzliche Aktionen von &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
+log-history-user-header: "&aZeige Verlauf für Spieler &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
+log-history-group-header: "&aZeige Verlauf für Gruppe &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
+log-history-track-header: "&aZeige Verlauf für Laufbahn &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
+log-export-already-exists: "&cFehler: Datei &4{0}&c exisitiert bereits."
+log-export-not-writable: "&cFehler: Datei &4{0}&c ist nicht beschreibbar."
+log-export-empty: "&cDas Log ist leer, und kann daher nicht exportiert werden."
+log-export-failure: "&cUnerwarteter Fehler beim Schreiben in die Datei."
+log-export-success: "&aLog erfolgreich nach &b{0}&a exportiert."
+import-already-running: "&cEin anderer Importprozess läuft bereits. Bitte warte auf dessen Fertigstellung, und versuche es erneut."
+export-already-running: "&cEin anderer Exportprozess läuft bereits. Bitte warte auf dessen Fertigstellung, und versuche es erneut."
+import-log-doesnt-exist: "&cFehler: Datei &4{0}&c existiert nicht."
+import-log-not-readable: "&cFehler: Datei &4{0}&c ist nicht lesbar."
+import-log-failure: "&cUnerwarteter Fehler beim Einlesen der Log-Datei."
+import-progress: "&b(Import) &b-> &f{0}&f% Abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehler(n) fertiggestellt."
+import-progress-sin: "&b(Import) &b-> &f{0}&f% Abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehler(n) fertiggestellt."
+import-start: "&b(Import) &b-> &fStarte Importprozess."
+import-info: "&b(Import) &b-> &f{0}."
+import-end-complete: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden - &7Keine Fehler."
+import-end-complete-err: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden mit -  &c{1} Fehler."
+import-end-complete-err-sin: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden mit - &c{1} Fehler."
 import-end-error-header: >
-  {PREFIX}&b(Import) &7------------> &fShowing Error #&b{0} &7<------------\n
-  {PREFIX}&b(Import) &fWhilst executing: &3Command #{1}\n
-  {PREFIX}&b(Import) &fCommand: &7{2}\n
-  {PREFIX}&b(Import) &fType: &3{3}\n
-  {PREFIX}&b(Import) &fOutput:
+  {PREFIX}&b(Import) &7------------> &fZeige Fehler #&b{0} &7<------------\n
+  {PREFIX}&b(Import) &fBeim ausführen von: &3Befehl #{1}\n
+  {PREFIX}&b(Import) &fBefehl: &7{2}\n
+  {PREFIX}&b(Import) &fTyp: &3{3}\n
+  {PREFIX}&b(Import) &fAusgabe:
 import-end-error-content: "&b(Import) &b-> &c{0}"
 import-end-error-footer: "&b(Import) &7<------------------------------------------>"
 
 command-specs:
   user:
-    description: "User commands"
-    usage: "/%s user <user>"
+    description: "Spielerbefehle"
+    usage: "/%s user <Spieler>"
   group:
-    description: "Group commands"
-    usage: "/%s group <group>"
+    description: "Gruppenbefehle"
+    usage: "/%s group <Gruppe>"
   track:
-    description: "Track commands"
-    usage: "/%s track <track>"
+    description: "Laufbahnbefehle"
+    usage: "/%s track <Laufbahn>"
   log:
-    description: "Log commands"
+    description: "Log-Befehle"
     usage: "/%s log"
   sync:
-    description: "Sync changes with the storage"
+    description: "Änderungen mit Speicher synchronisieren."
     usage: "/%s sync"
   info:
-    description: "Print general plugin info"
+    description: "Generelle Plugin-Infos ausgeben."
     usage: "/%s info"
+  debug:
+    description: "Erstelle Debug-Ausgabe."
+    usage: "/%s debug"
   verbose:
-    description: "Manage verbose permission checking"
-    usage: "/%s verbose <true|false> [filter]"
+    description: "Verwalte Wortreiche-Berechtigungs-Prüfung."
+    usage: "/%s verbose <true|false> [Filter]"
     args:
-      "on|record|off|paste": "whether to enable/disable logging, or to paste the logged output"
-      "filter": "the filter to match entries against"
-      "--slim": "add \"--slim\" to exclude trace data from the pasted output"
+      "on|record|off|paste": "Aktiviere/Deaktiviere Logging, oder gibt das Aufgezeichnete aus."
+      "filter": "Der Filter, mit dem die Einträge verglichen werden."
+      "--slim": "Füge \"--slim\" hinzu, um Verfolgungsdaten von der Ausgabe auszuschließen."
   tree:
-    description: "Generate a tree view of permissions"
-    usage: "/%s tree [selection] [max level] [player]"
+    description: "Erstelle einen Berechtigungsbaum."
+    usage: "/%s tree [Selektion] [Max Level] [Spieler]"
     args:
-      "selection": "the root of the tree. specify \".\" to include all permissions"
-      "max level": "how many branch levels should be returned"
-      "player": "the name of an online player to check against"
+      "selection": "Die Wurzel des Baumes. Spezifiziere \".\" um alle Berechtigungen einzuschließen"
+      "max level": "Wie viele Verästelungs-Level zurück gegeben werden sollen."
+      "player": "Der Name eines Spielers der online ist, gegen den geprüft werden soll."
   search:
-    description: "Search for users/groups with a specific permission"
-    usage: "/%s search <permission>"
+    description: "Suche nach Spielern/Gruppen mit einer bestimmten Berechtigung."
+    usage: "/%s search <Berechtigung>"
     args:
-      "permission": "the permission to search for"
-      "page": "the page to view"
+      "permission": "Die Berechtigung, nach der gesucht werden soll."
+      "page": "Die Seite, welche angezeigt wird."
   check:
-    description: "Perform a standard permission check on an online player"
-    usage: "/%s check <user> <permission>"
+    description: "Führe einen Standardberechtigungscheck für einen Onlinespieler durch."
+    usage: "/%s check <Spieler> <Berechtigung>"
     args:
-      "user": "the user to check"
-      "permission": "the permission to check for"
+      "user": "Der zu prüfende Spieler."
+      "permission": "Die Berechtigung, nach der geprüft wird."
   network-sync:
-    description: "Sync changes with the storage and request that all other servers on the network do the same"
+    description: "Synchronisiere Änderungen mit dem Speicher, und beauftrage alle Server im Netzwerk, das gleiche zu tun."
     usage: "/%s networksync"
   import:
-    description: "Import data from a file"
-    usage: "/%s import <file>"
+    description: "Daten von Datei importieren."
+    usage: "/%s import <Datei>"
     args:
-      "file": "the file to import from"
+      "file": "Die Datei, von der importiert wird."
   export:
-    description: "Export data to a file"
-    usage: "/%s export <file>"
+    description: "Daten zu Datei exportieren."
+    usage: "/%s export <Datei>"
     args:
-      "file": "the file to export to"
+      "file": "Die Datei, zu der exportiert wird."
   reload-config:
-    description: "Reload some of the config options"
+    description: "Lade einige Konfigurationsoptionen neu."
     usage: "/%s reloadconfig"
   bulk-update:
-    description: "Execute bulk change queries on all data"
+    description: "Wende die Bulkänderungen-Warteschlange auf die Daten an."
     usage: "/%s bulkupdate"
     args:
-      "data type": "the type of data being changed. ('all', 'users' or 'groups')"
-      "action": "the action to perform on the data. ('update' or 'delete')"
-      "action field": "the field to act upon. only required for 'update'. ('permission', 'server' or 'world')"
-      "action value": "the value to replace with. only required for 'update'."
-      "constraint...": "the constraints required for the update"
+      "data type": "Der Typ Daten, welcher geändert wird. ('all', 'users' oder 'groups')"
+      "action": "Die Aktion, die mit den Daten geschieht. ('update' oder 'delete')"
+      "action field": "Das Feld, in dem gearbeitet wird. Nur für die Aktualisierung benötigt. ('permission', 'server' oder 'world')"
+      "action value": "Der Wert, mit dem ersetzt wird. Nur für die Aktualisierung benötigt."
+      "constraint...": "Die Beschränkungen, die für die Aktualisierung nötig sind."
   migration:
-    description: "Migration commands"
+    description: "Migrationsbefehle"
     usage: "/%s migration"
   apply-edits:
-    description: "Applies permission changes made from the web editor"
-    usage: "/%s applyedits <code> [target]"
+    description: "Wendet Änderungen, welche im Web-Editor vorgenommen wurden, an."
+    usage: "/%s applyedits <Code> [Ziel]"
     args:
-      "code": "the unique code for the data"
-      "target": "who to apply the data to"
+      "code": "Der einzigartige Code für die Daten."
+      "target": "Auf wen die Daten angewendet werden."
   create-group:
-    description: "Create a new group"
-    usage: "/%s creategroup <group>"
+    description: "Erstellt eine neue Gruppe."
+    usage: "/%s creategroup <Gruppe>"
     args:
-      "name": "the name of the group"
+      "name": "Name der Gruppe."
   delete-group:
-    description: "Delete a group"
-    usage: "/%s deletegroup <group>"
+    description: "Löscht eine Gruppe."
+    usage: "/%s deletegroup <Gruppe>"
     args:
-      "name": "the name of the group"
+      "name": "Name der Gruppe."
   list-groups:
-    description: "List all groups on the platform"
+    description: "Listet alle Gruppen auf der Platform auf."
     usage: "/%s listgroups"
   create-track:
-    description: "Create a new track"
-    usage: "/%s createtrack <track>"
+    description: "Neue Laufbahn erstellen."
+    usage: "/%s createtrack <Laufbahnname>"
     args:
-      "name": "the name of the track"
+      "name": "Name der Laufbahn."
   delete-track:
-    description: "Delete a track"
-    usage: "/%s deletetrack <track>"
+    description: "Löscht eine Laufbahn."
+    usage: "/%s deletetrack <Laufbahnname>"
     args:
-      "name": "the name of the track"
+      "name": "Name der Laufbahn."
   list-tracks:
-    description: "List all tracks on the platform"
+    description: "Listet alle Laufbahnen auf der Platform auf."
     usage: "/%s listtracks"
   user-info:
-    description: "Shows info about the user"
+    description: "Zeigt die Info über den Spieler an."
   user-switchprimarygroup:
-    description: "Switches the user's primary group"
+    description: "Ändert die primäre Gruppe eines Spielers."
     args:
-      "group": "the group to switch to"
+      "group": "Die Gruppe, auf die gewechselt wird."
   user-promote:
-    description: "Promotes the user up a track"
+    description: "Befördert den Spieler auf der Laufbahn eine Gruppe nach oben."
     args:
-      "track": "the track to promote the user up"
-      "context...": "the contexts to promote the user in"
+      "track": "Die Laufbahn, auf der der Spieler befördert wird."
+      "context...": "Der Kontext, in dem der Spieler befördert wird."
   user-demote:
-    description: "Demotes the user down a track"
+    description: "Degradiert den Spieler auf der Laufbahn eine Gruppe nach unten."
     args:
-      "track": "the track to demote the user down"
-      "context...": "the contexts to demote the user in"
+      "track": "Die Laufbahn, auf der der Spieler degradiert wird."
+      "context...": "Der Kontext, in dem der Spieler degradiert wird."
   user-clone:
-    description: "Clone the user"
+    description: "Klont den Spieler."
     args:
-      "user": "the name/uuid of the user to clone onto"
+      "user": "Name/UUID des Spielers, auf den geklont wird."
   group-info:
-    description: "Gives info about the group"
+    description: "Zeigt Infos über die Gruppe an."
   group-listmembers:
-    description: "Show the users/groups who inherit from this group"
+    description: "Zeigt die Spieler/Gruppen, die von diesen Gruppe erben."
     args:
-      "page": "the page to view"
+      "page": "Die Seite, welche angezeigt wird."
   group-setweight:
-    description: "Set the groups weight"
+    description: "Wichtung der Gruppe festlegen."
     args:
-      "weight": "the weight to set"
+      "weight": "Die festzulegende Wichtung."
   group-set-display-name:
-    description: "Set the groups display name"
+    description: "Setzt den Anzeigenamen der Gruppe."
     args:
-      "name": "the name to set"
+      "name": "Der zu setzende Name."
   group-rename:
-    description: "Rename the group"
+    description: "Gruppe umbenennen."
     args:
-      "name": "the new name"
+      "name": "Der neue Name."
   group-clone:
-    description: "Clone the group"
+    description: "Klont die Gruppe."
     args:
-      "name": "the name of the group to clone onto"
+      "name": "Name der Gruppe, auf die geklont wird."
   holder-editor:
-    description: "Opens the web permission editor"
+    description: "Öffnet den Berechtigungs-Web-Editor."
   holder-showtracks:
-    description: "Lists the tracks that the object is on"
+    description: "Listet die Laufbahnen auf, auf denen das Objekt ist."
   holder-clear:
-    description: "Removes all permissions, parents and meta"
+    description: "Entfernt ALLE Berechtigungen, Übergeordnete Berechtigungen, und Metadaten."
     args:
-      "context...": "the contexts to filter by"
+      "context...": "Der Kontext, nach dem gefiltert wird."
   permission:
-    description: "Edit permissions"
+    description: "Berechtigungen bearbeiten."
   parent:
-    description: "Edit inheritances"
+    description: "Erbteile bearbeiten."
   meta:
-    description: "Edit metadata values"
+    description: "Metadatenwerte bearbeiten."
   permission-info:
-    description: "Lists the permission nodes the object has"
+    description: "Listet die Berechtigungsknoten, die ein Objekt hat, auf."
     args:
-      "page": "the page to view"
-      "sort mode": "how to sort the entries"
+      "page": "Die anzuzeigende Seite."
+      "sort mode": "Wie die Einträge sortiert werden."
   permission-set:
-    description: "Sets a permission for the object"
+    description: "Setzt eine Berechtigung für das Objekt."
     args:
-      "node": "the permission node to set"
-      "true|false": "the value of the node"
-      "context...": "the contexts to add the permission in"
+      "node": "Der zu setzende Berechtigungsknoten."
+      "true|false": "Der Wert des Knotens."
+      "context...": "Der Kontext, in welchem der Berechtigungsknoten hinzugefügt wird."
   permission-unset:
-    description: "Unsets a permission for the object"
+    description: "Hebt eine Berechtigung für ein Objekt auf."
     args:
-      "node": "the permission node to unset"
-      "context...": "the contexts to remove the permission in"
+      "node": "Der aufzuhebende Berechtigungsknoten."
+      "context...": "Der Kontext, in welchem der Berechtigungsknoten entfernt wird."
   permission-settemp:
-    description: "Sets a permission for the object temporarily"
+    description: "Setzt für das Objekt eine temporäre Berechtigung."
     args:
-      "node": "the permission node to set"
-      "true|false": "the value of the node"
-      "duration": "the duration until the permission node expires"
-      "context...": "the contexts to add the permission in"
+      "node": "Der zu setzende Berechtigungsknoten."
+      "true|false": "Der Wert des Knotens."
+      "duration": "Die Dauer, bis der Berechtigungsknoten abläuft."
+      "context...": "Der Kontext, in welchem der Berechtigungsknoten hinzugefügt wird."
   permission-unsettemp:
-    description: "Unsets a temporary permission for the object"
+    description: "Hebt eine temporäre Berechtigung für das Objekt auf."
     args:
-      "node": "the permission node to unset"
-      "context...": "the contexts to remove the permission in"
+      "node": "Der aufzuhebende Berechtigungsknoten."
+      "context...": "Der Kontext, in welchem der Berechtigungsknoten entfernt wird."
   permission-check:
-    description: "Checks to see if the object has a certain permission node"
+    description: "Prüft, ob ein Objekt einen bestimmten Berechtigungsknoten hat."
     args:
-      "node": "the permission node to check for"
-      "context...": "the contexts to check in"
+      "node": "Der Berechtigungsknoten, auf den geprüft wird."
+      "context...": "Der Kontext, in dem geprüft wird."
   permission-check-inherits:
-    description: "Checks to see if the object inherits a certain permission node"
+    description: "Prüft, ob ein Objekt einen bestimmten Berechtigungsknoten erbt."
     args:
-      "node": "the permission node to check for"
-      "context...": "the contexts to check in"
+      "node": "Die Berechtigungsknoten, auf die geprüft wird."
+      "context...": "Der Kontext, in dem geprüft wird."
   parent-info:
-    description: "Lists the groups that this object inherits from"
+    description: "Listet die Gruppen auf, von denen dieses Objekt erbt."
     args:
-      "page": "the page to view"
-      "sort mode": "how to sort the entries"
+      "page": "Die anzuzeigende Seite."
+      "sort mode": "Wie die Einträge sortiert werden."
   parent-set:
-    description: "Removes all other groups the object inherits already and adds them to the one given"
+    description: "Entfernt alle anderen Gruppen, von denen das Objekt bereits erbt, und fügt es es zu der angegebenen hinzu ('Übergeordnete'-Gruppe setzen)."
     args:
-      "group": "the group to set to"
-      "context...": "the contexts to set the group in"
+      "group": "Die zu setzende Gruppe."
+      "context...": "Der Kontext, in dem die Gruppe gesetzt wird."
   parent-add:
-    description: "Sets another group for the object to inherit permissions from"
+    description: "Fügt eine Gruppe, von der das Objekt Berechtigungen erbt, hinzu."
     args:
-      "group": "the group to inherit from"
-      "context...": "the contexts to inherit the group in"
+      "group": "Die Gruppe, von der geerbt wird."
+      "context...": "Der Kontext, in dem von der Gruppe geerbt wird."
   parent-remove:
-    description: "Removes a previously set inheritance rule"
+    description: "Entfernt eine zuvor gesetzte Verebungsregel."
     args:
-      "group": "the group to remove"
-      "context...": "the contexts to remove the group in"
+      "group": "Die zu entfernende Gruppe."
+      "context...": "Der Kontext, in dem die Gruppe entfernt wird."
   parent-set-track:
-    description: "Removes all other groups the object inherits from already on the given track and adds them to the one given"
+    description: "Entfernt alle Gruppen, von denen das Objekt bereits auf der gegebenen Laufbahn erbt und fügt sie zum angegebenen hinzu."
     args:
-      "track": "the track to set on"
-      "group": "the group to set to, or a number relating to the position of the group on the given track"
-      "context...": "the contexts to set the group in"
+      "track": "Die Laufbahn, auf der gesetzt wird."
+      "group": "Die zu setzende Gruppe, oder eine Zahl, welche sich auf die Position der Gruppe auf der angegebenen Laufbahn bezieht."
+      "context...": "Der Kontext, in dem die Gruppe gesetzt wird."
   parent-add-temp:
-    description: "Sets another group for the object to inherit permissions from temporarily"
+    description: "Setzt eine (weitere) Gruppe, von der das Objekt temporär Berechtigungen erbt."
     args:
-      "group": "the group to inherit from"
-      "duration": "the duration of the group membership"
-      "context...": "the contexts to inherit the group in"
+      "group": "Die Gruppe, von der geerbt wird."
+      "duration": "Die Dauer der Gruppenmitgliedschaft."
+      "context...": "Der Kontext, in dem die Gruppe erbt."
   parent-remove-temp:
-    description: "Removes a previously set temporary inheritance rule"
+    description: "Entfernt eine zuvor gesetzte temporäre Vererbungsrolle."
     args:
-      "group": "the group to remove"
-      "context...": "the contexts to remove the group in"
+      "group": "Die zu entfernende Gruppe."
+      "context...": "Der Kontext, in dem die Gruppe entfernt wird."
   parent-clear:
-    description: "Clears all parents"
+    description: "Entfernt alle 'Übergeordneten Berechtigungen'."
     args:
-      "context...": "the contexts to filter by"
+      "context...": "Der Kontext, nach dem gefiltert wird."
   parent-clear-track:
-    description: "Clears all parents on a given track"
+    description: "Entfernt alle 'Übergeordneten Berechtigungen' auf der angegebenen Laufbahn."
     args:
-      "track": "the track to remove on"
-      "context...": "the contexts to filter by"
+      "track": "Die Laufbahn, auf der entfernt wird."
+      "context...": "Der Kontext, nach dem gefiltert wird."
   meta-info:
-    description: "Shows all chat meta"
+    description: "Zeigt alle Chat-Metadaten an."
   meta-set:
-    description: "Sets a meta value"
+    description: "Setzt einen Metawert."
     args:
-      "key": "the key to set"
-      "value": "the value to set"
-      "context...": "the contexts to add the meta pair in"
+      "key": "Der zu setztende Schlüssel."
+      "value": "Der zu setzende Wert."
+      "context...": "Der Kontext, in dem das Metapaar hinzugefügt wird."
   meta-unset:
-    description: "Unsets a meta value"
+    description: "Hebt einen Metawert auf."
     args:
-      "key": "the key to unset"
-      "context...": "the contexts to remove the meta pair in"
+      "key": "Der aufzuhebende Schlüssel."
+      "context...": "Der Kontext, in dem das Metapaar entfernt wird."
   meta-settemp:
-    description: "Sets a meta value temporarily"
+    description: "Setzt einen temporären Metawert."
     args:
-      "key": "the key to set"
-      "value": "the value to set"
-      "duration": "the duration until the meta value expires"
-      "context...": "the contexts to add the meta pair in"
+      "key": "Der zu setztende Schlüssel."
+      "value": "Der zu setzende Wert."
+      "duration": "Die Dauer bis der Metawert abläuft."
+      "context...": "Der Kontext, in dem das Metapaar hinzugefügt wird."
   meta-unsettemp:
-    description: "Unsets a temporary meta value"
+    description: "Hebt einen temporären Metawert auf."
     args:
-      "key": "the key to unset"
-      "context...": "the contexts to remove the meta pair in"
+      "key": "Der aufzuhebende Schlüssel."
+      "context...": "Der Kontext, in dem das Metapaar entfernt wird."
   meta-addprefix:
-    description: "Adds a prefix"
+    description: "Fügt einen Präfix hinzu."
     args:
-      "priority": "the priority to add the prefix at"
-      "prefix": "the prefix string"
-      "context...": "the contexts to add the prefix in"
+      "priority": "Die Priorität mit der der Präfix hinzugefügt wird."
+      "prefix": "Der Präfix."
+      "context...": "Die Kontexte, in denen der Präfix hinzugefügt wird."
   meta-addsuffix:
-    description: "Adds a suffix"
+    description: "Fügt einen Suffix hinzu."
     args:
-      "priority": "the priority to add the suffix at"
-      "suffix": "the suffix string"
-      "context...": "the contexts to add the suffix in"
+      "priority": "Die Priorität mit der der Suffix hinzugefügt wird"
+      "suffix": "Der Suffix."
+      "context...": "Die Kontexte, in denen der Suffix hinzugefügt wird."
   meta-removeprefix:
-    description: "Removes a prefix"
+    description: "Entfernt einen Präfix."
     args:
-      "priority": "the priority to remove the prefix at"
-      "prefix": "the prefix string"
-      "context...": "the contexts to remove the prefix in"
+      "priority": "Die Priorität mit der der Präfix entfernt wird."
+      "prefix": "Der Präfix."
+      "context...": "Die Kontexte, in denen der Präfix entfernt wird."
   meta-removesuffix:
-    description: "Removes a suffix"
+    description: "Entfernt einen Suffix."
     args:
-      "priority": "the priority to remove the suffix at"
-      "suffix": "the suffix string"
-      "context...": "the contexts to remove the suffix in"
+      "priority": "Die Priorität mit der der Suffix entfernt wird."
+      "suffix": "Der Suffix."
+      "context...": "Die Kontexte, in denen der Suffix entfernt wird."
   meta-addtemp-prefix:
-    description: "Adds a prefix temporarily"
+    description: "Fügt einen Präfix temporär hinzu."
     args:
-      "priority": "the priority to add the prefix at"
-      "prefix": "the prefix string"
-      "duration": "the duration until the prefix expires"
-      "context...": "the contexts to add the prefix in"
+      "priority": "Die Priorität mit der der Präfix hinzugefügt wird."
+      "prefix": "Der Präfix."
+      "duration": "Die Dauer, bis der Präfix abläuft."
+      "context...": "Die Kontexte, in denen der Präfix hinzugefügt wird."
   meta-addtemp-suffix:
-    description: "Adds a suffix temporarily"
+    description: "Fügt einen Suffix temporär hinzu."
     args:
-      "priority": "the priority to add the suffix at"
-      "suffix": "the suffix string"
-      "duration": "the duration until the suffix expires"
-      "context...": "the contexts to add the suffix in"
+      "priority": "Die Priorität mit der der Suffix temporär hinzugefügt wird."
+      "suffix": "Der Suffix."
+      "duration": "Die Dauer, bis der Suffix abläuft."
+      "context...": "Die Kontexte, in denen der Suffix hinzugefügt wird."
   meta-removetemp-prefix:
-    description: "Removes a temporary prefix"
+    description: "Entfernt einen temporären Präfix."
     args:
-      "priority": "the priority to remove the prefix at"
-      "prefix": "the prefix string"
-      "context...": "the contexts to remove the prefix in"
+      "priority": "Die Priorität mit der der Präfix entfernt wird."
+      "prefix": "Der Präfix."
+      "context...": "Die Kontexte, in denen der Präfix entfernt wird."
   meta-removetemp-suffix:
-    description: "Removes a temporary suffix"
+    description: "Entfernt einen temporären Suffix."
     args:
-      "priority": "the priority to remove the suffix at"
-      "suffix": "the suffix string"
-      "context...": "the contexts to remove the suffix in"
+      "priority": "Die Priorität mit der der Suffix entfernt wird."
+      "suffix": "Der Suffix."
+      "context...": "Die Kontexte, in denen der Suffix entfernt wird."
   meta-clear:
-    description: "Clears all meta"
+    description: "Entfernt alle Metadaten."
     args:
-      "type": "the type of meta to remove"
-      "context...": "the contexts to filter by"
+      "type": "Der zu entfernende Metatyp."
+      "context...": "Der Kontext, nach dem gefiltert wird."
   track-info:
-    description: "Gives info about the track"
+    description: "Gibt Infos über die Laufbahn."
   track-append:
-    description: "Appends a group onto the end of the track"
+    description: "Hängt eine Gruppe an das Ende der Laufbahn an."
     args:
-      "group": "the group to append"
+      "group": "Die anzuhängende Gruppe."
   track-insert:
-    description: "Inserts a group at a given position along the track"
+    description: "Füge eine Gruppe bei der angegebenen Position auf der Laufbahn ein."
     args:
-      "group": "the group to insert"
-      "position": "the position to insert the group at (the first position on the track is 1)"
+      "group": "Die einzufügende Gruppe."
+      "position": "Die Position, auf der die Gruppe eingefügt wird (die erste Position auf der Laufbahn ist 1)."
   track-remove:
-    description: "Removes a group from the track"
+    description: "Entfernt eine Gruppe aus der Laufbahn."
     args:
-      "group": "the group to remove"
+      "group": "Die zu entfernende Gruppe."
   track-clear:
-    description: "Clears the groups on the track"
+    description: "Entfernt die Gruppen aus der Laufbahn."
   track-rename:
-    description: "Rename the track"
+    description: "Benennt die Laufbahn um."
     args:
-      "name": "the new name"
+      "name": "Der neue Name."
   track-clone:
-    description: "Clone the track"
+    description: "Klont die Laufbahn."
     args:
-      "name": "the name of the track to clone onto"
+      "name": "Der Name der Laufbahn auf die geklont wird."
   log-recent:
-    description: "View recent actions"
+    description: "Kürzliche Aktionen anzeigen."
     args:
-      "user": "the name/uuid of the user to filter by"
-      "page": "the page number to view"
+      "user": "Name/UUID des Spielers nach dem/der gefiltert wird."
+      "page": "Die anzuzeigende Seite."
   log-search:
-    description: "Search the log for an entry"
+    description: "Durchsucht den Log nach einem Eintrag."
     args:
-      "query": "the query to search by"
-      "page": "the page number to view"
+      "query": "Die Abfrage, nach der gesucht werden soll."
+      "page": "Die anzuzeigende Seite."
   log-notify:
-    description: "Toggle log notifications"
+    description: "Log-Benachrichtigungen an oder aus schalten."
     args:
-      "on|off": "whether to toggle on or off"
+      "on|off": "Schaltet Benachrichtigungen an oder aus."
   log-user-history:
-    description: "View a user's history"
+    description: "Verlauf eines Spielers ansehen."
     args:
-      "user": "the name/uuid of the user"
-      "page": "the page number to view"
+      "user": "Name/UUID des Spielers."
+      "page": "Die anzuzeigende Seite."
   log-group-history:
-    description: "View an group's history"
+    description: "Verlauf einer Gruppe ansehen."
     args:
-      "group": "the name of the group"
-      "page": "the page number to view"
+      "group": "Der Name der Gruppe."
+      "page": "Die anzuzeigende Seite."
   log-track-history:
-    description: "View a track's history"
+    description: "Verlauf eines Laufbahn ansehen."
     args:
-      "track": "the name of the track"
-      "page": "the page number to view"
+      "track": "Der Name des Tracks"
+      "page": "Die anzuzeigende Seite."
   sponge:
-    description: "Edit extra Sponge data"
-    usage: "/%s sponge <collection> <subject>"
+    description: "Extra Sponge Daten bearbeiten."
+    usage: "/%s sponge <Kollektion> <Subjekt>"
     args:
-      "collection": "the collection to query"
-      "subject": "the subject to modify"
+      "collection": "Die abzufragende Kollektion."
+      "subject": "Das zu modifizierende Subjekt."
   sponge-permission-info:
-    description: "Shows info about the subject's permissions"
+    description: "Zeigt Infos über die Berechtigung eines Subjekts."
     args:
-      "contexts...": "the contexts to filter by"
+      "contexts...": "Der Kontext, nach dem gefiltert wird."
   sponge-permission-set:
-    description: "Sets a permission for the Subject"
+    description: "Setzt eine Berechtigung für das Subjekt."
     args:
-      "node": "the permission node to set"
-      "tristate": "the value to set the permission to"
-      "contexts...": "the contexts to set the permission in"
+      "node": "Der zu setzende Berechtigungsknoten."
+      "tristate": "Der Wert, auf den die Berechtigung gesetzt wird."
+      "contexts...": "Der Kontext, in dem die Berechtigung gesetzt wird."
   sponge-permission-clear:
-    description: "Clears the Subjects permissions"
+    description: "Entfernt alle Berechtigungen des Subjekts."
     args:
-      "contexts...": "the contexts to clear permissions in"
+      "contexts...": "Der Kontext, in dem die Berechtigungen entfernt werden."
   sponge-parent-info:
-    description: "Shows info about the subject's parents"
+    description: "Zeigt Infos über die 'Übergeordneten Berechtigungen' eines Subjekts."
     args:
-      "contexts...": "the contexts to filter by"
+      "contexts...": "Der Kontext, nach dem gefiltert wird."
   sponge-parent-add:
-    description: "Adds a parent to the Subject"
+    description: "Eine Übergeordnete Berechtigung zum Subjekt hinzufügen."
     args:
-      "collection": "the subject collection where the parent Subject is"
-      "subject": "the name of the parent Subject"
-      "contexts...": "the contexts to add the parent in"
+      "collection": "Die Kollektion des Subjekts, in der das übergeordnete Subjekt ist."
+      "subject": "Der Name des Übergeordneten Subjekts."
+      "contexts...": "Der Kontext, in dem die Übergeordnete Berechtigung hinzugefügt wird."
   sponge-parent-remove:
-    description: "Removes a parent from the Subject"
+    description: "Entfernt eine Übergeordnete Berechtigung vom Subjekt."
     args:
-      "collection": "the subject collection where the parent Subject is"
-      "subject": "the name of the parent Subject"
-      "contexts...": "the contexts to remove the parent in"
+      "collection": "Die Kollektion des Subjekts, in der das Übergeordnete Subjekt ist."
+      "subject": "Der Name des Übergeordneten Subjekts."
+      "contexts...": "Der Kontext, in dem die Übergeordnete Berechtigung entfernt wird."
   sponge-parent-clear:
-    description: "Clears the Subjects parents"
+    description: "Entfernt die Übergeordneten Berechtigungen des Subjekts."
     args:
-      "contexts...": "the contexts to clear parents in"
+      "contexts...": "Die Kontexte, in denen die Übergeordneten Berechtigungen gelöscht werden."
   sponge-option-info:
-    description: "Shows info about the subject's options"
+    description: "Zeigt Infos über die Optionen des Subjekts."
     args:
-      "contexts...": "the contexts to filter by"
+      "contexts...": "Der Kontext, nach dem gefiltert wird."
   sponge-option-set:
-    description: "Sets an option for the Subject"
+    description: "Setzt eine Option für das Subjekt."
     args:
-      "key": "the key to set"
-      "value": "the value to set the key to"
-      "contexts...": "the contexts to set the option in"
+      "key": "Der zu setzende Schlüssel."
+      "value": "Der Wert, auf den der Schlüssel gesetzt wird."
+      "contexts...": "Die Kontexte, in denen die Option gesetzt wird."
   sponge-option-unset:
-    description: "Unsets an option for the Subject"
+    description: "Hebt eine Option für das Subjekt auf."
     args:
-      "key": "the key to unset"
-      "contexts...": "the contexts to unset the key in"
+      "key": "Der aufzuhebende Schlüssel."
+      "contexts...": "Die Kontexte, in denen die Option aufgehoben wird."
   sponge-option-clear:
-    description: "Clears the Subjects options"
+    description: "Leert die Optionen des Subjekts."
     args:
-      "contexts...": "the contexts to clear options in"
+      "contexts...": "Die Kontexte, in denen die Optionen geleert werden."
   migration-command:
-    description: "Migration command"
+    description: "Migrationsbefehl"
   migration-groupmanager:
-    description: "Migration command"
+    description: "Migrationsbefehl"
     args:
-      "migrate as global": "if world permissions should be ignored, and just migrated as global"
+      "migrate as global": "Ob Weltberechtigungen ignoriert, und als Global migriert werden sollen."
   migration-powerfulperms:
-    description: "Migration command"
+    description: "Migrationsbefehl"
     args:
-      "address": "the address of the PP database"
-      "database": "the name of the PP database"
-      "username": "the username to log into the DB"
-      "password": "the password to log into the DB"
-      "db table": "the name of the PP table where player data is stored"
+      "address": "Die Adresse der PP-Datenbank"
+      "database": "Der Name der PP-Datenbank"
+      "username": "Der Benutzername zum Login in die DB"
+      "password": "Das Passwort zum Login in die DB"
+      "db table": "Der Name der PP-Tabelle, in dem Spieler-Daten gespeichert werden"
