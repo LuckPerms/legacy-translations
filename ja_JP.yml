@@ -1,0 +1,100 @@
+# LuckPerms Language File
+# Locale: ja_JP (English)
+# Author: syokkendesuyo
+
+prefix: "&7&l[&b&lL&3&lP&7&l] "
+view-available-commands-prompt: "&a/{0} help &3を実行すると使用可能なコマンドを表示します"
+no-permission-for-subcommands: "&3サブコマンドを実行する権限がありません。"
+empty: "{0}"
+player-online: "&aオンライン"
+player-offline: "&cオフライン"
+loading-error: "&c権限データの読み込みに失敗しました。後ほどお試しください。"
+op-disabled: "&bこのサーバーではバニラのOPシステムが無効にされています。"
+log-info: "&7&l[&bL&3P&7&l] &3{0}"
+log-warn: "&7&l[&bLuck&3Perms&7&l] &c[警告] {0}"
+log-error: "&7&l[&bLuck&3Perms&7&l] &4[エラー] {0}"
+log: >
+  {PREFIX}&3ログ &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
+  {PREFIX}&3ログ &3&l> &f{3}
+command-no-permission: "&cこのコマンドを実行する権限がありません！"
+user-not-found: "&4{0}&c は見つかりませんでした。"
+user-not-online: "&b{0}&a はオンラインではありません。"
+apply-edits-success: "&b{0}&a にWEBエディタデータを適用しました。"
+apply-edits-success-summary: "&7(&a{0} &7{1} and &c{2} &7{3})"
+apply-edits-diff-added: "&a+  &f{0}"
+apply-edits-diff-removed: "&c-  &f{0}"
+editor-start: "&7エディタセッションを準備中です。しばらくお待ちください..."
+editor-upload-failure: "&c権限データのアップロードに失敗しました。"
+editor-url: "&aエディタリンク:"
+update-task-request: "&b更新を開始しました。しばらくお待ちください...
+update-task-complete: "&a更新が完了しました。"
+update-task-complete-network: "&a更新が完了しました。他のサーバーに設定を送信しています..."
+update-task-push-success: "&b{0} メッセージング &aを経由して設定の更新が行われました。"
+update-task-push-failure: "&他のサーバーに設定を送信中にエラーが発生しました。"
+update-task-push-failure-not-setup: "&c他のサーバーに設定を送信中にエラーが発生しました。 &7(メッセージングサービスが設定されていません)"
+reload-config-success: "&a設定ファイルが再読み込みされました。 &7(一部設定は再起動が必要です)"
+info-top: >
+  {PREFIX}&bLuckPerms v{0}&2 &7(by &bLuck&7)&2.\n
+  {PREFIX}&f-  &3プラットフォーム: &f{1}\n
+  {PREFIX}&f-  &3サーバーブランド: &f{2}\n
+  {PREFIX}&f-  &3サーバーバージョン:\n
+  {PREFIX}&f-  {3}
+info-middle: >
+  {PREFIX}&f-  &bメッセージング: &f{0}\n
+  {PREFIX}&f-  &bインスタンス:\n
+  {PREFIX}&f-     &3静的コンテキスト: &f{1}\n
+  {PREFIX}&f-     &3オンラインプレイヤー数: &a{2} &7(&a{3}&7 ユニークプレイヤー)\n
+  {PREFIX}&f-     &3稼働時間: &7{4}\n
+  {PREFIX}&f-     &3ローカルデータ: &a{5} &7ユーザー, &a{6} &7グループ, &a{7} &7トラック
+debug-start: "&bデバッグを開始しました...
+groups-list: "&aグループ: &7(名前, weight, tracks)"
+tracks-list: "&aトラック: {0}"
+list-tracks: "&b{0} のトラック:"
+user-info-general: >
+  {PREFIX}&b&l> &bユーザー情報 &f{0}\n
+  {PREFIX}&f- &3UUID: &f{1}\n
+  {PREFIX}&f- &3ステイタス: {2}\n
+  {PREFIX}&f- &3プライマリグループ &f{3}
+user-info-data: >
+  {PREFIX}&f- &aコンテキストデータ:\n
+  {PREFIX}&f-    &3コンテキストデータの保有状態{0}\n
+  {PREFIX}&f-    &3適用可能なコンテキスト: {1}\n
+  {PREFIX}&f-    &3接頭辞: {2}\n
+  {PREFIX}&f-    &3接尾辞: {3}\n
+  {PREFIX}&f-    &3メタ: {4}
+info-parent-header: "&f- &a親グループ:"
+info-temp-parent-header: "&f- &a一時的な親グループ:"
+group-info-general: >
+  {PREFIX}&b&l> &bグループ情報&f{0}\n
+  {PREFIX}&f- &3表示名: &f{1}\n
+  {PREFIX}&f- &3Weight: &f{2}
+
+command-specs:
+  user:
+    description: "ユーザーコマンド"
+    usage: "/%s user <ユーザー>"
+  group:
+    description: "グループコマンド"
+    usage: "/%s group <グループ>"
+  track:
+    description: "トラックコマンド"
+    usage: "/%s track <トラック>"
+  log:
+    description: "ログコマンド"
+    usage: "/%s log"
+  sync:
+    description: "ストレージとの同期を変更"
+    usage: "/%s sync"
+  info:
+    description: "プラグイン情報を表示"
+    usage: "/%s info"
+  debug:
+    description: "デバッグ出力を生成"
+    usage: "/%s debug"
+  tree:
+    description: "パーミッションのツリーを表示"
+    usage: "/%s tree [絞り込み] [最大レベル] [プレイヤー]"
+    args:
+      "selection": "the root of the tree. specify \".\" to include all permissions"
+      "max level": "分岐レベル"
+      "player": "確認するオンラインプレーヤー"
