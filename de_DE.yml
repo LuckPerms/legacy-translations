@@ -256,7 +256,7 @@ group-set-display-name-doesnt-have: "&b{0}&a Hat keinen Anzeigenamen gesetzt."
 group-set-display-name-already-has: "&b{0}&a hat bereits den Anzeigenamen &b{1}&a."
 group-set-display-name-already-in-use: "&aDer Anzeigename &b{0}&a wird bereits von &b{1}&a verwendet."
 group-set-display-name: "&aAnzeigename für Gruppe &b{1}&a wurde auf &b{0}&a im Kontext {2}&a gesetzt."
-group-set-display-name-removed: "&aAnzeigename für Gruppe &b{0}&a im Kontext {2}&a entfernt."
+group-set-display-name-removed: "&aAnzeigename für Gruppe &b{0}&a im Kontext {1}&a entfernt."
 track-info: >
   {PREFIX}&b&l> &bZeige Track: &f{0}\n
   {PREFIX}&f- &7Pfad: &f{1}
