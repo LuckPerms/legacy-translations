@@ -1,5 +1,5 @@
 # LuckPerms Language File
-# Locale: ja_JP (English)
+# Locale: ja_JP (Japanese)
 # Author: syokkendesuyo
 
 prefix: "&7&l[&b&lL&3&lP&7&l] "
@@ -20,7 +20,7 @@ command-no-permission: "&cこのコマンドを実行する権限がありませ
 user-not-found: "&4{0}&c は見つかりませんでした。"
 user-not-online: "&b{0}&a はオンラインではありません。"
 apply-edits-success: "&b{0}&a にWEBエディタデータを適用しました。"
-apply-edits-success-summary: "&7(&a{0} &7{1} and &c{2} &7{3})"
+apply-edits-success-summary: "&7(&a{0} &7{1} と &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
 editor-start: "&7エディタセッションを準備中です。しばらくお待ちください..."
