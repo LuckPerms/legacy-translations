@@ -1,29 +1,33 @@
 # LuckPerms Language File
 # Locale: de_DE (German/Deutsch)
 # Author: itsTyrion
+# Editore: Andre_601, Tobi406
 
 prefix: "&7&l[&b&lL&3&lP&7&l] "
 view-available-commands-prompt: "&3Nutze &a/{0} help&3, um verfügbare Befehle zu sehen."
 no-permission-for-subcommands: "&3Du hast keine Rechte zur Nutzung der Unterbefehle."
 first-time-setup: >
   {PREFIX}&3Es scheint als wären noch keine Rechte gesetzt worden!\n
-  {PREFIX}&3Befor du eine der LuckPerms-Befehle verwenden kannst, musst du dir zuerst per Konsole rechte geben.\n
+  {PREFIX}&3Bevor du eine der LuckPerms-Befehle verwenden kannst, musst du dir zuerst per Konsole rechte geben.\n
   {PREFIX}&3Öffne deine Konsole und verwende:\n
   {PREFIX} &3&l> &a{0} user {1} permission set luckperms.* true\n
   \n
   {PREFIX}&3Nachdem du das gemacht hast, kannst du anfangen, Rechte und Gruppen zu geben.\n
   {PREFIX}&3Weist nicht, wo anfangen? Schau hier: &7https://github.com/lucko/LuckPerms/wiki/Usage
-empty: "{0}"
+blank: "{0}"
 player-online: "&aOnline"
 player-offline: "&cOffline"
 loading-database-error: "&cEin Datenbankfehler ist während dem laden der Rechte aufgetreten. Bitte versuch es später erneut. Falls du ein Server-Admin bist, überprüfe die Konsole für mögliche Fehler."
 loading-state-error: "&cRechte für deinen Benutzer konnte während dem Pre-login nicht geladen werden - Unmöglich fortzufahren. Bitte versuch es später erneut. Falls du ein Server-Admin bist, überprüfe die Konsole für mögliche Fehler."
+loading-state-error-cb-offline-mode: "&cRechte für deinen Benutzer konnte während dem Pre-Login nicht geladen werden - Das ist vermutlich wegen eines Konflikts von CraftBukkit und dem Online-Modus einstellungen. Bitte überprüfe die Server-Konsole für weitere informationen."
 loading-setup-error: "&cEin unerwarteter Fehler ist beim erstellen der Rechte aufgetreten. Bitte versuch es später erneut."
 op-disabled: "&bDas Vanilla OP-System ist auf diesem Server deaktiviert."
-op-disabled-sponge: "&2Bitte beachte, dass der Server-Betreiber keine Wirkung auf die Sponge Permission-Checks hat, wenn ein Permissions-Plugin installiert ist. Bitte bearbeite die Nutzerdaten direkt."
+op-disabled-sponge: "&2Bitte beachte, dass der Server-Operator keine Wirkung auf die Sponge Permission-Checks hat, wenn ein Permissions-Plugin installiert ist. Bitte bearbeite die Nutzerdaten direkt."
 log: >
   {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
   {PREFIX}&3LOG &3&l> &f{3}
+verbose-log-permission: "&3VB &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
+verbose-log-meta: "&3VB &3&l> &a{0}&7 - &bMeta: &a{1}&7 - &7{2}"
 verbose-log: "&3VB &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
 export-log: "&3EXPORT &3&l> &f{0}"
 export-log-progress: "&3EXPORT &3&l> &7{0}"
@@ -52,7 +56,7 @@ user-invalid-entry: "&4{0}&c ist kein/e gültige/r Name/UUID."
 group-invalid-entry: "&4{0}&c ist kein gültiger Gruppenname."
 track-invalid-entry: "&4{0}&c ist kein gülter Track-Name."
 server-world-invalid-entry: "&cServer/Welt-Namen dürfen nur alphanumeriche Zeichen enthalten, und 36 Zeichen Länge nicht überschreiten."
-verbose-invalid-filter: "&4{0}&c ist kein gülter Verbose-Filter."
+verbose-invalid-filter: "&4{0}&c ist kein gülter Verbose-Filter. &7({1})"
 verbose-on: "&bVerbose-log &aaktiviert &bfür Checks, die mit einem &abeliebigen &bübereinstimmen."
 verbose-on-query: "&bVerbose-log &aaktiviert &bfür Checks, die mit &a{0}&b übereinstimmen."
 verbose-off: "&bVerbose-log &cdeaktiviert&b."
@@ -70,13 +74,12 @@ search-showing-users: "&bZeige Nutzer-Einträge:    &7(Seite &f{0}&7 von &f{1}&7
 search-showing-groups: "&bZeige Gruppen-Einträge:    &7(Seite &f{0}&7 von &f{1}&7 - &f{2}&7 Einträge)"
 apply-edits-invalid-code: "&cUngültiger Code. &7({0})"
 apply-edits-unable-to-read: "&cKonnte Daten mit dem angegebenen Code &7({0}) &cnicht lesen."
-apply-edits-no-target: "&cParsen des Zeiles der Bearbeitung nicht möglich."
-apply-edits-target-group-not-exists: "&cZiel-Gruppe &4{0}&c existiert nicht."
+apply-edits-unknown-type: "&cKann änderungen am angegebenen Objekt-Typ nicht anwenden. &7({0})"
 apply-edits-target-user-not-uuid: "&cZiel-Nutzer &4{0}&c îst keine gültige UUID."
 apply-edits-target-user-unable-to-load: "&cZiel-Nutzer &4{0}&c konnte nicht geladen werden."
 apply-edits-target-unknown: "&cUngültiges Ziel. &7({0})"
 apply-edits-target-no-changes-present: "&aKeine Änderungen wurden vom Web-Editor übernommen. Die erhaltenen Daten enthielten keine Bearbeitungen."
-apply-edits-success: "&aWeb-Editor-Daten wurden erfolgreich auf &b{0}&a angewendet."
+apply-edits-success: "&aWeb-Editor-Daten wurden erfolgreich auf {0} &b{1}&a angewendet."
 apply-edits-success-summary: "&7(&a{0} &7{1} und &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
@@ -121,6 +124,8 @@ info-storage: >
   {PREFIX}&f-  &bSpeicher:\n
   {PREFIX}&f-     &3Typ: &f{0}
 info-storage-meta: "&f-     &3{0}: {1}"
+info-extensions: "{PREFIX}&f-  &bErwriterungen:"
+info-extension-entry: "&f-     &3{0}"
 info-middle: >
   {PREFIX}&f-  &bMessaging: &f{0}\n
   {PREFIX}&f-  &bInstanz:\n
@@ -205,6 +210,7 @@ set-meta-success: "&aDer Meta-Key &f'{0}&f'&a wurde für &b{2}&a im Kontext {3}&
 set-meta-temp-success: "&aDer Meta-Key &f'{0}&f'&a wurde für &b{2}&a für einen Zeitraum von &b{3]&a im Kontext {4}&a auf &f'{1}&f'&a gesetzt."
 unset-meta-success: "&aMeta-Key &f'{0}&f'&a für &b{1}&a im Kontext {2}&a aufgehoben."
 unset-meta-temp-success: "&aTemporärer Meta-Key &f'{0}&f'&a für &b{1}&a im Kontext {2}&a aufgehoben."
+bulk-update-must-use-console: "&cDer Bulk update Befehl kann nur von der Konsole aus ausgeführt werden."
 bulk-update-invalid-data-type: "&cUngültiger Typ. 'all', 'users' oder 'groups' wurde erwartet."
 bulk-update-invalid-constraint: "&cUngültige Beschränkung &4{0}&c. Beschränkungen sollten im Format '&f<field> <comparison operator> <value>&c' sein."
 bulk-update-invalid-comparison: "&cUngültiger Vergleichs-Operator '&4{0}&c'. Einer der folgenden wurde erwartet: &f==  !=  ~~  ~!"
@@ -237,6 +243,7 @@ user-primarygroup-error-alreadyhas: "&b{0}&a hat &b{1}&a bereits als Primär-Gru
 user-primarygroup-error-notmember: "&b{0}&a war noch kein Mitglied von &b{1}&a, und wurde hinzugefügt."
 user-track-error-not-contain-group: "&b{0}&a ist auf &b{1}&a noch in keiner Gruppe."
 user-track-added-to-first: "&b{0}&a ist in diesem Track noch in keiner Gruppe, und wurde daher zur ersten &b{1}&a im Kontext {2}&a hinzugefügt."
+user-promote-not-on-track: "&b{0}&a ist nicht in keiner Gruppe auf diesem Track und wurde deswegen nicht befördert."
 user-promote-success: "&aBefördere &b{0}&a auf Track &b{1}&a im Kontext {4}&a von &b{2}&a zu &b{3}&a."
 user-promote-error-endoftrack: "&aDas Ende des Tracks &b{0}&a wurde erreicht. &b{1}&a konnte nicht befördert werden."
 user-promote-error-malformed: >
@@ -244,6 +251,7 @@ user-promote-error-malformed: >
   {PREFIX}&aBitte erstelle die Gruppe entweder, oder entferne sie vom Track, und versuche es erneut.
 user-demote-success: "&Degradiere &b{0}&a auf Track im Kontext {4} &b{1}&a von &b{2}&a zu &b{3}&a ."
 user-demote-endoftrack: "&aDas Ende von Track &b{0}&a wurde erreicht, &b{1}&a wurde daher von &b{2}&a entfernt."
+user-demote-endoftrack-not-removed: "&aDas Ende vom Track &b{0}&a wurde erreicht, aber &b{1}&a wurde nicht von der ersten Gruppe entfernt."
 user-demote-error-malformed: >
   {PREFIX}&aDie vorherige Gruppe auf Track, &b{0}&a, existiert nicht mehr. Degradierung nicht möglich\n
   {PREFIX}&aBitte erstelle die Gruppe entweder, oder entferne sie vom Track, und versuche es erneut.
@@ -289,12 +297,13 @@ log-export-already-exists: "&cFehler: Datei &4{0}&c exisitiert bereits."
 log-export-not-writable: "&cFehler: Datei &4{0}&c ist nicht beschreibbar."
 log-export-empty: "&cDer Log ist leer, und kann daher nicht exportiert werden."
 log-export-failure: "&cUnerwarteter Fehler beim schreiben in die Datei."
-log-export-success: "&aLog erfolgreich nach &b{0}&a exportiert."
+log-export-success: "&aErfolgreich nach &b{0}&a exportiert."
 import-already-running: "&cEin anderer Import-Prozess läuft bereits. Bitte warte auf dessen Fertigstellung, und versuche es erneut."
 export-already-running: "&cEin anderer Export-Prozess läuft bereits. Bitte warte auf dessen Fertigstellung, und versuche es erneut."
-import-log-doesnt-exist: "&cFehler: Datei &4{0}&c existiert nicht."
-import-log-not-readable: "&cFehler: Datei &4{0}&c ist nicht lesbar."
-import-log-failure: "&cUnerwarteter Fehler beim einlesen der Log-Datei."
+file-not-within-directory: "&cFehler: Datei &4{0}&c muss ein direktes Kind des Data-Ordners sein."
+import-file-doesnt-exist: "&cFehler: Datei &4{0}&c existiert nicht."
+import-file-not-readable: "&cFehler: Datei &4{0}&c ist nicht lesbar."
+import-file-read-failure: "&cEin unbekannter Fehler ist beim lesen der import Datei aufgetreten."
 import-progress: "&b(Import) &b-> &f{0}&f% abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehlern fertiggestellt."
 import-progress-sin: "&b(Import) &b-> &f{0}&f% abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehler fertiggestellt."
 import-start: "&b(Import) &b-> &fStarte Import-Prozess."
@@ -313,48 +322,46 @@ import-end-error-footer: "&b(Import) &7<----------------------------------------
 
 command-specs:
   user:
-    description: "Nutzer-Befehle"
+    description: "Eine Liste von Befehlen zum managen von Nutzern mit LuckPerms. (Ein 'Nutzer' in LuckPerms ist einfach ein Spieler und kann eine UUID oder ein name sein)"
     usage: "/%s user <Nutzer>"
   group:
-    description: "Gruppen-Befehle"
+    description: "Eine Liste von Befehlen zum managen von Gruppen mit LuckPerms. Gruppen sind einfach eine Kollektion von Rechten, welche Nutzern gegeben werden können. Neue Gruppen werden mit dem 'creategroup' Befehl erstellt."
     usage: "/%s group <Gruppe>"
   track:
-    description: "Track-Befehle"
+    description: "Eine Liste von Befehlen zum managen von Tracks mit LuckPerms. Tracks sind geordnete Kollektionen von Gruppen welche für Beföhrderungen oder Degradierungen verwendet werden können."
     usage: "/%s track <Track>"
   log:
-    description: "Log-Befehle"
+    description: "Eine Liste von Befehlen zum managen vom Log-System in LuckPerms."
     usage: "/%s log"
   sync:
-    description: "Änderungen mit Speicher synchronisieren"
+    description: "Lädt alle Daten vom Plugin's Speicher in den internen Speicher und wendet all erkannten änderungen an."
     usage: "/%s sync"
   info:
-    description: "Generelle Plugin-Infos ausgeben"
+    description: "Gibt generelle informationen über die aktuelle Plugin-Instanz."
     usage: "/%s info"
   debug:
-    description: "Erstelle Debug-Ausgabe"
+    description: "Erstellt eine Liste von internen Debug-Ausgaben"
     usage: "/%s debug"
   verbose:
-    description: "Verwalte Verbose-Permission-Prüfung"
-    usage: "/%s verbose <true|false> [Filter]"
+    description: "Kontrolliert das Verbose Permission-Prüfsystem des Plugins."
+    usage: "/%s verbose <on|record|off|upload> [Filter]"
     args:
-      "on|record|off|paste": "Aktiviere/deaktiviere Logging, oder gibt das geloggte aus"
+      "on|record|off|upload": "Logging aktivieren/deaktivieren oder um das geloggte hochzuladen"
       "filter": "Der Filter, mit dem die Einträge verglichen werden"
-      "--slim": "Füge \"--slim\" hinzu, um Verfolgungsdaten von der Ausgabe auszuschließen"
   tree:
-    description: "Erstelle einen Permissions-'Baum'"
-    usage: "/%s tree [selection] [max level] [Spieler]"
+    description: "Erstellt einen Rechte-'Baum' (Geordnete Rechte-Hierachie) von allen für LuckPerms bekannten Rechten."
+    usage: "/%s tree [Umfang] [Spieler]"
     args:
-      "selection": "Die Wurzel des Baumes. Spezifiziere \".\" um alle Permissions einzuschließen"
-      "max level": "Wie viele Verästelungs-Level zurück gegeben werden sollen"
+      "scope": "Die 'Wurzel' des Baumes. Verwende \".\" um alle Rechte einzufügen."
       "player": "Der Name eines Spielers der online ist, gegen den geprüft werden soll"
   search:
-    description: "Suche nach Nutzern/Gruppen mit einer bestimmten Permission"
+    description: "Sucht nach allen Nutzern/Gruppen mit einem bestimmten Recht."
     usage: "/%s search <Permission>"
     args:
       "permission": "Die Permission, nach der gesucht werden soll"
       "page": "Die Seite, welche angezeigt wird"
   check:
-    description: "Führe einen Standard-Permission-Check für einen Online-Spieler durch"
+    description: "Führe einen 'Schein'-Permission-Check für einen Online-Spieler durch"
     usage: "/%s check <Nutzer> <Permission>"
     args:
       "user": "Der zu Prüfende Nutzer"
@@ -363,12 +370,12 @@ command-specs:
     description: "Synchronisere Änderungen mit dem Speicher, und beauftrage alle Server im Netzwerk, das gleiche zu tun"
     usage: "/%s networksync"
   import:
-    description: "Daten von Datei importieren"
+    description: "Importiert Daten von einer (vorher erstellten) Export Datei."
     usage: "/%s import <Datei>"
     args:
       "file": "Die Datei, von der importiert wird"
   export:
-    description: "Daten zu Datei exportieren"
+    description: "Exportiert alle Daten zu einer 'Export' Datei. Diese kann später wieder importiert werden."
     usage: "/%s export <Datei>"
     args:
       "file": "Die Datei, zu der exportiert wird"
@@ -430,11 +437,13 @@ command-specs:
     args:
       "track": "der Track, auf dem der Nutzer befördert wird"
       "context...": "der Kontext, in dem der Nutzer befördert wird"
+      "--dont-add-to-first": "beföhrdere den Nutzer nur, wenn dieser bereits auf dieser Track ist"
   user-demote:
     description: "Degradiert den Nutzer auf dem Track eine Gruppe nach unten"
     args:
       "track": "der Track, auf dem der Nutzer degradiert wird"
       "context...": "der Kontext, in dem der Nutzer degradiert wird"
+      "--dont-remove-from-first": "verhindere, dass der Nutzer von der ersten Gruppe entfernt wird"
   user-clone:
     description: "Klont den Nutzer"
     args:
@@ -453,6 +462,7 @@ command-specs:
     description: "Setzt den Anzeigenamen der Gruppe"
     args:
       "name": "der zu setzende Name"
+      "context...": "der Kontext in welchem der Name gesetzt werden soll"
   group-rename:
     description: "Gruppe umbenennen"
     args:
@@ -497,6 +507,7 @@ command-specs:
       "node": "die zu setzende Permission-Node"
       "true|false": "der Wert der Node"
       "duration": "die Dauer, bis die Perm-Node abläuft"
+      "temporary modifier": "wie die temporäre permission angewendet werden soll"
       "context...": "der Kontext, in welchem die Permission-Node hinzugefügt wird"
   permission-unsettemp:
     description: "Habt eine temporäre Permission für das Objekt auf"
@@ -513,6 +524,10 @@ command-specs:
     args:
       "node": "die Permission-Node, auf die geprüft wird"
       "context...": "der Kontext, in dem geprüft wird"
+  permission-clear:
+    description: "Entfernt alle Rechte"
+    args:
+      "context...": "der Kontext zum filtern"
   parent-info:
     description: "Listet die Gruppen auf, von denen dieses Objekt erbt"
     args:
@@ -544,6 +559,7 @@ command-specs:
     args:
       "group": "die Gruppe, von der geerbt wird"
       "duration": "die Dauer der Gruppen-Mitgliedschaft"
+      "temporary modifier": "Wie die temporäre Gruppe angewendet werden soll"
       "context...": "der Kontext, in dem die Gruppe erbt"
   parent-remove-temp:
     description: "Entfernt eine zuvor gesetzte temporäre Vererbungs-Rolle"
@@ -596,6 +612,18 @@ command-specs:
       "priority": "die Priorität mit der der Suffix hinzugefügt wird"
       "suffix": "der Suffix"
       "context...": "die Kontexte, in denen der Suffix hinzugefügt wird"
+  meta-setprefix:
+    description: "Setzt einen Prefix"
+    args:
+      "priority": "die Priorität mit welcher der Prefix gesetzt wird"
+      "prefix": "der Prefix text"
+      "context...": "Der Kontext in welchem der Prefix gesetzt wird"
+  meta-setsuffix:
+    description: "Setzt einen Suffix"
+    args:
+      "priority": "die Priorität mit welcher der Suffix gesetzt wird"
+      "suffix": "der Suffix text"
+      "context...": "Der Kontext in welchem der Suffix gesetzt wird"
   meta-removeprefix:
     description: "Entfernt einen Prefix"
     args:
@@ -622,6 +650,20 @@ command-specs:
       "prefix": "der Prefix"
       "duration": "die Dauer, bis der Suffix abläuft"
       "context...": "die Kontexte, in denen der Suffix hinzugefügt wird"
+  meta-settemp-prefix:
+    description: "Setzt einen Prefix temporär"
+    args:
+      "priority": "die Priorität mit welcher der Prefix gesetzt wird"
+      "prefix": "der Prefix text"
+      "duration": "die Dauer bis der Prefix abläuft"
+      "context...": "Der Kontext in welchem der Prefix gesetzt wird"
+  meta-settemp-suffix:
+    description: "Sets a suffix temporarily"
+    args:
+      "priority": "die Priorität mit welcher der Suffix gesetzt wird"
+      "suffix": "der Suffix text"
+      "duration": "die Dauer bis der Suffix abläuft"
+      "context...": "Der Kontext in welchem der Suffix gesetzt wird"
   meta-removetemp-prefix:
     description: "Entfernt einen temporären Prefix"
     args:
