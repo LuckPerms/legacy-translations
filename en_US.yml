@@ -13,18 +13,20 @@ first-time-setup: >
   \n
   {PREFIX}&3After you've done this, you can begin to define your permission assignments and groups.\n
   {PREFIX}&3Don't know where to start? Check here: &7https://github.com/lucko/LuckPerms/wiki/Usage
-empty: "{0}"
+blank: "{0}"
 player-online: "&aOnline"
 player-offline: "&cOffline"
-loading-database-error: "&cA database error occurred whilst loading permissions data. Please try again later."
-loading-state-error: "&cPermissions data for your user was not loaded during the pre-login stage - unable to continue. Please try again later."
+loading-database-error: "&cA database error occurred whilst loading permissions data. Please try again later. If you are a server admin, please check the console for any errors."
+loading-state-error: "&cPermissions data for your user was not loaded during the pre-login stage - unable to continue. Please try again later. If you are a server admin, please check the console for any errors."
+loading-state-error-cb-offline-mode: "&cPermissions data for your user was not loaded during the pre-login stage - this is likely due to a conflict between CraftBukkit and the online-mode setting. Please check the server console for more information."
 loading-setup-error: "&cAn unexpected error occurred whilst setting up your permissions data. Please try again later."
 op-disabled: "&bThe vanilla OP system is disabled on this server."
 op-disabled-sponge: "&2Please note that Server Operator status has no effect on Sponge permission checks when a permission plugin is installed. Please edit user data directly."
 log: >
   {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
   {PREFIX}&3LOG &3&l> &f{3}
-verbose-log: "&3VB &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
+verbose-log-permission: "&3VB &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
+verbose-log-meta: "&3VB &3&l> &a{0}&7 - &bmeta: &a{1}&7 - &7{2}"
 export-log: "&3EXPORT &3&l> &f{0}"
 export-log-progress: "&3EXPORT &3&l> &7{0}"
 migration-log: "&3MIGRATION &7[&3{0}&7] &3&l> &f{1}"
@@ -52,7 +54,7 @@ user-invalid-entry: "&4{0}&c is not a valid username/uuid."
 group-invalid-entry: "&4{0}&c is not a valid group name."
 track-invalid-entry: "&4{0}&c is not a valid track name."
 server-world-invalid-entry: "&cServer/world names can only contain alphanumeric characters and cannot exceed 36 characters in length."
-verbose-invalid-filter: "&4{0}&c is not a valid verbose filter."
+verbose-invalid-filter: "&4{0}&c is not a valid verbose filter. &7({1})"
 verbose-on: "&bVerbose logging &aenabled &bfor checks matching &aANY&b."
 verbose-on-query: "&bVerbose logging &aenabled &bfor checks matching &a{0}&b."
 verbose-off: "&bVerbose logging &cdisabled&b."
@@ -70,13 +72,12 @@ search-showing-users: "&bShowing user entries:    &7(page &f{0}&7 of &f{1}&7 - &
 search-showing-groups: "&bShowing group entries:    &7(page &f{0}&7 of &f{1}&7 - &f{2}&7 entries)"
 apply-edits-invalid-code: "&cInvalid code. &7({0})"
 apply-edits-unable-to-read: "&cUnable to read data using the given code. &7({0})"
-apply-edits-no-target: "&cUnable to parse the target of the edit."
-apply-edits-target-group-not-exists: "&cTarget group &4{0}&c does not exist."
+apply-edits-unknown-type: "&cUnable to apply edit to the specified object type. &7({0})"
 apply-edits-target-user-not-uuid: "&cTarget user &4{0}&c is not a valid uuid."
 apply-edits-target-user-unable-to-load: "&cUnable to load target user &4{0}&c."
 apply-edits-target-unknown: "&cInvalid target. &7({0})"
 apply-edits-target-no-changes-present: "&aNo changes were applied from the web editor. The returned data didn't contain any edits."
-apply-edits-success: "&aWeb editor data was applied to &b{0}&a successfully."
+apply-edits-success: "&aWeb editor data was applied to {0} &b{1}&a successfully."
 apply-edits-success-summary: "&7(&a{0} &7{1} and &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
@@ -121,6 +122,8 @@ info-storage: >
   {PREFIX}&f-  &bStorage:\n
   {PREFIX}&f-     &3Type: &f{0}
 info-storage-meta: "&f-     &3{0}: {1}"
+info-extensions: "{PREFIX}&f-  &bExtensions:"
+info-extension-entry: "&f-     &3{0}"
 info-middle: >
   {PREFIX}&f-  &bMessaging: &f{0}\n
   {PREFIX}&f-  &bInstance:\n
@@ -205,6 +208,7 @@ set-meta-success: "&aSet meta key &f'{0}&f'&a to &f'{1}&f'&a for &b{2}&a in cont
 set-meta-temp-success: "&aSet meta key &f'{0}&f'&a to &f'{1}&f'&a for &b{2}&a for a duration of &b{3}&a in context {4}&a."
 unset-meta-success: "&aUnset meta key &f'{0}&f'&a for &b{1}&a in context {2}&a."
 unset-meta-temp-success: "&aUnset temporary meta key &f'{0}&f'&a for &b{1}&a in context {2}&a."
+bulk-update-must-use-console: "&cThe bulk update command can only be used from the console."
 bulk-update-invalid-data-type: "&cInvalid type. Was expecting 'all', 'users' or 'groups'."
 bulk-update-invalid-constraint: "&cInvalid constraint &4{0}&c. Constraints should be in the format '&f<field> <comparison operator> <value>&c'."
 bulk-update-invalid-comparison: "&cInvalid comparison operator '&4{0}&c'. Expected one of the following: &f==  !=  ~~  ~!"
@@ -237,6 +241,7 @@ user-primarygroup-error-alreadyhas: "&b{0}&a already has &b{1}&a set as their pr
 user-primarygroup-error-notmember: "&b{0}&a was not already a member of &b{1}&a, adding them now."
 user-track-error-not-contain-group: "&b{0}&a isn't already in any groups on &b{1}&a."
 user-track-added-to-first: "&b{0}&a isn't in any groups on this track, so they were added to the first group, &b{1}&a in context {2}&a."
+user-promote-not-on-track: "&b{0}&a isn't in any groups on this track, so was not promoted."
 user-promote-success: "&aPromoting &b{0}&a along track &b{1}&a from &b{2}&a to &b{3}&a in context {4}&a."
 user-promote-error-endoftrack: "&aThe end of track &b{0}&a was reached. Unable to promote &b{1}&a."
 user-promote-error-malformed: >
@@ -244,6 +249,7 @@ user-promote-error-malformed: >
   {PREFIX}&aEither create the group, or remove it from the track and try again.
 user-demote-success: "&aDemoting &b{0}&a along track &b{1}&a from &b{2}&a to &b{3}&a in context {4}&a."
 user-demote-endoftrack: "&aThe end of track &b{0}&a was reached, so &b{1}&a was removed from &b{2}&a."
+user-demote-endoftrack-not-removed: "&aThe end of track &b{0}&a was reached, but &b{1}&a was not removed from the first group."
 user-demote-error-malformed: >
   {PREFIX}&aThe previous group on the track, &b{0}&a, no longer exists. Unable to demote user.\n
   {PREFIX}&aEither create the group, or remove it from the track and try again.
@@ -289,12 +295,13 @@ log-export-already-exists: "&cError: File &4{0}&c already exists."
 log-export-not-writable: "&cError: File &4{0}&c is not writable."
 log-export-empty: "&cThe log is empty and therefore cannot be exported."
 log-export-failure: "&cAn unexpected error occured whilst writing to the file."
-log-export-success: "&aSuccessfully exported the log to &b{0}&a."
+log-export-success: "&aSuccessfully exported to &b{0}&a."
 import-already-running: "&cAnother import process is already running. Please wait for it to finish and try again."
 export-already-running: "&cAnother export process is already running. Please wait for it to finish and try again."
-import-log-doesnt-exist: "&cError: File &4{0}&c does not exist."
-import-log-not-readable: "&cError: File &4{0}&c is not readable."
-import-log-failure: "&cAn unexpected error occured whilst reading from the log file."
+file-not-within-directory: "&cError: File &4{0}&c must be a direct child of the data directory."
+import-file-doesnt-exist: "&cError: File &4{0}&c does not exist."
+import-file-not-readable: "&cError: File &4{0}&c is not readable."
+import-file-read-failure: "&cAn unexpected error occured whilst reading from the import file."
 import-progress: "&b(Import) &b-> &f{0}&f% complete &7- &b{1}&f/&b{2} &foperations complete with &c{3} &ferrors."
 import-progress-sin: "&b(Import) &b-> &f{0}&f% complete &7- &b{1}&f/&b{2} &foperations complete with &c{3} &ferror."
 import-start: "&b(Import) &b-> &fStarting import process."
@@ -313,48 +320,51 @@ import-end-error-footer: "&b(Import) &7<----------------------------------------
 
 command-specs:
   user:
-    description: "User commands"
+    description: "A set of commands for managing users within LuckPerms. (A 'user' in LuckPerms is just a player, and can refer to a UUID or username)"
     usage: "/%s user <user>"
   group:
-    description: "Group commands"
+    description: "A set of commands for managing groups within LuckPerms. Groups are just collections of permission assignments that can be given to users. New groups are made using the 'creategroup' command."
     usage: "/%s group <group>"
   track:
-    description: "Track commands"
+    description: "A set of commands for managing tracks within LuckPerms. Tracks are a ordered collection of groups which can be used for defining promotions and demotions."
     usage: "/%s track <track>"
   log:
-    description: "Log commands"
+    description: "A set of commands for managing the logging functionality within LuckPerms."
     usage: "/%s log"
   sync:
-    description: "Sync changes with the storage"
+    description: "Reloads all data from the plugins storage into memory, and applies any changes that are detected."
     usage: "/%s sync"
   info:
-    description: "Print general plugin info"
+    description: "Prints general information about the active plugin instance."
     usage: "/%s info"
+  editor:
+    description: "Creates a new web editor session"
+    usage: "/%s editor [type]"
+    args:
+      "type": "the types to load into the editor. ('all', 'users' or 'groups')"
   debug:
-    description: "Produce debugging output"
+    description: "Produces a set of internal debugging output"
     usage: "/%s debug"
   verbose:
-    description: "Manage verbose permission checking"
-    usage: "/%s verbose <true|false> [filter]"
+    description: "Controls the plugins verbose permission check monitoring system."
+    usage: "/%s verbose <on|record|off|upload> [filter]"
     args:
-      "on|record|off|paste": "whether to enable/disable logging, or to paste the logged output"
+      "on|record|off|upload": "whether to enable/disable logging, or to upload the logged output"
       "filter": "the filter to match entries against"
-      "--slim": "add \"--slim\" to exclude trace data from the pasted output"
   tree:
-    description: "Generate a tree view of permissions"
-    usage: "/%s tree [selection] [max level] [player]"
+    description: "Generates a tree view (ordered list hierarchy) of all permissions known to LuckPerms."
+    usage: "/%s tree [scope] [player]"
     args:
-      "selection": "the root of the tree. specify \".\" to include all permissions"
-      "max level": "how many branch levels should be returned"
+      "scope": "the root of the tree. specify \".\" to include all permissions"
       "player": "the name of an online player to check against"
   search:
-    description: "Search for users/groups with a specific permission"
+    description: "Searchs for all of the users/groups with a specific permission"
     usage: "/%s search <permission>"
     args:
       "permission": "the permission to search for"
       "page": "the page to view"
   check:
-    description: "Perform a standard permission check on an online player"
+    description: "Performs a 'mock' permission check for an online player"
     usage: "/%s check <user> <permission>"
     args:
       "user": "the user to check"
@@ -363,12 +373,12 @@ command-specs:
     description: "Sync changes with the storage and request that all other servers on the network do the same"
     usage: "/%s networksync"
   import:
-    description: "Import data from a file"
+    description: "Imports data from a (previously created) export file"
     usage: "/%s import <file>"
     args:
       "file": "the file to import from"
   export:
-    description: "Export data to a file"
+    description: "Exports all permissions data to an 'export' file. Can be re-imported at a later time."
     usage: "/%s export <file>"
     args:
       "file": "the file to export to"
@@ -430,11 +440,13 @@ command-specs:
     args:
       "track": "the track to promote the user up"
       "context...": "the contexts to promote the user in"
+      "--dont-add-to-first": "only promote the user if they're already on the track"
   user-demote:
     description: "Demotes the user down a track"
     args:
       "track": "the track to demote the user down"
       "context...": "the contexts to demote the user in"
+      "--dont-remove-from-first": "prevent the user from being removed from the first group"
   user-clone:
     description: "Clone the user"
     args:
@@ -453,6 +465,7 @@ command-specs:
     description: "Set the groups display name"
     args:
       "name": "the name to set"
+      "context...": "the contexts to set the name in"
   group-rename:
     description: "Rename the group"
     args:
@@ -497,6 +510,7 @@ command-specs:
       "node": "the permission node to set"
       "true|false": "the value of the node"
       "duration": "the duration until the permission node expires"
+      "temporary modifier": "how the temporary permission should be applied"
       "context...": "the contexts to add the permission in"
   permission-unsettemp:
     description: "Unsets a temporary permission for the object"
@@ -513,6 +527,10 @@ command-specs:
     args:
       "node": "the permission node to check for"
       "context...": "the contexts to check in"
+  permission-clear:
+    description: "Clears all permissions"
+    args:
+      "context...": "the contexts to filter by"
   parent-info:
     description: "Lists the groups that this object inherits from"
     args:
@@ -544,6 +562,7 @@ command-specs:
     args:
       "group": "the group to inherit from"
       "duration": "the duration of the group membership"
+      "temporary modifier": "how the temporary permission should be applied"
       "context...": "the contexts to inherit the group in"
   parent-remove-temp:
     description: "Removes a previously set temporary inheritance rule"
@@ -596,6 +615,18 @@ command-specs:
       "priority": "the priority to add the suffix at"
       "suffix": "the suffix string"
       "context...": "the contexts to add the suffix in"
+  meta-setprefix:
+    description: "Sets a prefix"
+    args:
+      "priority": "the priority to set the prefix at"
+      "prefix": "the prefix string"
+      "context...": "the contexts to set the prefix in"
+  meta-setsuffix:
+    description: "Sets a suffix"
+    args:
+      "priority": "the priority to set the suffix at"
+      "suffix": "the suffix string"
+      "context...": "the contexts to set the suffix in"
   meta-removeprefix:
     description: "Removes a prefix"
     args:
@@ -622,6 +653,20 @@ command-specs:
       "suffix": "the suffix string"
       "duration": "the duration until the suffix expires"
       "context...": "the contexts to add the suffix in"
+  meta-settemp-prefix:
+    description: "Sets a prefix temporarily"
+    args:
+      "priority": "the priority to set the prefix at"
+      "prefix": "the prefix string"
+      "duration": "the duration until the prefix expires"
+      "context...": "the contexts to set the prefix in"
+  meta-settemp-suffix:
+    description: "Sets a suffix temporarily"
+    args:
+      "priority": "the priority to set the suffix at"
+      "suffix": "the suffix string"
+      "duration": "the duration until the suffix expires"
+      "context...": "the contexts to set the suffix in"
   meta-removetemp-prefix:
     description: "Removes a temporary prefix"
     args:
