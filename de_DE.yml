@@ -251,7 +251,7 @@ user-promote-error-malformed: >
   {PREFIX}&aBitte erstelle die Gruppe entweder, oder entferne sie vom Track, und versuche es erneut.
 user-demote-success: "&Degradiere &b{0}&a auf Track im Kontext {4} &b{1}&a von &b{2}&a zu &b{3}&a ."
 user-demote-endoftrack: "&aDas Ende von Track &b{0}&a wurde erreicht, &b{1}&a wurde daher von &b{2}&a entfernt."
-user-demote-endoftrack-not-removed: "&aDas Ende vom Track &b{0}&a wurde erreicht, aber &b{1}&a wurde nicht von der ersten Gruppe entfernt."
+user-demote-endoftrack-not-removed: "&aDas Ende von Track &b{0}&a wurde erreicht, aber &b{1}&a wurde nicht von der ersten Gruppe entfernt."
 user-demote-error-malformed: >
   {PREFIX}&aDie vorherige Gruppe auf Track, &b{0}&a, existiert nicht mehr. Degradierung nicht möglich\n
   {PREFIX}&aBitte erstelle die Gruppe entweder, oder entferne sie vom Track, und versuche es erneut.
