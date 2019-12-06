@@ -1,7 +1,7 @@
-# LuckPerms Language File
-# Locale: de_DE (German/Deutsch)
-# Author: itsTyrion
-# Editore: Andre_601, Tobi406
+# LuckPerms Sprach-Datei
+# Sprache: de_DE (German/Deutsch)
+# Autor: itsTyrion
+# Editoren: Andre_601, Tobi406
 
 prefix: "&7&l[&b&lL&3&lP&7&l] "
 view-available-commands-prompt: "&3Nutze &a/{0} help&3, um verfügbare Befehle zu sehen."
@@ -124,7 +124,7 @@ info-storage: >
   {PREFIX}&f-  &bSpeicher:\n
   {PREFIX}&f-     &3Typ: &f{0}
 info-storage-meta: "&f-     &3{0}: {1}"
-info-extensions: "{PREFIX}&f-  &bErwriterungen:"
+info-extensions: "{PREFIX}&f-  &bErweiterungen:"
 info-extension-entry: "&f-     &3{0}"
 info-middle: >
   {PREFIX}&f-  &bMessaging: &f{0}\n
@@ -210,7 +210,7 @@ set-meta-success: "&aDer Meta-Key &f'{0}&f'&a wurde für &b{2}&a im Kontext {3}&
 set-meta-temp-success: "&aDer Meta-Key &f'{0}&f'&a wurde für &b{2}&a für einen Zeitraum von &b{3]&a im Kontext {4}&a auf &f'{1}&f'&a gesetzt."
 unset-meta-success: "&aMeta-Key &f'{0}&f'&a für &b{1}&a im Kontext {2}&a aufgehoben."
 unset-meta-temp-success: "&aTemporärer Meta-Key &f'{0}&f'&a für &b{1}&a im Kontext {2}&a aufgehoben."
-bulk-update-must-use-console: "&cDer Bulk update Befehl kann nur von der Konsole aus ausgeführt werden."
+bulk-update-must-use-console: "&cDer Bulkupdate-Befehl kann nur von der Konsole aus ausgeführt werden."
 bulk-update-invalid-data-type: "&cUngültiger Typ. 'all', 'users' oder 'groups' wurde erwartet."
 bulk-update-invalid-constraint: "&cUngültige Beschränkung &4{0}&c. Beschränkungen sollten im Format '&f<field> <comparison operator> <value>&c' sein."
 bulk-update-invalid-comparison: "&cUngültiger Vergleichs-Operator '&4{0}&c'. Einer der folgenden wurde erwartet: &f==  !=  ~~  ~!"
@@ -303,7 +303,7 @@ export-already-running: "&cEin anderer Export-Prozess läuft bereits. Bitte wart
 file-not-within-directory: "&cFehler: Datei &4{0}&c muss ein direktes Kind des Data-Ordners sein."
 import-file-doesnt-exist: "&cFehler: Datei &4{0}&c existiert nicht."
 import-file-not-readable: "&cFehler: Datei &4{0}&c ist nicht lesbar."
-import-file-read-failure: "&cEin unbekannter Fehler ist beim lesen der import Datei aufgetreten."
+import-file-read-failure: "&cEin unbekannter Fehler ist beim lesen der Import-Datei aufgetreten."
 import-progress: "&b(Import) &b-> &f{0}&f% abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehlern fertiggestellt."
 import-progress-sin: "&b(Import) &b-> &f{0}&f% abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehler fertiggestellt."
 import-start: "&b(Import) &b-> &fStarte Import-Prozess."
@@ -322,34 +322,34 @@ import-end-error-footer: "&b(Import) &7<----------------------------------------
 
 command-specs:
   user:
-    description: "Eine Liste von Befehlen zum managen von Nutzern mit LuckPerms. (Ein 'Nutzer' in LuckPerms ist einfach ein Spieler und kann eine UUID oder ein name sein)"
+    description: "Eine Liste von Befehlen zum Verwalten von Nutzern mit LuckPerms. (Ein 'Nutzer' in LuckPerms ist einfach ein Spieler und kann eine UUID oder ein Name sein)"
     usage: "/%s user <Nutzer>"
   group:
-    description: "Eine Liste von Befehlen zum managen von Gruppen mit LuckPerms. Gruppen sind einfach eine Kollektion von Rechten, welche Nutzern gegeben werden können. Neue Gruppen werden mit dem 'creategroup' Befehl erstellt."
+    description: "Eine Liste von Befehlen zum Verwalten von Gruppen mit LuckPerms. Gruppen sind einfach eine Kollektion von Rechten, welche Nutzern gegeben werden können. Neue Gruppen werden mit dem 'creategroup'-Befehl erstellt."
     usage: "/%s group <Gruppe>"
   track:
-    description: "Eine Liste von Befehlen zum managen von Tracks mit LuckPerms. Tracks sind geordnete Kollektionen von Gruppen welche für Beföhrderungen oder Degradierungen verwendet werden können."
+    description: "Eine Liste von Befehlen zum Verwalten von Tracks mit LuckPerms. Tracks sind geordnete Kollektionen von Gruppen welche für Beföhrderungen oder Degradierungen verwendet werden können."
     usage: "/%s track <Track>"
   log:
-    description: "Eine Liste von Befehlen zum managen vom Log-System in LuckPerms."
+    description: "Eine Liste von Befehlen zum Verwalten vom Log-System in LuckPerms."
     usage: "/%s log"
   sync:
-    description: "Lädt alle Daten vom Plugin's Speicher in den internen Speicher und wendet all erkannten änderungen an."
+    description: "Lädt alle Daten vom Plugin-Speicher in den internen Speicher und wendet alle erkannten Änderungen an."
     usage: "/%s sync"
   info:
-    description: "Gibt generelle informationen über die aktuelle Plugin-Instanz."
+    description: "Gibt generelle Informationen über die aktuelle Plugin-Instanz."
     usage: "/%s info"
   debug:
     description: "Erstellt eine Liste von internen Debug-Ausgaben"
     usage: "/%s debug"
   verbose:
-    description: "Kontrolliert das Verbose Permission-Prüfsystem des Plugins."
+    description: "Kontrolliert das Verbose Rechte-Prüfsystem des Plugins."
     usage: "/%s verbose <on|record|off|upload> [Filter]"
     args:
       "on|record|off|upload": "Logging aktivieren/deaktivieren oder um das geloggte hochzuladen"
       "filter": "Der Filter, mit dem die Einträge verglichen werden"
   tree:
-    description: "Erstellt einen Rechte-'Baum' (Geordnete Rechte-Hierachie) von allen für LuckPerms bekannten Rechten."
+    description: "Erstellt einen Rechte-'Baum' (Geordnete Rechte-Hierachie) von allen für LuckPerms bekannte Rechte."
     usage: "/%s tree [Umfang] [Spieler]"
     args:
       "scope": "Die 'Wurzel' des Baumes. Verwende \".\" um alle Rechte einzufügen."
@@ -370,7 +370,7 @@ command-specs:
     description: "Synchronisere Änderungen mit dem Speicher, und beauftrage alle Server im Netzwerk, das gleiche zu tun"
     usage: "/%s networksync"
   import:
-    description: "Importiert Daten von einer (vorher erstellten) Export Datei."
+    description: "Importiert Daten von einer (vorher erstellten) Export-Datei."
     usage: "/%s import <Datei>"
     args:
       "file": "Die Datei, von der importiert wird"
@@ -507,7 +507,7 @@ command-specs:
       "node": "die zu setzende Permission-Node"
       "true|false": "der Wert der Node"
       "duration": "die Dauer, bis die Perm-Node abläuft"
-      "temporary modifier": "wie die temporäre permission angewendet werden soll"
+      "temporary modifier": "wie das temporäre Recht angewendet werden soll"
       "context...": "der Kontext, in welchem die Permission-Node hinzugefügt wird"
   permission-unsettemp:
     description: "Habt eine temporäre Permission für das Objekt auf"
