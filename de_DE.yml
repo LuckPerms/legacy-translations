@@ -303,7 +303,7 @@ export-already-running: "&cEin anderer Export-Prozess läuft bereits. Bitte wart
 file-not-within-directory: "&cFehler: Datei &4{0}&c muss ein direktes Kind des Data-Ordners sein."
 import-file-doesnt-exist: "&cFehler: Datei &4{0}&c existiert nicht."
 import-file-not-readable: "&cFehler: Datei &4{0}&c ist nicht lesbar."
-import-file-read-failure: "&cEin unbekannter Fehler ist beim lesen der Import-Datei aufgetreten."
+import-file-read-failure: "&cEin unbekannter Fehler ist beim Lesen der Import-Datei aufgetreten."
 import-progress: "&b(Import) &b-> &f{0}&f% abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehlern fertiggestellt."
 import-progress-sin: "&b(Import) &b-> &f{0}&f% abgeschlossen &7- &b{1}&f/&b{2} &fOperationen mit &c{3} &fFehler fertiggestellt."
 import-start: "&b(Import) &b-> &fStarte Import-Prozess."
