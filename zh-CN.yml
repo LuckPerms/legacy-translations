@@ -2,7 +2,7 @@
 # Locale: zh-CN (Simplified Chinese)
 # Author: EuropeJing & HIGAN
 
-prefix: "&7&l[&b&lL&3&lP&7&l] &c"
+prefix: "&7&l[&b&lL&3&lP&7&l] "
 view-available-commands-prompt: "&3使用 &a/{0} help &3来查看可用的命令。"
 no-permission-for-subcommands: "&3你没有权限使用任何子命令。"
 first-time-setup: >
@@ -13,18 +13,20 @@ first-time-setup: >
   \n
   {PREFIX}&3当你完成这些操作，你就能定义你自己的权限分配和组了。\n
   {PREFIX}&3还不知道如何操作？点击这里：&7https://github.com/lucko/LuckPerms/wiki/Usage
-empty: "{0}"
+blank: "{0}"
 player-online: "&a在线"
 player-offline: "&c离线"
-loading-database-error: "&c加载权限时发生数据库错误，请稍后尝试。"
-loading-state-error: "&c在预登录阶段未能成功加载用户的权限数据 - 无法继续，请稍后尝试。"
+loading-database-error: "&c加载权限数据时发生数据库错误,请稍后再试。如果您是服务器管理员，请检查控制台是否有任何错误。"
+loading-state-error: "&c在预登录阶段未加载用户的权限数据--无法继续,请稍后再试。如果您是服务器管理员，请检查控制台是否有任何错误。"
+loading-state-error-cb-offline-mode: "&c在预登录阶段未加载用户的权限数据--这可能是由于CraftBukkit与在线模式设置之间的冲突。请检查服务器控制台以获取更多信息。"
 loading-setup-error: "&c设置权限数据时发生意外错误，请稍后再试。"
 op-disabled: "&b此服务器上禁用了原生 OP 系统。"
 op-disabled-sponge: "&2请注意，当安装权限插件时，服务器 OP 状态无效。请直接编辑用户数据。"
 log: >
   {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
   {PREFIX}&3LOG &3&l> &f{3}
-verbose-log: "&3详细 &3&l> {0}"
+verbose-log-permission: "&3详细 &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
+verbose-log-meta: "&3详细 &3&l> &a{0}&7 - &b元数据：&a{1}&7 - &7{2}"
 export-log: "&3输出 &3&l> &f{0}"
 export-log-progress: "&3输出 &3&l> &7{0}"
 migration-log: "&3移动 &7[&3{0}&7] &3&l> &f{1}"
@@ -52,7 +54,7 @@ user-invalid-entry: "&4{0}&c不是有效的用户名/uuid。"
 group-invalid-entry: "&4{0}&c不是有效的组名称。"
 track-invalid-entry: "&4{0}&c不是有效的权限组轨道名称。"
 server-world-invalid-entry: "&c服务器/世界名称只能包含字母数字字符，长度不能超过36个字符。"
-verbose-invalid-filter: "&4{0}&c不是有效的详细过滤器"
+verbose-invalid-filter: "&4{0}&c不是有效的详细过滤器。&7({1})"
 verbose-on: "&b将匹配过滤器:&aANY&b的权限详细输出设置为&a开&b。"
 verbose-on-query: "&b将匹配过滤器:&a{0}&b的权限详细输出设置为&a开&b。"
 verbose-off: "&b详细输出设置为&c关&b。"
@@ -70,13 +72,12 @@ search-showing-users: "&b显示用户条目:    &7(第 &f{0}&7/&f{1}&7页 - &f{2
 search-showing-groups: "&b显示组条目:    &7(第 &f{0}&7/&f{1}&7页 - &f{2}&7 条目)"
 apply-edits-invalid-code: "&c无效的代码。&7({0})"
 apply-edits-unable-to-read: "&c无法使用给定代码读取数据。&7({0})"
-apply-edits-no-target: "&c无法解析编辑的目标。请提供它作为一个额外的参数。"
-apply-edits-target-group-not-exists: "&c目标组&4{0}&c不存在。"
+apply-edits-unknown-type: "&c无法对指定的对象类型应用编辑。&7({0})"
 apply-edits-target-user-not-uuid: "&c目标用户&4{0}&c不是一个有效的uuid。"
 apply-edits-target-user-unable-to-load: "&c无法加载目标用户&4{0}&c。"
 apply-edits-target-unknown: "&c目标无效。&7({0})"
 apply-edits-target-no-changes-present: "&a由于返回的数据没有包含任何改动，网页编辑器没有应用任何修改。"
-apply-edits-success: "&a网页编辑器数据已成功应用于&b{0}&a。"
+apply-edits-success: "&a网页编辑器数据已成功应用于{0} &b{1}&a。"
 apply-edits-success-summary: "&7(&a{0} &7{1} 和 &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
@@ -121,6 +122,8 @@ info-storage: >
   {PREFIX}&f-  &b储存:\n
   {PREFIX}&f-     &3类型: &f{0}
 info-storage-meta: "&f-     &3{0}: {1}"
+info-extensions: "{PREFIX}&f-  &b扩展名: "
+info-extension-entry: "&f-     &3{0}"
 info-middle: >
   {PREFIX}&f-  &3消息类型: &f{0}\n
   {PREFIX}&f-  &b服务器实例:\n
@@ -205,11 +208,12 @@ set-meta-success: "&a在环境&b{3}&a中将&b{2}&a的元信息&f'{0}&f'&a设置�
 set-meta-temp-success: "&a在环境&b{4}&a中将&b{2}&a的元信息&f'{0}&f'&a设置为&f'{1}&f'&a，持续时间为&b{3}&a。"
 unset-meta-success: "&a在环境{2}中取消设置&b{1}&a的元信息&f'{0}&f'&a。"
 unset-meta-temp-success: "&a在环境{2}中取消设置&b{1}&a的临时元信息&f'{0}&f'&a。"
+bulk-update-must-use-console: "&c批量更新命令只能从控制台使用。"
 bulk-update-invalid-data-type: "&c类型无效。期望类型是'all'、'users'或'groups'。"
 bulk-update-invalid-constraint: "&c无效的约束&4{0}&c。约束的格式应该是'&f<field> <comparison operator> <value>&c'。"
 bulk-update-invalid-comparison: "&c比较运算符无效'&4{0}&c'。应该以下之一: &f==  !=  ~~  ~!"
 bulk-update-queued: "&a批量更新操作已排队。&7(&f{0}&7)"
-bulk-update-confirm: "&a运行&b/{0} bulkupdate &a确认{1}执行更新。"
+bulk-update-confirm: "&a运行&b/{0} bulkupdate confirm {1}&a执行更新。"
 bulk-update-unknown-id: "&a使用id&b{0}&a的操作不存在或已过期。"
 bulk-update-starting: "&a运行批量更新。"
 bulk-update-success: "&b批量更新已成功完成。"
@@ -237,6 +241,7 @@ user-primarygroup-error-alreadyhas: "&a已将&b{1}&a设置为用户&b{0}&a的主
 user-primarygroup-error-notmember: "&b{0}&a不是&b{1}&a的成员，现在添加它们。"
 user-track-error-not-contain-group: "&a用户&b{0}&a尚未在权限组轨道&b{1}&a上的任何组中。"
 user-track-added-to-first: "&b{0}&a不在此权限组轨道上的任何组中，因此在环境&b{2}&a中将其添加到第一组&b{2}&a。"
+user-promote-not-on-track: "&b{0}&a不在此权限组轨道上的任何组中，因此没有提升。"
 user-promote-success: "&a在环境&b{4}&a中将用户&b{0}&a沿权限组轨道&b{1}&a从&b{2}&a提升到&b{3}&a。"
 user-promote-error-endoftrack: "&a已达到权限组轨道&b{0}&a的结尾，所以无法提升用户&b{1}&a。"
 user-promote-error-malformed: >
@@ -244,6 +249,7 @@ user-promote-error-malformed: >
   {PREFIX}&a创建组，或将其从权限组轨道中删除，然后重试。
 user-demote-success: "&a在环境&b{4}&a中将&b{0}&a沿权限组轨道&b{1}&a从&b{2}&a下降到&b{3}&a。"
 user-demote-endoftrack: "&a已达到权限组轨道&b{0}&a的结尾，所以&b{1}&a已从&b{2}&a中移除。"
+user-demote-endoftrack-not-removed: "&a已达到权限组轨道&b{0}&a的结尾，但&b{1}&a没有从第一组中移除。"
 user-demote-error-malformed: >
   {PREFIX}&a权限组轨道上的上一组&b{0}&a不存在。无法降级用户。\n
   {PREFIX}&a创建组，或将其从权限组轨道中删除，然后重试。
@@ -289,12 +295,13 @@ log-export-already-exists: "&c错误: 文件&4{0}&c已经存在。"
 log-export-not-writable: "&c错误: 文件&4{0}&c不可写。"
 log-export-empty: "&c日志为空，因此无法导出。"
 log-export-failure: "&c写入文件时出现意外错误。"
-log-export-success: "&a成功导出日志&b{0}&a。"
+log-export-success: "&a成功导出到&b{0}&a。"
 import-already-running: "&c另一个导入过程已经在运行，请等待完成，然后重试。"
 export-already-running: "&c另一个导出过程已经在运行，请等待完成，然后重试。"
-import-log-doesnt-exist: "&c错误: 文件&4{0}&c不存在。"
-import-log-not-readable: "&c错误: 文件&4{0}&c不可读。"
-import-log-failure: "&c从日志文件读取时发生意外错误。"
+file-not-within-directory: "&c错误：文件&4{0}&c必须是数据目录的直接子级。"
+import-file-doesnt-exist: "&c错误：文件&4{0}&c不存在。"
+import-file-not-readable: "&c错误：文件&4{0}&c不可读。"
+import-file-read-failure: "&c从导入文件读取时发生意外错误。"
 import-progress: "&b(导入) &b-> &f{0}&f%完成 &7- &b{1}&f/&b{2} &f完成 &c{3}&f错误。"
 import-progress-sin: "&b(导入) &b-> &f{0}&f%完成 &7- &b{1}&f/&b{2} &f完成 &c{3}&f错误。"
 import-start: "&b(导入) &b-> &f开始导入过程。"
@@ -313,48 +320,51 @@ import-end-error-footer: "&b(导入) &7<----------------------------------------
 
 command-specs:
   user:
-    description: "用户命令"
-    usage: "/%s user <用户>"
+    description: "用于管理LuckPerms中用户的一组命令。（'user'是LuckPerms中的玩家，可以引用UUID或用户名）"
+    usage: "/%s user <user>"
   group:
-    description: "组命令"
-    usage: "/%s group <组>"
+    description: "用于管理LuckPerms中的组的一组命令。组是分配给用户权限的集合。使用'creategroup'命令创建新组。"
+    usage: "/%s group <group>"
   track:
-    description: "权限组轨道指令"
-    usage: "/%s track <权限组轨道>"
+    description: "用于管理LuckPerms中权限组轨道的一组命令。权限组轨道是用于自定义升级和降级的组的有序集合。"
+    usage: "/%s track <track>"
   log:
-    description: "日志命令"
+    description: "用于管理LuckPerms中日志记录功能的的一组命令"
     usage: "/%s log"
   sync:
-    description: "与存储同步更改"
+    description: "将所有数据从插件存储中重新加载到内存中，并应用检测到的所有更改"
     usage: "/%s sync"
   info:
-    description: "打印通用插件信息"
+    description: "打印有关活动插件实例的常规信息"
     usage: "/%s info"
+  editor:
+    description: "创建一个新的网页编辑器会话"
+    usage: "/%s editor [type]"
+    args:
+      "type": "要加载到编辑器中的类型。('all', 'users' 或者 'groups')"
   debug:
-    description: "生成调试输出"
+    description: "生成一组内部调试输出"
     usage: "/%s debug"
   verbose:
-    description: "管理详细权限检查"
-    usage: "/%s verbose <true|false> [filter]"
+    description: "控制插件详细权限检查监视系统"
+    usage: "/%s verbose <on|record|off|upload> [filter]"
     args:
-      "on|record|off|paste": "是否启用/禁用日志记录，或粘贴记录的输出"
+      "on|record|off|upload": "是否启用/禁用日志记录，或上传日志记录的输出"
       "filter": "过滤器匹配项"
-      "--slim": "添加\"--slim\"从粘贴的输出中排除跟踪数据"
   tree:
-    description: "生成权限的树视图"
-    usage: "/%s tree [selection] [max level] [player]"
+    description: "生成LuckPerms已知的所有权限的树状视图（有序列表层次结构）"
+    usage: "/%s tree [scope] [player]"
     args:
-      "selection": "树的根，指定\".\"包括所有权限"
-      "max level": "应该返回多少分支级别"
+      "scope": "树的根，指定\".\"包括所有权限"
       "player": "要检查的在线玩家的名称"
   search:
-    description: "搜索具有特定权限的用户/组"
+    description: "搜索具有特定权限的所有用户/组"
     usage: "/%s search <permission>"
     args:
       "permission": "权限搜索"
       "page": "页面查看"
   check:
-    description: "对用户执行标准的权限检查"
+    description: "对用户执行'mock'权限检查"
     usage: "/%s check <user> <permission>"
     args:
       "user": "检查用户"
@@ -363,12 +373,12 @@ command-specs:
     description: "与存储同步更改并请求网络上所有其他服务器都同步"
     usage: "/%s networksync"
   import:
-    description: "从文件导入数据"
+    description: "从（先前创建的）导出文件中导入数据"
     usage: "/%s import <file>"
     args:
       "file": "要导入的文件"
   export:
-    description: "将数据导出到文件"
+    description: "将所有权限数据导出到'export'文件。可以在以后重新导入。"
     usage: "/%s export <file>"
     args:
       "file": "要导出的文件"
@@ -430,11 +440,13 @@ command-specs:
     args:
       "track": "提升用户的权限组轨道"
       "context...": "提升用户使用的环境"
+      "--dont-add-to-first": "只有用户已经在轨道上时对其进行升级"
   user-demote:
     description: "在权限组轨道降低用户"
     args:
       "track": "降低用户的权限组轨道"
       "context...": "降低用户使用的环境"
+      "--dont-remove-from-first": "防止从第一组中删除用户"
   user-clone:
     description: "复制用户"
     args:
@@ -453,6 +465,7 @@ command-specs:
     description: "设置组的显示名称"
     args:
       "name": "设置的名称"
+      "context...": "设置名称的环境"
   group-rename:
     description: "重命名组"
     args:
@@ -497,6 +510,7 @@ command-specs:
       "node": "要添加的权限"
       "true|false": "节点的值"
       "duration": "到期时间"
+      "temporary modifier": "how the temporary permission should be applied"
       "context...": "权限的环境"
   permission-unsettemp:
     description: "取消对对象的临时权限"
@@ -513,6 +527,10 @@ command-specs:
     args:
       "node": "要检查的权限"
       "context...": "权限的环境"
+  permission-clear:
+    description: "清除所有权限"
+    args:
+      "context...": "清除所有权限的环境"
   parent-info:
     description: "列出此对象从哪里继承的组"
     args:
@@ -544,6 +562,7 @@ command-specs:
     args:
       "group": "要继承的组"
       "duration": "持续时间"
+      "temporary modifier": "how the temporary permission should be applied"
       "context...": "继承该组的环境"
   parent-remove-temp:
     description: "删除以前设置的临时继承规则"
@@ -596,6 +615,18 @@ command-specs:
       "priority": "添加的后缀优先级"
       "suffix": "后缀字符串"
       "context...": "添加后缀的环境"
+  meta-setprefix:
+    description: "设置前缀"
+    args:
+      "priority": "设置前缀的优先级"
+      "prefix": "前缀字符串"
+      "context...": "设置前缀的环境"
+  meta-setsuffix:
+    description: "设置后缀"
+    args:
+      "priority": "设置后缀的优先级"
+      "suffix": "后缀字符串"
+      "context...": "设置后缀的环境"
   meta-removeprefix:
     description: "删除前缀"
     args:
@@ -619,6 +650,20 @@ command-specs:
     description: "添加临时后缀"
     args:
       "priority": "添加的后缀优先级"
+      "suffix": "后缀字符串"
+      "duration": "持续时间"
+      "context...": "添加后缀的环境"
+  meta-settemp-prefix:
+    description: "设置临时前缀"
+    args:
+      "priority": "设置前缀的优先级"
+      "prefix": "前缀字符串"
+      "duration": "持续时间"
+      "context...": "添加前缀的环境"
+  meta-settemp-suffix:
+    description: "设置临时后缀"
+    args:
+      "priority": "设置后缀的优先级"
       "suffix": "后缀字符串"
       "duration": "持续时间"
       "context...": "添加后缀的环境"
