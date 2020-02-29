@@ -1,100 +1,769 @@
 # LuckPerms Language File
-# Locale: ja_JP (Japanese)
-# Author: syokkendesuyo
+# Locale: jp_JP (Japanese) Ver: 1.0
+# Author: xSoukazex
+# 誤訳、日本語的におかしい所があればDiscord:xSoukazex#5126にご連絡ください。訂正します。使用する皆さんのためにもご協力お願いします。
 
 prefix: "&7&l[&b&lL&3&lP&7&l] "
-view-available-commands-prompt: "&a/{0} help &3を実行すると使用可能なコマンドを表示します"
-no-permission-for-subcommands: "&3サブコマンドを実行する権限がありません。"
+view-available-commands-prompt: "&3利用可能なコマンド見るためには &a/{0} help &3と入力してください。"
+no-permission-for-subcommands: "&3このサブコマンドを利用する権限がありません。"
+first-time-setup: >
+  {PREFIX}&3権限がまだ設定されていません！\n
+  {PREFIX}&3ゲーム内でLuckPermsコマンドを実行する前に、コンソールから権限を設定し許可を得る必要があります\n
+  {PREFIX}&3コンソールを開いて次のコマンドを実行してください:\n
+  {PREFIX} &3&l> &a{0} user {1} permission set luckperms.* true\n
+  \n
+  {PREFIX}&3これを実行した後にゲーム内で権限の割り当てやグループの設定をすることができます\n
+  {PREFIX}&3何から始めればいいか分からないですか？ ここから確認できます: &7https://github.com/lucko/LuckPerms/wiki/Usage
 empty: "{0}"
 player-online: "&aオンライン"
 player-offline: "&cオフライン"
-loading-error: "&c権限データの読み込みに失敗しました。後ほどお試しください。"
-op-disabled: "&bこのサーバーではバニラのOPシステムが無効にされています。"
-log-info: "&7&l[&bL&3P&7&l] &3{0}"
-log-warn: "&7&l[&bLuck&3Perms&7&l] &c[警告] {0}"
-log-error: "&7&l[&bLuck&3Perms&7&l] &4[エラー] {0}"
+loading-database-error: "&c権限データの読み込み中にデータベースエラーが発生しました。もう一度やり直してください。"
+loading-state-error: "&cログイン中に権限データが正常に読み込まれませんでした。もう一度やり直してください。"
+loading-setup-error: "&c権限データの読み込み中に予期しないエラーが発生しました。もう一度やり直してください。"
+op-disabled: "&bサーバーのOPシステムがこのサーバーでは無効になっています。"
+op-disabled-sponge: "&2パーミッションプラグインが導入されている場合、サーバー管理者のステータスはSpongeのパーミッションチェックには影響しません。ユーザーデータを直接編集してください。"
 log: >
-  {PREFIX}&3ログ &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
-  {PREFIX}&3ログ &3&l> &f{3}
-command-no-permission: "&cこのコマンドを実行する権限がありません！"
-user-not-found: "&4{0}&c は見つかりませんでした。"
-user-not-online: "&b{0}&a はオンラインではありません。"
-apply-edits-success: "&b{0}&a にWEBエディタデータを適用しました。"
-apply-edits-success-summary: "&7(&a{0} &7{1} と &c{2} &7{3})"
+  {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
+  {PREFIX}&3LOG &3&l> &f{3}
+verbose-log: "&3VB &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
+export-log: "&3EXPORT &3&l> &f{0}"
+export-log-progress: "&3EXPORT &3&l> &7{0}"
+migration-log: "&3MIGRATION &7[&3{0}&7] &3&l> &f{1}"
+migration-log-progress: "&3MIGRATION &7[&3{0}&7] &3&l> &7{1}"
+command-not-recognised: "&cコマンドが正しくありません。再度実行してください。"
+command-no-permission: "&cこのコマンドを使用する権限がありません！"
+main-command-usage-header: "&b{0} サブコマンド: &7({1} ...)"
+command-usage-argument-join: "&3 - &7"
+command-usage-brief: "&3> &a{0}{1}"
+command-usage-detailed-header: >
+  {PREFIX}&3&lコマンドの使用方法 &3- &b{0}\n
+  {PREFIX}&b> &7{1}
+command-usage-detailed-args-header: "&3引数:"
+command-usage-detailed-arg: "&b- {0}&3 -> &7{1}"
+required-argument: "&8<&7{0}&8>"
+optional-argument: "&8[&7{0}&8]"
+user-not-found: "&4{0}&cというユーザーは存在していません。"
+user-not-online: "&b{0}&aはオンラインではありません。"
+user-save-error: "&4{0}&cのユーザーデータの保存中にエラーが発生しました。"
+group-not-found: "&4{0}&cというグループ名は存在していません。"
+group-save-error: "&4{0}&cのグループデータの保存中にエラーが発生しました。"
+track-not-found: "&4{0}&cというトラック名は存在していません。"
+track-save-error: "&4{0}のトラックデータの保存中にエラーが発生しました。"
+user-invalid-entry: "&4{0}&c は有効なユーザー名/UUIDではありません。"
+group-invalid-entry: "&4{0}&c は有効なグループ名ではありません。"
+track-invalid-entry: "&4{0}&c は有効なトラック名ではありません。"
+server-world-invalid-entry: "&cサーバー/ワールド名には英数字のみ含めることができ、36文字以内である必要があります。"
+verbose-invalid-filter: "&4{0}&c は有効な詳細ログフィルターではありません。"
+verbose-on: "&aすべて&bの詳細ログのロギングを&a有効&bにしました。"
+verbose-on-query: "&a{0}&bに該当する詳細ログのロギングを&a有効&bにしました。"
+verbose-off: "&b詳細ログのロギングは&c無効&bにしました。"
+verbose-recording-on: "&aすべて&bの詳細ログの記録を&a有効&bにしました。"
+verbose-recording-on-query: "&a{0}&bに該当する詳細ログの記録を&a有効&bにしました。"
+verbose-upload-start: "&b詳細ログのロギングを&c無効&bにしました。結果をアップロードしています..."
+verbose-results-url: "&a詳細ログURL:"
+tree-upload-start: "&bパーミッションツリーを生成しています。"
+tree-empty: "&cパーミッションツリーを生成できません。引数を確認してください。"
+tree-url: "&aパーミッションツリーのURL:"
+search-searching: "&b{0}&aの権限を持つユーザー・グループを検索しています..."
+search-searching-members: "&b{0}&aを継承したユーザー・グループを検索しています..."
+search-result: "&a全体で&b{0}&aつ見つかりました。&aユーザー:&b{1}/&aグループ:&b{2}"
+search-showing-users: "&bユーザーの検索結果:    &7(page &f{0}&7 of &f{1}&7 - &f{2}&7 entries)"
+search-showing-groups: "&bグループの検索結果:    &7(page &f{0}&7 of &f{1}&7 - &f{2}&7 entries)"
+apply-edits-invalid-code: "&c無効なコード &7({0})"
+apply-edits-unable-to-read: "&c指定されたコードを利用してデータを読み取ることができません。&7({0})"
+apply-edits-no-target: "&c編集の目的を解析できません。"
+apply-edits-target-group-not-exists: "&c目的のグループ:&4{0}&cは存在しません。"
+apply-edits-target-user-not-uuid: "&c目的のユーザー:&4{0}&cは有効なUUIDではありません。"
+apply-edits-target-user-unable-to-load: "&c目的のユーザー:&4{0}&cを読み込むことができません。"
+apply-edits-target-unknown: "&c無効なターゲット &7({0})"
+apply-edits-target-no-changes-present: "&aWebエディターからの変更は適用されませんでした。返されたデータにはいかなる編集も含まれません。"
+apply-edits-success: "&aWebエディターの変更は正常に&b{0}&aに適用されました。"
+apply-edits-success-summary: "&7(&a{0} &7{1} and &c{2} &7{3})"
 apply-edits-diff-added: "&a+  &f{0}"
 apply-edits-diff-removed: "&c-  &f{0}"
-editor-start: "&7エディタセッションを準備中です。しばらくお待ちください..."
-editor-upload-failure: "&c権限データのアップロードに失敗しました。"
-editor-url: "&aエディタリンク:"
-update-task-request: "&b更新を開始しました。しばらくお待ちください...
-update-task-complete: "&a更新が完了しました。"
-update-task-complete-network: "&a更新が完了しました。他のサーバーに設定を送信しています..."
-update-task-push-success: "&b{0} メッセージング &aを経由して設定の更新が行われました。"
-update-task-push-failure: "&他のサーバーに設定を送信中にエラーが発生しました。"
-update-task-push-failure-not-setup: "&c他のサーバーに設定を送信中にエラーが発生しました。 &7(メッセージングサービスが設定されていません)"
-reload-config-success: "&a設定ファイルが再読み込みされました。 &7(一部設定は再起動が必要です)"
+editor-no-match: "&cエディターを開けません。 目的のタイプに一致するオブジェクトがありません。"
+editor-start: "&7新しいエディターセッションを用意しています。 お待ち下さい..."
+editor-upload-failure: "&cパーミッションデータをエディターにアップロードできません。"
+editor-url: "&a以下のリンクをクリックして、エディターを開いてください:"
+check-result: "&aユーザー:&b{0}&aのパーミッション:&b{1}&aのチェック結果: &f{2}"
+create-success: "&b{0}&a は正常に作成されました。"
+delete-success: "&b{0}&a は正常に削除されました"
+rename-success: "&b{0}&a は &b{1}&a に名前が変更されました。"
+clone-success: "&b{0}&a は &b{1}&aに正常に複製されました。"
+already-inherits: "&b{0}&a は、コンテキスト: &b{2}&a を既に &b{1}&a から継承しています。"
+does-not-inherit: "&b{0}&a は、コンテキスト: &b{2}&a の &b{1}&a から継承できません。"
+already-temp-inherits: "&b{0}&a は、コンテキスト: &b{2}&a を既に一時的に &b{1}&a から継承しています。"
+does-not-temp-inherit: "&b{0}&a は、コンテキスト: &b{2}&a の &b{1}&a から一時的に継承しています。"
+track-already-contains: "&b{0}&a には既に &b{1}&a が含まれています。"
+track-does-not-contain: "&b{0}&a には &b{1}&a は含まれていません。"
+track-ambiguous-call: "&4{0}&c は、このトラックの複数のグループのメンバーです。場所を特定できません。"
+already-exists: "&4{0}&c は既に存在しています!"
+does-not-exist: "&4{0}&c は存在していません。"
+user-load-error: "&c予期せぬエラーが発生しました。ユーザーは読み込まれていません。"
+group-load-error: "&c予期せぬエラーが発生しました。グループは読み込まれていません。"
+groups-load-error: "&c予期せぬエラーが発生しました。全グループは読み込まれていません。"
+track-load-error: "&c予期せぬエラーが発生しました。トラックは読み込まれていません。"
+tracks-load-error: "&c予期せぬエラーが発生しました。全トラックは読み込まれていません。"
+track-empty: "&4{0}&c は空であるか、1つのグループのみを含むため、使用できません。"
+update-task-request: "&bタスクを更新しています。お待ちください..."
+update-task-complete: "&aタスクの更新が完了しました。"
+update-task-complete-network: "&aタスクの更新が完了しました。現在、他サーバーにプッシュしています。"
+update-task-push-success: "&a他サーバーは、&b{0} Messaging &aを介して通知され、成功しました。"
+update-task-push-failure: "&c他のサーバーにプッシュする際にエラーが発生しました。"
+update-task-push-failure-not-setup: "&c他のサーバーにプッシュする際にエラーが発生しました。 &7(メッセージングサービスが設定されていません)"
+reload-config-success: "&a設定ファイルがリロードされました。 &7(一部の変更はサーバー再起動後に適用されます)"
 info-top: >
-  {PREFIX}&bLuckPerms v{0}&2 &7(by &bLuck&7)&2.\n
+  {PREFIX} &bLuckPerms v{0}&2 を実行中。作者:&bLuck&2\n
   {PREFIX}&f-  &3プラットフォーム: &f{1}\n
   {PREFIX}&f-  &3サーバーブランド: &f{2}\n
   {PREFIX}&f-  &3サーバーバージョン:\n
   {PREFIX}&f-  {3}
+info-storage: >
+  {PREFIX}&f-  &bストレージ:\n
+  {PREFIX}&f-     &3Tタイプ: &f{0}
+info-storage-meta: "&f-      &3{0}: {1}"
 info-middle: >
   {PREFIX}&f-  &bメッセージング: &f{0}\n
   {PREFIX}&f-  &bインスタンス:\n
-  {PREFIX}&f-     &3静的コンテキスト: &f{1}\n
-  {PREFIX}&f-     &3オンラインプレイヤー数: &a{2} &7(&a{3}&7 ユニークプレイヤー)\n
-  {PREFIX}&f-     &3稼働時間: &7{4}\n
-  {PREFIX}&f-     &3ローカルデータ: &a{5} &7ユーザー, &a{6} &7グループ, &a{7} &7トラック
-debug-start: "&bデバッグを開始しました...
-groups-list: "&aグループ: &7(名前, weight, tracks)"
+  {PREFIX}&f-     &3静的なコンテキスト: &f{1}\n
+  {PREFIX}&f-     &3オンラインプレイヤー: &a{2} &7(&a{3}&7 unique)\n
+  {PREFIX}&f-     &3実行時間: &7{4}\n
+  {PREFIX}&f-     &3ローカルデータ: &a{5} &7users, &a{6} &7groups, &a{7} &7tracks
+debug-start: "&bデバッグ情報を出力しています..."
+debug-url: "&aデバッグ情報のURL:"
+create-error: "&4{0}&cの作成中にエラーが発生しました。"
+delete-error: "&4{0}&cの削除中にエラーが発生しました。"
+delete-group-error-default: "&cYデフォルトグループは削除できません。"
+groups-list: "&aグループ: &7(グループ名, ウェイト, トラック)"
+groups-list-entry: "&f-  &3{0} &7- &b{1}"
+groups-list-entry-with-tracks: "&f-  &3{0} &7- &b{1} &7- [&3{2}&7]"
 tracks-list: "&aトラック: {0}"
-list-tracks: "&b{0} のトラック:"
+permission-info: "&b{0}のパーミッション:  &7(&f{2}&7ページ中の&f{1}&7ページ目 - &f{3}&7 エントリ)"
+permission-info-no-data: "&b{0}&aにはパーミッションが設定されていません。"
+parent-info: "&b{0}の親権限グループ:  &7(&f{2}&7ページ中の&f{1}&7ページ目 - &f{3}&7 エントリ)"
+parent-info-no-data: "&b{0}&aには親権限グループが定義されていません。"
+list-tracks: "&b{0}のトラック:"
+list-tracks-entry: "&a{0}: {1}"
+list-tracks-empty: "&b{0}&aにはトラックがありません。"
+context-pair-inline: "&3{0}=&b{1}"
+context-pair--global-inline: "&eglobal"
+context-pair-sep: "&a, "
+context-pair: "&8(&7{0}=&f{1}&8)"
+check-permission: "&b{0}&aには、コンテキスト:{3}&aで{2}&aに設定されたパーミッション:&b{1}&aがあります。"
+check-inherits-permission: "&b{0}&aには、コンテキスト;{3}&aで{2}&aに設定されたパーミッション&b{1}&aがあります。&7(&a{4}&7から継承)"
+setpermission-success: "&aコンテキスト:{3}で&b{2}&aの&b{0}&aを&b{1}&aに設定します。"
+already-haspermission: "&b{0}&aには既にコンテキスト:{2}&aで&b{1}&aが設定されています。"
+setpermission-temp-success: "&aコンテキスト:{4}で、&b{0}aを&b{1}&aに&b{2}&aを&b{3}&aの期間を設定します。"
+already-has-temp-permission: "&b{0}&aには既にコンテキスト:{2}&aで一時的に&b{1}&aが設定されています。"
+unsetpermission-success: "&aコンテキスト:{2}で&b{1}&aの&b{0}&aの設定を解除します。"
+does-not-have-permission: "&b{0}&aには、コンテキスト:{2}&aで&b{1}&aが設定されていません。"
+unset-temp-permission-success: "&aコンテキスト:{2}の、&b{1}&aの&b{0}&aの一時的なパーミッションを解除します。"
+does-not-have-temp-permission: "&b{0}&aには、コンテキスト:{2}で一時的に&b{1}&aが設定されていません。"
+set-inherit-success: "&b{0}&aは、コンテキスト:{2}&aの&b{1}&aから権限を継承するようになりました。"
+set-temp-inherit-success: "&b{0}&aは、コンテキスト:{3}&aで&b{2}&aの期間、&b{1}&aからパーミッションを継承するようになりました。"
+set-parent-success: "&b{0}&aは既存の親権限グループを解除し、コンテキスト:{2}&aの&b{1}&aのみを継承するようになりました。"
+set-track-parent-success: "&b{0}&aはトラック&b{1}&aの既存の親権限グループを解除し、コンテキスト:{3}&aの&b{2}&aのみを継承します。"
+unset-inherit-success: "&b{0}&aは、コンテキスト:{2}の&b{1}&aからパーミッションを継承しなくなりました。"
+unset-temp-inherit-success: "&b{0}&aは、コンテキスト:{2}の&b{1}&aから一時的なパーミッションを継承しなくなりました。"
+clear-success: "&b{0}&aのノードはコンテキスト:{1}で削除されました。 (&b{2}&aノードは削除されました。)"
+clear-success-singular: "&b{0}&aのノードはコンテキスト:{1}で削除されました。 (&b{2}&aノードは削除されました。)"
+permission-clear-success: "&b{0}&aの権限はコンテキスト:{1}&aで削除されました。 (&b{2}&aノードは削除されました。)"
+permission-clear-success-singular: "&b{0}&aの権限はコンテキスト:{1}&aで削除されました。 (&b{2}&aノードは削除されました。)"
+parent-clear-success: "&b{0}&aの親権限はコンテキスト:{1}&aで削除されました。 (&b{2}&aノードは削除されました。)"
+parent-clear-success-singular: "&b{0}&aの親権限はコンテキスト:{1}&aで削除されました。 (&b{2}&aノードは削除されました。)"
+parent-clear-track-success: "&b{0}&aのトラック&b{1}&aの親権限は、コンテキスト:{2}&aでクリアされました。 (&b{3}&aノードは削除されました。)"
+parent-clear-track-success-singular: "&b{0}&aのトラック&b{1}&aの親権限は、コンテキスト:{2}&aでクリアされました。 (&b{3}&aノードは削除されました。)"
+meta-clear-success: "&b{0}&aのメタ一致タイプ&b{1}&aは、コンテキスト:{2}&aで削除されました。 (&b{3}&aノードは削除されました。)"
+meta-clear-success-singular: "&b{0}&aのメタ一致タイプ&b{1}&aは、コンテキスト:{2}&aで削除されました。(&b{3}&aノードは削除されました。)"
+illegal-date-error: "&c日付＆4{0}＆cを解析できませんでした。"
+past-date-error: "&c過去の日付を設定することはできません！"
+chat-meta-prefix-header: "&b{0}のプレフィックス"
+chat-meta-suffix-header: "&b{0}のサフィックス"
+meta-header: "&b{0}'s Meta"
+chat-meta-entry: "&b-> {0} &f- &f'{1}&f' &8(&a{2}&7から継承&8）"
+chat-meta-entry-with-context: "&b-> {0} &f- &f'{1}&f' &8(&a{2}&7から継承&8）{3}"
+meta-entry: "&b-> &a{0} &f= &f'{1}&f' &8(&a{2}&7から継承&8）"
+meta-entry-with-context: "&b-> &a{0} &f= &f'{1}&f' &8(&a{2}&7から継承&8）{3}"
+chat-meta-prefix-none: "&b{0}にはプレフィックスがありません。"
+chat-meta-suffix-none: "&b{0}にはサフィックスがありません。"
+meta-none: "&b{0}にはメタがありません。"
+meta-invalid-priority: "&c無効な優先度です:&4 {0}&c。 &c数字が必要です。"
+already-has-chat-meta: "&b{0}&aは、コンテキスト:{4}で優先度&b{3}&aに設定された{1}&f'{2}&f'&aを既に持っています。"
+already-has-temp-chat-meta: "&b{0}&aには、既に{1}&f'{2}&f'&aがコンテキスト:{4}&aで優先度&b{3}&aで一時的に設定されています。"
+does-not-have-chat-meta: "&b{0}&aには、コンテキスト:{4}&aで優先度&b{3}&aに設定された{1}&f'{2}&f'&aがありません。"
+does-not-have-temp-chat-meta: "&b{0}&aには、コンテキスト:{4}&aで優先度&b{3}&aで一時的に設定された{1}&f'{2}&f'&aがありません。"
+add-chatmeta-success: "&b{0}&aは、{1}&f'{2}&f'&aをコンテキスト:{4}&aで&b{3}&aの優先度に設定していました。"
+add-temp-chatmeta-success: "&b{0}&aは、コンテキスト:{5}&aで、&b{4}&aの期間、{1}&f'{2}&f'6aの優先度を&b{3}&aに設定していました。"
+remove-chatmeta-success: "&b{0}&aは、コンテキスト:{4}&aで削除された{1}&f'{2}6f'&aを優先度&b{3}&aで削除しました。"
+bulk-remove-chatmeta-success: "&b{0}&aは、コンテキスト:{3}で{1}つを優先度&b{2}&aで削除しました。"
+remove-temp-chatmeta-success: "&b{0}&aは、コンテキスト:{4}で一時的な{1}&f'{2}&f'&aを優先度&b{3}&aで削除しました。"
+bulk-remove-temp-chatmeta-success: "&b{0}&aは、コンテキスト:{3}&aで一時的な{1}つの優先度&b{2}&aで削除しました。"
+already-has-meta: "&b{0}&aには、既にコンテキスト:{3}&aで&f'{1}&f'&aが&f'{2}&f'&aに設定されています。"
+already-has-temp-meta: "&b{0}&aには、既にメタキー&f'{1}&f'&aがコンテキスト:{3}&aで一時的に&f'{2}&f'&aに設定されています。"
+doesnt-have-meta: "&b{0}&aには、コンテキスト:{2}&aに設定されたメタキー&f'{1}&f'&aがありません。"
+doesnt-have-temp-meta: "&b{0}&aには、コンテキスト:{2}で一時的に設定されるメタキー&f'{1}&f'&aがありません。"
+set-meta-success: "&aコンテキスト{3}で&b{2}&aのメタキー&f'{0}&f'&aを&f'{1}&f'&aに設定します。"
+set-meta-temp-success: "&aコンテキスト{4}で&b{3}&aの期間、&b{2}&aのメタキー&f'{0}&f'&aを&f'{1}&f'&aに設定します。"
+unset-meta-success: "&aコンテキスト{2}で&b{1}&aのメタキー&f'{0}&f'&aを設定解除します。"
+unset-meta-temp-success: "&aコンテキスト{2}の&b{1}&aの一時メタキー&f '{0}&f'&aの設定を解除します。"
+bulk-update-invalid-data-type: "&c無効なタイプです。 'all'、 'users' または 'groups'が必要です。"
+bulk-update-invalid-constraint: "&c無効な制約です: &4{0}&c  制約は'&f <field> <comparison operator> <value>&c'の形式である必要があります。"
+bulk-update-invalid-comparison: "&c無効な比較演算子です。 '&4 {0}&c'。次のいずれかが必要です： &f==  !=  ~~  ~!"
+bulk-update-queued: "&a一括更新操作がキューに追加されました。 &7（&f {0}&7）"
+bulk-update-confirm: "&b/{0}bulkupdate confirm {1}&a実行して、一括更新します。"
+bulk-update-unknown-id: "&aID&b{0}&aの操作は存在しないか、有効期限が切れています。"
+bulk-update-starting: "&a一括更新を実行しています。"
+bulk-update-success: "&一括更新が正常に完了しました。"
+bulk-update-failure: "&c一括更新に失敗しました。 コンソールでエラーを確認してください。"
 user-info-general: >
-  {PREFIX}&b&l> &bユーザー情報 &f{0}\n
-  {PREFIX}&f- &3UUID: &f{1}\n
-  {PREFIX}&f- &3ステイタス: {2}\n
-  {PREFIX}&f- &3プライマリグループ &f{3}
+  {PREFIX}&b&l> &bユーザー情報: &f{0}\n
+  {PREFIX}&f- &3UUID: &f{1} &7(タイプ: {2}&7)\n
+  {PREFIX}&f- &3状態: {3}\n
+  {PREFIX}&f- &3プライマリグループ: &f{4}
 user-info-data: >
-  {PREFIX}&f- &aコンテキストデータ:\n
-  {PREFIX}&f-    &3コンテキストデータの保有状態{0}\n
-  {PREFIX}&f-    &3適用可能なコンテキスト: {1}\n
-  {PREFIX}&f-    &3接頭辞: {2}\n
-  {PREFIX}&f-    &3接尾辞: {3}\n
-  {PREFIX}&f-    &3メタ: {4}
-info-parent-header: "&f- &a親グループ:"
-info-temp-parent-header: "&f- &a一時的な親グループ:"
+  {PREFIX}&f- &aユーザー設定情報:\n
+  {PREFIX}&f-    &3コンテキスト情報の有無: {0}\n
+  {PREFIX}&f-    &3該当するコンテキスト: {1}\n
+  {PREFIX}&f-    &3プレフィックス: {2}\n
+  {PREFIX}&f-    &3サフィックス: {3}\n
+  {PREFIX}&f-    &3付加情報: {4}
+info-parent-header: "&f- &a親権限グループ:"
+info-temp-parent-header: "&f- &a一時的な親権限グループ:"
+info-parent-entry: "&f-    &3> &f{0}{1}"
+info-parent-entry-expiry: "&f-    &2-    {0}で有効期限になります。"
+user-removegroup-error-primary: "&aユーザーをプライマリグループから削除することはできません。"
+user-primarygroup-success: "&b{0}&aのプレイマリグループは&b{1}&aに設定されました。"
+user-primarygroup-warn-option: "&a警告: このサーバー&7({0})&aで使用されているプライマリグループの算出方法は、この変更を反映していない可能性があります。"
+user-primarygroup-error-alreadyhas: "&b{0}&aには既に&b{1}&aがプライマリグループとして設定されています。"
+user-primarygroup-error-notmember: "&b{0}&aはまだ&b{1}&aのメンバーではなかったため、今すぐ追加します。"
+user-track-error-not-contain-group: "&b{0}&aは&b{1}&aのどのグループにもありません。"
+user-track-added-to-first: "&b{0}&aはこのトラックのどのグループにも属していないため、コンテキスト{2}&aの最初のグループ&b{1}&aに追加されました。"
+user-promote-success: "&aコンテキスト{4}&aで&b{2}&aから&b{3}&aにトラック&b{1}&aに従って&b{0}&aを昇格しました。"
+user-promote-error-endoftrack: "&aトラックの終わり&b{0}&aに到達しました。&b{1}&aを昇格できません。"
+user-promote-error-malformed: >
+  {PREFIX}&aトラック上の次のグループ&b{0}&aは存在しません。ユーザーを昇格できません。\n
+  {PREFIX}&aグループを作成するか、トラックから削除して再試行してください。
+user-demote-success: "&aコンテキスト{4}で&b{2}&aから&b{3}&aにトラック&b{1}&aに従って&b{0}&aを降格しました。"
+user-demote-endoftrack: "&aトラックの終わり&b{0}&aに到達したため、&b{1}&aは&b{2}&aから削除されました。"
+user-demote-error-malformed: >
+  {PREFIX}&aトラック上の以前のグループ&b{0}&aはもう存在しません。ユーザーを降格できません。\n
+  {PREFIX}&aグループを作成するか、トラックから削除して再試行してください。
 group-info-general: >
-  {PREFIX}&b&l> &bグループ情報&f{0}\n
+  {PREFIX}&b&l> &bグループ情報: &f{0}\n
   {PREFIX}&f- &3表示名: &f{1}\n
-  {PREFIX}&f- &3Weight: &f{2}
+  {PREFIX}&f- &3ウェイト: &f{2}
+group-set-weight: "&aグループ&b{1}&aのウェイトを&b{0}&aに設定します。"
+group-set-display-name-doesnt-have: "&b{0}&aには表示名が設定されていません。"
+group-set-display-name-already-has: "&b{0}&aの表示名は既に&b{1}&aです。"
+group-set-display-name-already-in-use: "&a表示名&b{0}&aは既に&b{1}&aによって使用されています。"
+group-set-display-name: "&aコンテキスト{2}のグループ&b{1}&aの表示名を&b{0}&aに設定します。"
+group-set-display-name-removed: "&aコンテキスト{1}のグループ&b{0}&aの表示名を削除しました。"
+track-info: >
+  {PREFIX}&b&l> &bトラックの表示: &f{0}\n
+  {PREFIX}&f- &7パス: &f{1}
+track-clear: "&b{0}&aのグループトラックは削除されました。"
+track-append-success: "&aグループ&b{0}&aがトラック&b{1}&aに追加されました。"
+track-insert-success: "&aグループ&b{0}&aは、トラック&b{1}&aの位置&b{2}&aに挿入されました。"
+track-insert-error-number: "&c推定される番号が代わりに設定されました: {0}"
+track-insert-error-invalid-pos: "&c&4{0}&cの位置に挿入できません。&7（無効な位置です）"
+track-remove-success: "&aグループ&b{0}&aはトラック&b{1}&aから削除されました。"
+log-load-error: "&cログをロードできませんでした。"
+log-invalid-page: "&c無効なページ番号です。"
+log-invalid-page-range: "&c無効なページ番号です。 &41&cから&4{0}&cまでの値を入力してください。"
+log-no-entries: "&b表示するエントリログはありません。"
+log-entry: >
+  {PREFIX}&b#{0} &8(&7{1} ago&8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
+  {PREFIX}&7> &f{5}
+log-notify-console: "&cコンソールへの通知の有無を切り替えることはできません。"
+log-notify-toggle-on: "&a有効&b : ログ出力"
+log-notify-toggle-off: "&c無効&b : ログ出力"
+log-notify-already-on: "&c既に通知を受けています。"
+log-notify-already-off: "&c現在、通知を受け取っていません。"
+log-notify-unknown: "&c不明な状態です。 \"on\" または \"off\"が必要です。"
+log-search-header: "&aクエリー:&b{0}&aの最近のアクションを表示しています。  &7(&f{2}&7ページ中の&f{1}&7ページ目)"
+log-recent-header: "&a最近のアクションを表示しています。  &7(&f{2}&7ページ中の&f{1}&7ページ目)"
+log-recent-by-header: "&b{0}&aの最近のアクションを表示しています。  &7(&f{2}&7ページ中の&f{1}&7ページ目)"
+log-history-user-header: "&aユーザー:&b{0}&aの履歴を表示しています。  &7(&f{2}&7ページ中の&f{1}&7ページ目)"
+log-history-group-header: "&aグループ:&b{0}&aの履歴を表示しています。  &7(&f{2}&7ページ中の&f{1}&7ページ目)"
+log-history-track-header: "&aトラック:&b{0}&aの履歴を表示しています。  &7(&f{2}&7ページ中の&f{1}&7ページ目)"
+log-export-already-exists: "&cエラー: ファイル:&4{0}&cは既に存在しています。"
+log-export-not-writable: "&cエラー: ファイル:&4{0}&cに書き込み権限がありません。"
+log-export-empty: "&cログは空であるため、エクスポートできません。"
+log-export-failure: "&cファイルへの書き込み中に予期しないエラーが発生しました。"
+log-export-success: "&aログを&b{0}&aに正常にエクスポートしました。"
+import-already-running: "&c別のインポートプロセスが既に実行されています。 終了するまで待ってからもう一度お試しください。"
+export-already-running: "&c別のエクスポートプロセスが既に実行されています。 終了するまで待ってからもう一度お試しください。"
+import-log-doesnt-exist: "&cエラー: ファイル:&4{0}&cは存在しません。"
+import-log-not-readable: "&cエラー: ファイル:&4{0}&cに読み込み権限がありません。"
+import-log-failure: "&cログファイルの読み取り中に予期しないエラーが発生しました。"
+import-progress: "&b(インポート) &b-> &f{0}&f% 完了 &7- &b{1}&f/&b{2} &f 操作は &c{3} &fのエラーで完了します。(この文が表示された場合、よろしければ翻訳者にSSを提供してください。)"
+import-progress-sin: "&b(インポート) &b-> &f{0}&f% 完了 &7- &b{1}&f/&b{2} &f操作は &c{3} &fのエラーで完了します。(この文が表示された場合、よろしければ翻訳者にSSを提供してください。)"
+import-start: "&b(インポート) &b-> &fインポートが開始しました。"
+import-info: "&b(インポート) &b-> &f{0}."
+import-end-complete: "&b(インポート) &a&l完了しました！ &7- &b{0}&7秒で完了 - &7エラーはありません。"
+import-end-complete-err: "&b(インポート) &a&l完了しました！ &7- &b{0}&7秒で完了 - &c{1}のエラーがありました。"
+import-end-complete-err-sin: "&b(インポートt) &a&l完了しました！ &7- &b{0}&7秒で完了 - &c{1}のエラーがありました。"
+import-end-error-header: >
+  {PREFIX}&b(インポート) &7------------> &fインポートエラー #&b{0} &7<------------\n
+  {PREFIX}&b(インポート) &f実行中: &3コマンド #{1}\n
+  {PREFIX}&b(インポート) &fコマンド: &7{2}\n
+  {PREFIX}&b(インポート) &fタイプ: &3{3}\n
+  {PREFIX}&b(インポート) &f出力:
+import-end-error-content: "&b(インポート) &b-> &c{0}"
+import-end-error-footer: "&b(インポート) &7<------------------------------------------>"
 
 command-specs:
   user:
     description: "ユーザーコマンド"
-    usage: "/%s user <ユーザー>"
+    usage: "/%s user <user>"
   group:
     description: "グループコマンド"
-    usage: "/%s group <グループ>"
+    usage: "/%s group <group>"
   track:
     description: "トラックコマンド"
-    usage: "/%s track <トラック>"
+    usage: "/%s track <track>"
   log:
     description: "ログコマンド"
     usage: "/%s log"
   sync:
-    description: "ストレージとの同期を変更"
+    description: "変更をストレージと同期します"
     usage: "/%s sync"
   info:
-    description: "プラグイン情報を表示"
+    description: "プラグイン情報を表示します"
     usage: "/%s info"
   debug:
-    description: "デバッグ出力を生成"
+    description: "デバッグ情報を生成します"
     usage: "/%s debug"
-  tree:
-    description: "パーミッションのツリーを表示"
-    usage: "/%s tree [絞り込み] [最大レベル] [プレイヤー]"
+  verbose:
+    description: "詳細なアクセス権のチェックを管理します"
+    usage: "/%s verbose <true|false> [filter]"
     args:
-      "selection": "the root of the tree. specify \".\" to include all permissions"
-      "max level": "分岐レベル"
-      "player": "確認するオンラインプレーヤー"
+      "on|record|off|paste": "ログ出力を有効/無効にするか、アップロードするか"
+      "filter": "エントリを照合するフィルター"
+      "--slim": "\"--slim\"を追加し、貼り付けられた出力からトレーズデータを除外します。"
+  tree:
+    description: "パーミッションツリーの生成します"
+    usage: "/%s tree [selection] [max level] [player]"
+    args:
+      "selection": "ツリーのルート。\".\"を指定して、全ての権限を含めます。"
+      "max level": "返されるブランチレベルの数"
+      "player": "確認するオンラインプレイヤーの名前"
+  search:
+    description: "特定の権限を持つユーザー/グループを検索します"
+    usage: "/%s search <permission>"
+    args:
+      "permission": "検索するパーミッション"
+      "page": "表示するページ番号"
+  check:
+    description: "オンラインプレイヤーのパーミッションを確認します"
+    usage: "/%s check <user> <permission>"
+    args:
+      "user": "確認するユーザー"
+      "permission": "確認するパーミッション"
+  network-sync:
+    description: "変更をストレージと同期し、同一ネットワーク上の他のすべてのサーバーが同一権限となるように同期を要求します"
+    usage: "/%s networksync"
+  import:
+    description: "ファイルからデータをインポートします"
+    usage: "/%s import <file>"
+    args:
+      "file": "インポート元のファイルの名前"
+  export:
+    description: "データをファイルにエクポートします"
+    usage: "/%s export <file>"
+    args:
+      "file": "エクスポート先のファイルの名前"
+  reload-config:
+    description: "設定オプションをリロードします"
+    usage: "/%s reloadconfig"
+  bulk-update:
+    description: "すべてのデータに対して一括変更クエリを実行します"
+    usage: "/%s bulkupdate"
+    args:
+      "data type": "変更されるデータのタイプ ('all', 'users' または 'groups')"
+      "action": "データに対して実行するアクション ('update' または 'delete')"
+      "action field": "作用するフィールド。'update'にのみ必要 ('permission', 'server' または 'world')"
+      "action value": "置換する値。'update'にのみ必要"
+      "constraint...": "アップデートに必要な制約"
+  migration:
+    description: "移行コマンド"
+    usage: "/%s migration"
+  apply-edits:
+    description: "Webエディターから行われたパーミッションの変更を適用します"
+    usage: "/%s applyedits <code> [target]"
+    args:
+      "code": "変更を保存した際に発行されたコード"
+      "target": "データの適用先"
+  create-group:
+    description: "新しいグループを作成します"
+    usage: "/%s creategroup <group>"
+    args:
+      "name": "グループの名前"
+  delete-group:
+    description: "グループを削除します"
+    usage: "/%s deletegroup <group>"
+    args:
+      "name": "グループの名前"
+  list-groups:
+    description: "プラットフォーム上の全てのグループを表示します"
+    usage: "/%s listgroups"
+  create-track:
+    description: "新しいトラックを作成します"
+    usage: "/%s createtrack <track>"
+    args:
+      "name": "トラックの名前"
+  delete-track:
+    description: "トラックを削除します"
+    usage: "/%s deletetrack <track>"
+    args:
+      "name": "トラックの名前"
+  list-tracks:
+    description: "プラットフォーム上の全てのトラックを表示します"
+    usage: "/%s listtracks"
+  user-info:
+    description: "ユーザーに関する情報を表示します"
+  user-switchprimarygroup:
+    description: "ユーザーのプライマリグループを切り替えます"
+    args:
+      "group": "切り替え先のグループの名前"
+  user-promote:
+    description: "ユーザーをトラックにより昇格させます"
+    args:
+      "track": "ユーザーを昇格するトラック"
+      "context...": "ユーザーを昇格するコンテキスト"
+  user-demote:
+    description: "ユーザーをトラックにより降格させます"
+    args:
+      "track": "ユーザーを降格するトラック"
+      "context...": "ユーザーを降格するコンテキスト"
+  user-clone:
+    description: "ユーザーのクローンを作成します"
+    args:
+      "user": "クローンを作成するユーザーの名前/UUID"
+  group-info:
+    description: "グループに関する情報を表示します"
+  group-listmembers:
+    description: "グループから継承するユーザー/グループを表示します"
+    args:
+      "page": "表示するページ"
+  group-setweight:
+    description: "グループの優先順位を設定します"
+    args:
+      "weight": "設定する重み値(優先順位)"
+  group-set-display-name:
+    description: "グループの表示名を設定します"
+    args:
+      "name": "設定する名前"
+  group-rename:
+    description: "グループの名前を変更します"
+    args:
+      "name": "新しい名前"
+  group-clone:
+    description: "グループを複製します"
+    args:
+      "name": "複製するグループの名前"
+  holder-editor:
+    description: "Webパーミッションエディターを開きます"
+  holder-showtracks:
+    description: "オブジェクトが存在するトラックを表示します"
+  holder-clear:
+    description: "全てのパーミッション、親、および付加情報を削除します"
+    args:
+      "context...": "フィルタするコンテキスト"
+  permission:
+    description: "パーミッション情報を編集します"
+  parent:
+    description: "継承情報を編集します"
+  meta:
+    description: "付加情報値を編集します"
+  permission-info:
+    description: "オブジェクトが持つパーミッションノードを表示します"
+    args:
+      "page": "表示するページ"
+      "sort mode": "エントリを並び替える方法/モード"
+  permission-set:
+    description: "オブジェクトのパーミッションを設定します"
+    args:
+      "node": "設定するパーミッションノード"
+      "true|false": "ノードの値(true=許可、false=不許可)"
+      "context...": "パーミッションを追加するコンテキスト"
+  permission-unset:
+    description: "オブジェクトを解除します"
+    args:
+      "node": "解除するパーミッションノード"
+      "context...": "パーミッションを削除するコンテキスト"
+  permission-settemp:
+    description: "オブジェクトに一時的にパーミッションを設定します"
+    args:
+      "node": "設定するパーミッションノード"
+      "true|false": "ノードの値(true=許可、false=不許可)"
+      "duration": "パーミッションノードの期限が切れるまでの期間"
+      "context...": "パーミッションを追加するコンテキスト"
+  permission-unsettemp:
+    description: "オブジェクトの一時的なパーミッションを解除します"
+    args:
+      "node": "設定解除するパーミッションノード"
+      "context...": "パーミッションを削除するコンテキスト"
+  permission-check:
+    description: "オブジェクトに特定のパーミッションノードがあるかどうか確認します"
+    args:
+      "node": "確認するパーミッションノード"
+      "context...": "確認するコンテキスト"
+  permission-check-inherits:
+    description: "オブジェクトが特定のパーミッションノードを継承しているかどうか確認します"
+    args:
+      "node": "確認するパーミッションノード"
+      "context...": "確認するコンテキスト"
+  parent-info:
+    description: "オブジェクトが継承するグループを表示します"
+    args:
+      "page": "表示するページ"
+      "sort mode": "エントリを並び替える方法/モード"
+  parent-set:
+    description: "オブジェクトが既に継承している他の全てのグループを削除し、指定されたグループに追加します"
+    args:
+      "group": "設定するグループ"
+      "context...": "グループを設定するコンテキスト"
+  parent-add:
+    description: "権限を継承するオブジェクトの別のグループを設定します"
+    args:
+      "group": "継承するグループ"
+      "context...": "グループを継承するコンテキスト"
+  parent-remove:
+    description: "以前に設定された継承ルールを削除します"
+    args:
+      "group": "削除するグループ"
+      "context...": "グループを削除するコンテキスト"
+  parent-set-track:
+    description: "オブジェクトが継承する他の全てのグループを削除し、指定されたトラックに追加します"
+    args:
+      "track": "設定するトラック"
+      "group": "設定するグループ、または指定されたトラック上のグループ位置に関連する番号"
+      "context...": "グループを設定するコンテキスト"
+  parent-add-temp:
+    description: "一時的に権限を継承するオブジェクトの別のグループを設定します"
+    args:
+      "group": "継承するグループ"
+      "duration": "グループを保持しておく期間"
+      "context...": "グループを継承するコンテキスト"
+  parent-remove-temp:
+    description: "以前に設定された一時的に権限を継承するルールを削除します"
+    args:
+      "group": "削除するグループ"
+      "context...": "グループを削除するコンテキスト"
+  parent-clear:
+    description: "全ての親を削除します"
+    args:
+      "context...": "フィルタするコンテキスト"
+  parent-clear-track:
+    description: "指定されたトラックの全ての親をクリアします"
+    args:
+      "track": "削除するトラック"
+      "context...": "フィルタするコンテキスト"
+  meta-info:
+    description: "全てのチャットの付加情報を表示します"
+  meta-set:
+    description: "付加情報値を設定します"
+    args:
+      "key": "設定するキー"
+      "value": "設定する値"
+      "context...": "メタペアを追加するコンテキスト"
+  meta-unset:
+    description: "付加情報値の設定を解除します"
+    args:
+      "key": "設定を解除するキー"
+      "context...": "メタペアを削除するコンテキスト"
+  meta-settemp:
+    description: "付加情報値を一時的に設定します"
+    args:
+      "key": "設定するキー"
+      "value": "設定する値"
+      "duration": "付加情報値が無効になるまでの期間"
+      "context...": "メタペアを追加するコンテキスト"
+  meta-unsettemp:
+    description: "一時的に設定した付加情報値の設定を解除します"
+    args:
+      "key": "設定解除するキー"
+      "context...": "メタペアを削除するコンテキスト"
+  meta-addprefix:
+    description: "プレフィックスを追加します"
+    args:
+      "priority": "追加するプレフィックスの優先度"
+      "prefix": "プレフィックスの文字列"
+      "context...": "プレフィックスを追加するコンテキスト"
+  meta-addsuffix:
+    description: "サフィックスを追加します"
+    args:
+      "priority": "追加するサフィックスの優先度"
+      "suffix": "サフィックスの文字列"
+      "context...": "サフィックスを追加するコンテキスト"
+  meta-removeprefix:
+    description: "プレフィックスを削除します"
+    args:
+      "priority": "削除するプレフィックスの優先度"
+      "prefix": "プレフィックスの文字列"
+      "context...": "プレフィックスを削除するコンテキスト"
+  meta-removesuffix:
+    description: "サフィックスを削除します"
+    args:
+      "priority": "削除するサフィックスの優先度"
+      "suffix": "サフィックスの文字列"
+      "context...": "サフィックスを削除するコンテキスト"
+  meta-addtemp-prefix:
+    description: "プレフィックスを一時的に追加します"
+    args:
+      "priority": "プレフィックスを追加する優先順位"
+      "prefix": "プレフィックスの文字列"
+      "duration": "プレフィックスが有効な期間"
+      "context...": "プレフィックスを追加するコンテキスト"
+  meta-addtemp-suffix:
+    description: "サフィックスを一時的に追加します"
+    args:
+      "priority": "サフィックスを追加する優先順位"
+      "suffix": "サフィックスの文字列"
+      "duration": "サフィックスが有効な期間"
+      "context...": サフィックスを追加するコンテキスト"
+  meta-removetemp-prefix:
+    description: "一時的なプレフィックスを削除します"
+    args:
+      "priority": "削除するプレフィックスの優先順位"
+      "prefix": "プレフィックスの文字列"
+      "context...": "プレフィックスを削除するコンテキスト"
+  meta-removetemp-suffix:
+    description: "一時的なサフィックスを削除します"
+    args:
+      "priority": "削除するサフィックスの優先順位"
+      "suffix": "サフィックスの文字列"
+      "context...": "サフィックスを削除するコンテキスト"
+  meta-clear:
+    description: "全てのメタ情報をクリアします"
+    args:
+      "type": "削除するメタ情報のタイプ"
+      "context...": "フィルタリングするためのコンテキスト"
+  track-info:
+    description: "トラックに関する情報を表示します"
+  track-append:
+    description: "トラックの終わりにグループを追加します"
+    args:
+      "group": "追加するグループ"
+  track-insert:
+    description: "トラックに沿った特定位置にグループを挿入します"
+    args:
+      "group": "挿入するグループ"
+      "position": "グループを挿入する位置(トラックの最初の位置は1)"
+  track-remove:
+    description: "トラックからグループを削除します"
+    args:
+      "group": "削除するグループ"
+  track-clear:
+    description: "トラック上のグループをクリアします"
+  track-rename:
+    description: "トラックをリネームします"
+    args:
+      "name": "新しい名前"
+  track-clone:
+    description: "トラックを複製します"
+    args:
+      "name": "複製するトラックの名前"
+  log-recent:
+    description: "最近のアクションを表示します"
+    args:
+      "user": "表示するユーザーの名前/UUID"
+      "page": "表示するページ番号"
+  log-search:
+    description: "エントリをログから検索します"
+    args:
+      "query": "検索するクエリ"
+      "page": "表示するページ番号"
+  log-notify:
+    description: "ログ通知の有無を切り替えます"
+    args:
+      "on|off": "オンの場合は通知をし、オフの場合は通知しません"
+  log-user-history:
+    description: "ユーザーの履歴を表示します"
+    args:
+      "user": "ユーザーの名前/UUID"
+      "page": "表示するページ番号"
+  log-group-history:
+    description: "グループの履歴を表示します"
+    args:
+      "group": "グループの名前"
+      "page": "表示するページ番号"
+  log-track-history:
+    description: "トラックの履歴を表示します"
+    args:
+      "track": "トラックの名前"
+      "page": "表示するページ番号"
+  sponge:
+    description: "追加のSpongeデータを編集します"
+    usage: "/%s sponge <collection> <subject>"
+    args:
+      "collection": "照会するコレクション"
+      "subject": "変更するサブジェクト"
+  sponge-permission-info:
+    description: "サブジェクトのパーミッションに関する情報を表示します"
+    args:
+      "contexts...": "フィルタするコンテキスト"
+  sponge-permission-set:
+    description: "サブジェクトのパーミッションを設定します"
+    args:
+      "node": "設定するパーミッションノード"
+      "tristate": "パーミッションを設定する値"
+      "contexts...": "パーミッションを設定するコンテキスト"
+  sponge-permission-clear:
+    description: "サブジェクトのパーミッションをクリアします"
+    args:
+      "contexts...": "パーミッションをクリアするコンテキスト"
+  sponge-parent-info:
+    description: "サブジェクトの親に関する情報を表示します"
+    args:
+      "contexts...": "フィルタするコンテキスト"
+  sponge-parent-add:
+    description: "サブジェクトに親を追加します"
+    args:
+      "collection": "親サブジェクトが存在するサブジェクトのコレクション"
+      "subject": "親サブジェクトの名前"
+      "contexts...": "親を追加するコンテキスト"
+  sponge-parent-remove:
+    description: "サブジェクトから親を削除します"
+    args:
+      "collection": "親サブジェクトが存在するサブジェクトのコレクション"
+      "subject": "親サブジェクトの名前"
+      "contexts...": "親を削除するコンテキスト"
+  sponge-parent-clear:
+    description: "サブジェクトの親をクリアします"
+    args:
+      "contexts...": "親をクリアするコンテキスト"
+  sponge-option-info:
+    description: "サブジェクトのオプションに関する情報を表示します"
+    args:
+      "contexts...": "フィルタするコンテキスト"
+  sponge-option-set:
+    description: "サブジェクトのオプションを設定します"
+    args:
+      "key": "設定するためのキー"
+      "value": "キーを設定する値"
+      "contexts...": "オプションを設定するコンテキスト"
+  sponge-option-unset:
+    description: "サブジェクトのオプションを解除します"
+    args:
+      "key": "解除するためのキー"
+      "contexts...": "キーを解除するコンテキスト"
+  sponge-option-clear:
+    description: "サブジェクトオプションをクリアします"
+    args:
+      "contexts...": "オプションをクリアするためのコンテキスト"
+  migration-command:
+    description: "移行 コマンド"
+  migration-groupmanager:
+    description: "移行 コマンド"
+    args:
+      "migrate as global": "ワールドのパーミッションを無視し、グローバルとして移行する場合"
+  migration-powerfulperms:
+    description: "移行 コマンド"
+    args:
+      "address": "PPデータベースのアドレス"
+      "database": "PPデータベースの名前"
+      "username": "データベースにログインするユーザー名"
+      "password": "データーベースにログインするパスワード"
+      "db table": "プレイヤーデータを保管するPPテーブル名"
