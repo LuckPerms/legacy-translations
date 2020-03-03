@@ -1,7 +1,6 @@
 # LuckPerms Language File
-# Locale: jp_JP (Japanese) Ver: 1.0
-# Author: xSoukazex
-# 誤訳、日本語的におかしい所があればDiscord:xSoukazex#5126にご連絡ください。訂正します。使用する皆さんのためにもご協力お願いします。
+# Locale: jp_JP (Japanese)
+# Author: xSoukazex, syokkendesuyo
 
 prefix: "&7&l[&b&lL&3&lP&7&l] "
 view-available-commands-prompt: "&3利用可能なコマンド見るためには &a/{0} help &3と入力してください。"
