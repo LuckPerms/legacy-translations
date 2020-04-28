@@ -1,12 +1,12 @@
 # LuckPerms Sprach-Datei
 # Sprache: de_DE (German/Deutsch)
 # Autor: itsTyrion
-# Editoren: Andre_601, Tobi406
+# Editoren: Andre_601, Tobi406, Yasu-San
 
 prefix: "&7&l[&b&lL&3&lP&7&l] "
 view-available-commands-prompt: "&3Nutze &a/{0} help&3, um verfügbare Befehle zu sehen."
 no-permission-for-subcommands: "&3Du hast keine Rechte zur Nutzung der Unterbefehle."
-first-time-setup: >
+first-time-setup: |
   {PREFIX}&3Es scheint als wären noch keine Rechte gesetzt worden!\n
   {PREFIX}&3Bevor du eine der LuckPerms-Befehle verwenden kannst, musst du dir zuerst per Konsole rechte geben.\n
   {PREFIX}&3Öffne deine Konsole und verwende:\n
@@ -23,7 +23,7 @@ loading-state-error-cb-offline-mode: "&cRechte für deinen Benutzer konnte währ
 loading-setup-error: "&cEin unerwarteter Fehler ist beim erstellen der Rechte aufgetreten. Bitte versuch es später erneut."
 op-disabled: "&bDas Vanilla OP-System ist auf diesem Server deaktiviert."
 op-disabled-sponge: "&2Bitte beachte, dass der Server-Operator keine Wirkung auf die Sponge Permission-Checks hat, wenn ein Permissions-Plugin installiert ist. Bitte bearbeite die Nutzerdaten direkt."
-log: >
+log: |
   {PREFIX}&3LOG &3&l> &8(&e{0}&8) [&a{1}&8] (&b{2}&8)\n
   {PREFIX}&3LOG &3&l> &f{3}
 verbose-log-permission: "&3VB &3&l> &a{0}&7 - &a{1}&7 - {2}{3}"
@@ -38,7 +38,7 @@ command-no-permission: "&cKeine Rechte auf diesen Befehl!"
 main-command-usage-header: "&b{0} Unterbefehl: &7({1} ...)"
 command-usage-argument-join: "&3 - &7"
 command-usage-brief: "&3> &a{0}{1}"
-command-usage-detailed-header: >
+command-usage-detailed-header: |
   {PREFIX}&3&lBefehlsverwendung &3- &b{0}\n
   {PREFIX}&b> &7{1}
 command-usage-detailed-args-header: "&3Argumente:"
@@ -54,9 +54,9 @@ track-not-found: "&cEin Track mit dem Namen &4{0}&c konnte nicht gefunden werden
 track-save-error: "&cFehler beim speichern der Track-Daten für &4{0}&c."
 user-invalid-entry: "&4{0}&c ist kein/e gültige/r Name/UUID."
 group-invalid-entry: "&4{0}&c ist kein gültiger Gruppenname."
-track-invalid-entry: "&4{0}&c ist kein gülter Track-Name."
+track-invalid-entry: "&4{0}&c ist kein gültiger Track-Name."
 server-world-invalid-entry: "&cServer/Welt-Namen dürfen nur alphanumeriche Zeichen enthalten, und 36 Zeichen Länge nicht überschreiten."
-verbose-invalid-filter: "&4{0}&c ist kein gülter Verbose-Filter. &7({1})"
+verbose-invalid-filter: "&4{0}&c ist kein gültiger Verbose-Filter. &7({1})"
 verbose-on: "&bVerbose-log &aaktiviert &bfür Checks, die mit einem &abeliebigen &bübereinstimmen."
 verbose-on-query: "&bVerbose-log &aaktiviert &bfür Checks, die mit &a{0}&b übereinstimmen."
 verbose-off: "&bVerbose-log &cdeaktiviert&b."
@@ -67,7 +67,7 @@ verbose-results-url: "&aUEL der Verbose-Ergebnisse:"
 tree-upload-start: "&bErstelle Permission-Baum..."
 tree-empty: "&cBerechtigungs-Baum konnte nicht erstellt werden. Keine Ergebnisse gefunden."
 tree-url: "&aURL des Berechtigungs-Baumes:"
-search-searching: "&aSuche nach Nutzern und Gruppen mit &bberechtigung {0}&a..."
+search-searching: "&aSuche nach Nutzern und Gruppen mit &bBerechtigung {0}&a..."
 search-searching-members: "&aSuche nach Nutzern und Gruppen, die von &b{0}&a erben..."
 search-result: "&aEs wurden &b{0}&a Einträge von &b{1}&a Nutzern und &b{2}&a Gruppen gefunden."
 search-showing-users: "&bZeige Nutzer-Einträge:    &7(Seite &f{0}&7 von &f{1}&7 - &f{2}&7 Einträge)"
@@ -114,19 +114,19 @@ update-task-push-success: "&aDie anderen Server wurden erfolgreich via &b{0} - M
 update-task-push-failure: "&cFehler beim anwenden der Änderungen auf andere Server."
 update-task-push-failure-not-setup: "&cFehler beim anwenden der Änderungen auf andere Server. &7(kein Benachrichtigungsdienst konfiguriert)"
 reload-config-success: "&aDie Konfiguration wurde neu geladen. &7(Eine Änderungen werden allerdings erst beim nächsten Server-Neustart wirksam)"
-info-top: >
+info-top: |
   {PREFIX}&2  &bLuckPerms v{0}&2 von &bLuck&2.\n
   {PREFIX}&f-  &3Plattform: &f{1}\n
   {PREFIX}&f-  &3Server-Brand: &f{2}\n
   {PREFIX}&f-  &3Server-Version:\n
   {PREFIX}&f-  {3}
-info-storage: >
+info-storage: |
   {PREFIX}&f-  &bSpeicher:\n
   {PREFIX}&f-     &3Typ: &f{0}
 info-storage-meta: "&f-     &3{0}: {1}"
 info-extensions: "{PREFIX}&f-  &bErweiterungen:"
 info-extension-entry: "&f-     &3{0}"
-info-middle: >
+info-middle: |
   {PREFIX}&f-  &bMessaging: &f{0}\n
   {PREFIX}&f-  &bInstanz:\n
   {PREFIX}&f-     &3Statische Kontexte: &f{1}\n
@@ -191,8 +191,8 @@ meta-entry-with-context: "&b-> &a{0} &f= &f'{1}&f' &8(&7geerbt von &a{2}&8){3}"
 chat-meta-prefix-none: "&b{0} hat keinen Prefix."
 chat-meta-suffix-none: "&b{0} hat keinen Suffix."
 meta-none: "&b{0} hat keine Meta."
-meta-invalid-priority: "&cUngültige Priotität: &4{0}&c. Zahl wurde erwartet."
-already-has-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a berits mit einer Priorität von &b{3}&a im Kontext {4}&a gesetzt."
+meta-invalid-priority: "&cUngültige Priorität: &4{0}&c. Zahl wurde erwartet."
+already-has-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a bereits mit einer Priorität von &b{3}&a im Kontext {4}&a gesetzt."
 already-has-temp-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a bereits temporär mit einer Priorität von &b{3}&a im Kontext {4}&a gesetzt."
 does-not-have-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a nicht mit einer Priorität von &b{3}&a im Kontext {4}&a gesetzt."
 does-not-have-temp-chat-meta: "&b{0}&a hat {1} &f'{2}&f'&a nicht temporär mit einer Priorität von &b{3}&a im Kontext {4}&a gesetzt."
@@ -220,14 +220,14 @@ bulk-update-unknown-id: "&aOperation mit ID &b{0}&a existiert nicht oder ist abg
 bulk-update-starting: "&aBulk Update wird durchgeführt."
 bulk-update-success: "&bBulk Update erfolgreich ausgeführt."
 bulk-update-failure: "&cBulk Update fehlgeschlagen. Für Fehler-Details in der Konsole nachsehen."
-user-info-general: >
+user-info-general: |
   {PREFIX}&b&l> &bNutzer-Info: &f{0}\n
   {PREFIX}&f- &3UUID: &f{1} &7(Typ: {2}&7)\n
   {PREFIX}&f- &3Status: {3}\n
   {PREFIX}&f- &3Primäre Gruppe: &f{4}
-user-info-data: >
-  {PREFIX}&f- &aContextuale Daten:\n
-  {PREFIX}&f-    &3Hat kontextuale Daten: {0}\n
+user-info-data: |
+  {PREFIX}&f- &aKontextuelle Daten:\n
+  {PREFIX}&f-    &3Hat kontextuelle Daten: {0}\n
   {PREFIX}&f-    &3Andwendbare Kontexte: {1}\n
   {PREFIX}&f-    &3Prefix: {2}\n
   {PREFIX}&f-    &3Suffix: {3}\n
@@ -238,7 +238,7 @@ info-parent-entry: "&f-    &3> &f{0}{1}"
 info-parent-entry-expiry: "&f-    &2-    endet in {0}"
 user-removegroup-error-primary: "&aDu kannst einen Nutzer nicht von seiner Primärgruppe entfernen."
 user-primarygroup-success: "&b{0}&as Primärgruppe wurde auf &b{1}&a gesetzt."
-user-primarygroup-warn-option: "&aWarnung: Die primäre Gruppen-Kalkulations-Methode die von diesm Server &7({0}) &averwendet wird, reflektiert diese Änderung evtl. nicht."
+user-primarygroup-warn-option: "&aWarnung: Die primäre Gruppen-Kalkulations-Methode die von diesem Server &7({0}) &averwendet wird, reflektiert diese Änderung evtl. nicht."
 user-primarygroup-error-alreadyhas: "&b{0}&a hat &b{1}&a bereits als Primär-Gruppe gesetzt."
 user-primarygroup-error-notmember: "&b{0}&a war noch kein Mitglied von &b{1}&a, und wurde hinzugefügt."
 user-track-error-not-contain-group: "&b{0}&a ist auf &b{1}&a noch in keiner Gruppe."
@@ -246,16 +246,16 @@ user-track-added-to-first: "&b{0}&a ist in diesem Track noch in keiner Gruppe, u
 user-promote-not-on-track: "&b{0}&a ist nicht in keiner Gruppe auf diesem Track und wurde deswegen nicht befördert."
 user-promote-success: "&aBefördere &b{0}&a auf Track &b{1}&a im Kontext {4}&a von &b{2}&a zu &b{3}&a."
 user-promote-error-endoftrack: "&aDas Ende des Tracks &b{0}&a wurde erreicht. &b{1}&a konnte nicht befördert werden."
-user-promote-error-malformed: >
+user-promote-error-malformed: |
   {PREFIX}&aDie nächste Gruppe auf Track, &b{0}&a, existiert nicht mehr. Beförderung nicht möglich\n
   {PREFIX}&aBitte erstelle die Gruppe entweder, oder entferne sie vom Track, und versuche es erneut.
-user-demote-success: "&Degradiere &b{0}&a auf Track im Kontext {4} &b{1}&a von &b{2}&a zu &b{3}&a ."
+user-demote-success: "&aDegradiere &b{0}&a auf Track im Kontext {4} &b{1}&a von &b{2}&a zu &b{3}&a ."
 user-demote-endoftrack: "&aDas Ende von Track &b{0}&a wurde erreicht, &b{1}&a wurde daher von &b{2}&a entfernt."
 user-demote-endoftrack-not-removed: "&aDas Ende von Track &b{0}&a wurde erreicht, aber &b{1}&a wurde nicht von der ersten Gruppe entfernt."
-user-demote-error-malformed: >
+user-demote-error-malformed: |
   {PREFIX}&aDie vorherige Gruppe auf Track, &b{0}&a, existiert nicht mehr. Degradierung nicht möglich\n
   {PREFIX}&aBitte erstelle die Gruppe entweder, oder entferne sie vom Track, und versuche es erneut.
-group-info-general: >
+group-info-general: |
   {PREFIX}&b&l> &bGruppen-Info: &f{0}\n
   {PREFIX}&f- &3Anzeigename: &f{1}\n
   {PREFIX}&f- &3Gewichtung: &f{2}
@@ -265,7 +265,7 @@ group-set-display-name-already-has: "&b{0}&a hat bereits den Anzeigenamen &b{1}&
 group-set-display-name-already-in-use: "&aDer Anzeigename &b{0}&a wird bereits von &b{1}&a verwendet."
 group-set-display-name: "&aAnzeigename für Gruppe &b{1}&a wurde auf &b{0}&a im Kontext {2}&a gesetzt."
 group-set-display-name-removed: "&aAnzeigename für Gruppe &b{0}&a im Kontext {1}&a entfernt."
-track-info: >
+track-info: |
   {PREFIX}&b&l> &bZeige Track: &f{0}\n
   {PREFIX}&f- &7Pfad: &f{1}
 track-clear: "&b{0}&as Gruppen-Track wurde geleert."
@@ -278,22 +278,22 @@ log-load-error: "&cDer Log konnte nicht geladen werden."
 log-invalid-page: "&cUngültige Seiten-Zahl."
 log-invalid-page-range: "&cUngültige Seite. Bitte gib einen Wert zwischen &41&c und &4{0}&c ein."
 log-no-entries: "&bKeine anzeigbaren Log-Einträge."
-log-entry: >
+log-entry: |
   {PREFIX}&b#{0} &8(&7vor {1} &8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
   {PREFIX}&7> &f{5}
-log-notify-console: "&cNotifications können für Konsole nicht getoggled werden"
+log-notify-console: "&cNotifications können für Konsole nicht getoggelt werden"
 log-notify-toggle-on: "&bLog-Output &aaktiviert."
 log-notify-toggle-off: "&bLog-Output &cdeaktiviert."
 log-notify-already-on: "&cDu bekommst bereits Benachrichtigungen."
-log-notify-already-off: "&cDu bekommst arktuell keine Benachrichtigunen."
+log-notify-already-off: "&cDu bekommst aktuell keine Benachrichtigungen."
 log-notify-unknown: "&cUngültiger Status. Erwartet: \"on\" or \"off\"."
 log-search-header: "&aZeige kürzliche Aktionen für Abfrage &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
-log-recent-header: "&aZeige kürzliche Akionen &7(Seite &f{0}&7 von &f{1}&7)"
+log-recent-header: "&aZeige kürzliche Aktionen &7(Seite &f{0}&7 von &f{1}&7)"
 log-recent-by-header: "&aZeige kürzliche Aktionen nach &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
 log-history-user-header: "&aZeige Verlauf für Nutzer &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
 log-history-group-header: "&aZeige Verlauf für Gruppe &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
 log-history-track-header: "&aZeige Verlauf für Track &b{0}  &7(Seite &f{1}&7 von &f{2}&7)"
-log-export-already-exists: "&cFehler: Datei &4{0}&c exisitiert bereits."
+log-export-already-exists: "&cFehler: Datei &4{0}&c existiert bereits."
 log-export-not-writable: "&cFehler: Datei &4{0}&c ist nicht beschreibbar."
 log-export-empty: "&cDer Log ist leer, und kann daher nicht exportiert werden."
 log-export-failure: "&cUnerwarteter Fehler beim schreiben in die Datei."
@@ -311,7 +311,7 @@ import-info: "&b(Import) &b-> &f{0}."
 import-end-complete: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden - &7Keine Fehler."
 import-end-complete-err: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden -  &c{1} Fehler."
 import-end-complete-err-sin: "&b(Import) &a&lABGESCHLOSSEN &7- Nach &b{0} &7Sekunden - &c{1} Fehler."
-import-end-error-header: >
+import-end-error-header: |
   {PREFIX}&b(Import) &7------------> &fZeige Fehler #&b{0} &7<------------\n
   {PREFIX}&b(Import) &fBeim ausführen von: &3Befehl #{1}\n
   {PREFIX}&b(Import) &fBefehl: &7{2}\n
@@ -328,7 +328,7 @@ command-specs:
     description: "Eine Liste von Befehlen zum Verwalten von Gruppen mit LuckPerms. Gruppen sind einfach eine Kollektion von Rechten, welche Nutzern gegeben werden können. Neue Gruppen werden mit dem 'creategroup'-Befehl erstellt."
     usage: "/%s group <Gruppe>"
   track:
-    description: "Eine Liste von Befehlen zum Verwalten von Tracks mit LuckPerms. Tracks sind geordnete Kollektionen von Gruppen welche für Beföhrderungen oder Degradierungen verwendet werden können."
+    description: "Eine Liste von Befehlen zum Verwalten von Tracks mit LuckPerms. Tracks sind geordnete Kollektionen von Gruppen welche für Beförderungen oder Degradierungen verwendet werden können."
     usage: "/%s track <Track>"
   log:
     description: "Eine Liste von Befehlen zum Verwalten vom Log-System in LuckPerms."
@@ -367,7 +367,7 @@ command-specs:
       "user": "Der zu Prüfende Nutzer"
       "permission": "Die Permission, nach der geprüft wird"
   network-sync:
-    description: "Synchronisere Änderungen mit dem Speicher, und beauftrage alle Server im Netzwerk, das gleiche zu tun"
+    description: "Synchronisiere Änderungen mit dem Speicher, und beauftrage alle Server im Netzwerk, das gleiche zu tun"
     usage: "/%s networksync"
   import:
     description: "Importiert Daten von einer (vorher erstellten) Export-Datei."
@@ -431,13 +431,13 @@ command-specs:
   user-switchprimarygroup:
     description: "Ändert die Primär-Gruppe eines Nutzers"
     args:
-      "group": "die Gruppe, auf die geswitcht wird"
+      "group": "die Gruppe, auf die gewechselt wird"
   user-promote:
     description: "Befördert den Nutzer auf dem Track eine Gruppe nach oben"
     args:
       "track": "der Track, auf dem der Nutzer befördert wird"
       "context...": "der Kontext, in dem der Nutzer befördert wird"
-      "--dont-add-to-first": "beföhrdere den Nutzer nur, wenn dieser bereits auf dieser Track ist"
+      "--dont-add-to-first": "befördere den Nutzer nur, wenn dieser bereits auf dieser Track ist"
   user-demote:
     description: "Degradiert den Nutzer auf dem Track eine Gruppe nach unten"
     args:
@@ -544,7 +544,7 @@ command-specs:
       "group": "die Gruppe, von der geerbt wird"
       "context...": "der Kontext, in dem von der Gruppe geerbt wird"
   parent-remove:
-    description: "Entfernt eine zuvor gesetzte Verebungs-Regel"
+    description: "Entfernt eine zuvor gesetzte Vererbungs-Regel"
     args:
       "group": "die zu entfernende Gruppe"
       "context...": "der Kontext, in dem die Gruppe entfernt wird"
@@ -776,7 +776,7 @@ command-specs:
     args:
       "contexts...": "die Kontexte, in denen die Eltern gelöscht werden"
   sponge-option-info:
-    description: "Zeigt Infos über die Optionen des Sujekts"
+    description: "Zeigt Infos über die Optionen des Subjekts"
     args:
       "contexts...": "der Kontext, nach dem gefiltert wird"
   sponge-option-set:
