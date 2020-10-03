@@ -279,535 +279,535 @@ log-no-entries: "&bNenhuma entrada de registro."
 log-entry: >
   {PREFIX}&b#{0} &8(&7{1} ago&8) &8(&e{2}&8) [&a{3}&8] (&b{4}&8)\n
   {PREFIX}&7> &f{5}
-log-notify-console: "&cCannot toggle notifications for console."
-log-notify-toggle-on: "&aEnabled&b logging output."
-log-notify-toggle-off: "&cDisabled&b logging output."
-log-notify-already-on: "&cYou are already receiving notifications."
-log-notify-already-off: "&cYou aren't currently receiving notifications."
-log-notify-unknown: "&cState unknown. Expecting \"on\" or \"off\"."
-log-search-header: "&aShowing recent actions for query &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-recent-header: "&aShowing recent actions  &7(page &f{0}&7 of &f{1}&7)"
-log-recent-by-header: "&aShowing recent actions by &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-history-user-header: "&aShowing history for user &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-history-group-header: "&aShowing history for group &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-history-track-header: "&aShowing history for track &b{0}  &7(page &f{1}&7 of &f{2}&7)"
-log-export-already-exists: "&cError: File &4{0}&c already exists."
-log-export-not-writable: "&cError: File &4{0}&c is not writable."
-log-export-empty: "&cThe log is empty and therefore cannot be exported."
-log-export-failure: "&cAn unexpected error occured whilst writing to the file."
-log-export-success: "&aSuccessfully exported to &b{0}&a."
-import-already-running: "&cAnother import process is already running. Please wait for it to finish and try again."
-export-already-running: "&cAnother export process is already running. Please wait for it to finish and try again."
-file-not-within-directory: "&cError: File &4{0}&c must be a direct child of the data directory."
-import-file-doesnt-exist: "&cError: File &4{0}&c does not exist."
-import-file-not-readable: "&cError: File &4{0}&c is not readable."
-import-file-read-failure: "&cAn unexpected error occured whilst reading from the import file."
-import-progress: "&b(Import) &b-> &f{0}&f% complete &7- &b{1}&f/&b{2} &foperations complete with &c{3} &ferrors."
-import-progress-sin: "&b(Import) &b-> &f{0}&f% complete &7- &b{1}&f/&b{2} &foperations complete with &c{3} &ferror."
-import-start: "&b(Import) &b-> &fStarting import process."
+log-notify-console: "&cNão é possível alternar notificações para o console."
+log-notify-toggle-on: "&aAttivado&b saída de registros."
+log-notify-toggle-off: "&cDesativado&b saída de registros."
+log-notify-already-on: "&cVocê já está recebendo notificações."
+log-notify-already-off: "&cVocê não está recebendo notificações."
+log-notify-unknown: "&cEstado desconhecido. Esperando \"on\" ou \"off\"."
+log-search-header: "&aMostrando ações recentes para a consulta &b{0}  &7(página &f{1}&7 de &f{2}&7)"
+log-recent-header: "&aMostrando ações recentes  &7(página &f{0}&7 de &f{1}&7)"
+log-recent-by-header: "&aMostrando ações recentes por &b{0}  &7(página &f{1}&7 de &f{2}&7)"
+log-history-user-header: "&aMostrando histórico do usuário &b{0}  &7(página &f{1}&7 de &f{2}&7)"
+log-history-group-header: "&aMostrando histórico do grupo &b{0}  &7(página &f{1}&7 de &f{2}&7)"
+log-history-track-header: "&aMostrando histórico do cargo &b{0}  &7(página &f{1}&7 de &f{2}&7)"
+log-export-already-exists: "&cErro: Arquivo &4{0}&c já existe."
+log-export-not-writable: "&cErro: Arquivo &4{0}&c não pode ser escrito."
+log-export-empty: "&cO registro está vazio, portanto não pode ser exportado."
+log-export-failure: "&cOcorreu um erro inesperado ao gravar no arquivo."
+log-export-success: "&aExportado com sucesso para &b{0}&a."
+import-already-running: "&cOutro processo de importar está rodando. Por favor espere até que ele termine e tente novamente."
+export-already-running: "&cOutro processo de exportar está rodando. Por favor espere até que ele termine e tente novamente."
+file-not-within-directory: "&cErro: Arquivo &4{0}&c deve ser um filho direto do diretório de dados."
+import-file-doesnt-exist: "&cErro: Arquivo &4{0}&c não existe."
+import-file-not-readable: "&cErro: Arquivo &4{0}&c não pode ser lido."
+import-file-read-failure: "&cOcorreu um erro inesperado durante a leitura do arquivo."
+import-progress: "&b(Import) &b-> &f{0}&f% completo &7- &b{1}&f/&b{2} &foperações completadas com &c{3} &ferros."
+import-progress-sin: "&b(Import) &b-> &f{0}&f% completp &7- &b{1}&f/&b{2} &foperações completadas com &c{3} &ferro."
+import-start: "&b(Import) &b-> &fComeçando processode importação."
 import-info: "&b(Import) &b-> &f{0}."
-import-end-complete: "&b(Import) &a&lCOMPLETED &7- took &b{0} &7seconds - &7No errors."
-import-end-complete-err: "&b(Import) &a&lCOMPLETED &7- took &b{0} &7seconds - &c{1} errors."
-import-end-complete-err-sin: "&b(Import) &a&lCOMPLETED &7- took &b{0} &7seconds - &c{1} error."
+import-end-complete: "&b(Import) &a&lCOMPLETO &7- levou &b{0} &7segundos - &7Sem erros."
+import-end-complete-err: "&b(Import) &a&lCOMPLETO &7- levou &b{0} &7segundos - &c{1} erros."
+import-end-complete-err-sin: "&b(Import) &a&lCOMPLETO &7- levou &b{0} &7segundos - &c{1} erro."
 import-end-error-header: >
-  {PREFIX}&b(Import) &7------------> &fShowing Error #&b{0} &7<------------\n
-  {PREFIX}&b(Import) &fWhilst executing: &3Command #{1}\n
-  {PREFIX}&b(Import) &fCommand: &7{2}\n
-  {PREFIX}&b(Import) &fType: &3{3}\n
-  {PREFIX}&b(Import) &fOutput:
+  {PREFIX}&b(Import) &7------------> &fMostrando Erro #&b{0} &7<------------\n
+  {PREFIX}&b(Import) &fDurante a execução de: &3Comando #{1}\n
+  {PREFIX}&b(Import) &fComando: &7{2}\n
+  {PREFIX}&b(Import) &fTipo: &3{3}\n
+  {PREFIX}&b(Import) &fSaída:
 import-end-error-content: "&b(Import) &b-> &c{0}"
 import-end-error-footer: "&b(Import) &7<------------------------------------------>"
 
 command-specs:
   user:
-    description: "A set of commands for managing users within LuckPerms. (A 'user' in LuckPerms is just a player, and can refer to a UUID or username)"
+    description: "Um conjunto de comandos para gerenciar usuários no LuckPerms. (Um usuário é um jogador, e pode ser referido pelo UUID ou username)"
     usage: "/%s user <user>"
   group:
-    description: "A set of commands for managing groups within LuckPerms. Groups are just collections of permission assignments that can be given to users. New groups are made using the 'creategroup' command."
+    description: "Um conjunto de comandos para gerenciar grupos no LuckPerms. Os grupos são apenas coleções de atribuições de permissão que podem ser fornecidas aos usuários. Novos grupos são feitos usando o comando 'creategroup'."
     usage: "/%s group <group>"
   track:
-    description: "A set of commands for managing tracks within LuckPerms. Tracks are a ordered collection of groups which can be used for defining promotions and demotions."
+    description: "Um conjunto de comandos para gerenciar cargos no LuckPerms. Os cargos são uma coleção ordenada de grupos que podem ser usados ​​para definir promoções e rebaixamentos."
     usage: "/%s track <track>"
   log:
-    description: "A set of commands for managing the logging functionality within LuckPerms."
+    description: "Um conjunto de comandos para gerenciar a funcionalidade de registro em LuckPerms."
     usage: "/%s log"
   sync:
-    description: "Reloads all data from the plugins storage into memory, and applies any changes that are detected."
+    description: "Recarrega todos os dados do armazenamento de plug-ins na memória e aplica todas as alterações detectadas."
     usage: "/%s sync"
   info:
-    description: "Prints general information about the active plugin instance."
+    description: "Mostra informações gerais sobre a instância do plugin ativo."
     usage: "/%s info"
   editor:
-    description: "Creates a new web editor session"
+    description: "Cria uma nova sessão web."
     usage: "/%s editor [type]"
     args:
-      "type": "the types to load into the editor. ('all', 'users' or 'groups')"
+      "type": "os tipos para carregar no editor. ('all', 'users' ou 'groups')"
   debug:
-    description: "Produces a set of internal debugging output"
+    description: "Produz um conjunto de saída de depuração interna."
     usage: "/%s debug"
   verbose:
-    description: "Controls the plugins verbose permission check monitoring system."
+    description: "Controla o sistema de monitoramento de verificação de permissão detalhada dos plug-ins."
     usage: "/%s verbose <on|record|off|upload> [filter]"
     args:
-      "on|record|off|upload": "whether to enable/disable logging, or to upload the logged output"
-      "filter": "the filter to match entries against"
+      "on|record|off|upload": "se deseja habilitar / desabilitar o registro ou fazer o upload da saída registrada"
+      "filter": "o filtro para comparar as entradas"
   tree:
-    description: "Generates a tree view (ordered list hierarchy) of all permissions known to LuckPerms."
+    description: "Gera uma exibição em árvore (hierarquia de lista ordenada) de todas as permissões conhecidas pelo LuckPerms."
     usage: "/%s tree [scope] [player]"
     args:
-      "scope": "the root of the tree. specify \".\" to include all permissions"
-      "player": "the name of an online player to check against"
+      "scope": "A raiz da árvore. Digite \".\" para incluir todas as permissões 
+      "player": "O nome de um jogador online para verificar"
   search:
-    description: "Searchs for all of the users/groups with a specific permission"
+    description: "Procura por todos os usuários / grupos com uma permissão específica."
     usage: "/%s search <permission>"
     args:
-      "permission": "the permission to search for"
-      "page": "the page to view"
+      "permission": "a permissão para pesquisar por"
+      "page": "a página para ver"
   check:
-    description: "Performs a 'mock' permission check for an online player"
+    description: "Executa uma verificação de permissão 'simulada' para um jogador online."
     usage: "/%s check <user> <permission>"
     args:
-      "user": "the user to check"
-      "permission": "the permission to check for"
+      "user": "o usuário para checar"
+      "permission": "a permissão para ser checada"
   network-sync:
-    description: "Sync changes with the storage and request that all other servers on the network do the same"
+    description: "Sincronize as alterações com o armazenamento e solicite que todos os outros servidores da rede façam o mesmo"
     usage: "/%s networksync"
   import:
-    description: "Imports data from a (previously created) export file"
+    description: "Importa dados de um arquivo de exportação (criado anteriormente)"
     usage: "/%s import <file>"
     args:
-      "file": "the file to import from"
+      "file": "o arquivo a ser importado"
   export:
-    description: "Exports all permissions data to an 'export' file. Can be re-imported at a later time."
+    description: "Exporta todos os dados de permissões para um arquivo de 'exportação'. Pode ser reimportado posteriormente."
     usage: "/%s export <file>"
     args:
-      "file": "the file to export to"
+      "file": "o arquivo a ser gerado"
   reload-config:
-    description: "Reload some of the config options"
+    description: "Recarregue algumas das opções de configuração"
     usage: "/%s reloadconfig"
   bulk-update:
-    description: "Execute bulk change queries on all data"
+    description: "Execute consultas de alteração em massa em todos os dados"
     usage: "/%s bulkupdate"
     args:
-      "data type": "the type of data being changed. ('all', 'users' or 'groups')"
-      "action": "the action to perform on the data. ('update' or 'delete')"
-      "action field": "the field to act upon. only required for 'update'. ('permission', 'server' or 'world')"
-      "action value": "the value to replace with. only required for 'update'."
-      "constraint...": "the constraints required for the update"
+      "data type": "o tipo de dados sendo alterado. ('all', 'users' ou 'groups')"
+      "action": "a ação a ser executada nos dados. ('update' ou 'delete')"
+      "action field": "o campo para agir. necessário apenas para 'atualização'. ('permission', 'server' ou 'world')"
+      "action value": "o valor a ser substituído. necessário apenas para 'atualização'."
+      "constraint...": "as restrições necessárias para a atualização"
   migration:
-    description: "Migration commands"
+    description: "Comandos de migração"
     usage: "/%s migration"
   apply-edits:
-    description: "Applies permission changes made from the web editor"
+    description: "Aplica mudanças de permissão feitas no editor da web"
     usage: "/%s applyedits <code> [target]"
     args:
-      "code": "the unique code for the data"
-      "target": "who to apply the data to"
+      "code": "o código único para os dados"
+      "target": "a quem aplicar os dados"
   create-group:
-    description: "Create a new group"
+    description: "Criar novo grupo"
     usage: "/%s creategroup <group>"
     args:
-      "name": "the name of the group"
+      "name": "nome do grupo"
   delete-group:
-    description: "Delete a group"
+    description: "Deletar um grupo"
     usage: "/%s deletegroup <group>"
     args:
-      "name": "the name of the group"
+      "name": "o nome do grupo"
   list-groups:
-    description: "List all groups on the platform"
+    description: "Lista todos os grupos na plataforma"
     usage: "/%s listgroups"
   create-track:
-    description: "Create a new track"
+    description: "Criar um novo cargo"
     usage: "/%s createtrack <track>"
     args:
-      "name": "the name of the track"
+      "name": "nome do cargo"
   delete-track:
-    description: "Delete a track"
+    description: "Deletar um cargo"
     usage: "/%s deletetrack <track>"
     args:
-      "name": "the name of the track"
+      "name": "nome do cargo"
   list-tracks:
-    description: "List all tracks on the platform"
+    description: "Liste todos os cargos na plataforma"
     usage: "/%s listtracks"
   user-info:
-    description: "Shows info about the user"
+    description: "Mostra informações sobre o usuário"
   user-switchprimarygroup:
-    description: "Switches the user's primary group"
+    description: "Muda o grupo primário do usuário"
     args:
-      "group": "the group to switch to"
+      "group": "o grupo para o qual mudar"
   user-promote:
-    description: "Promotes the user up a track"
+    description: "Promove o usuário num cargo"
     args:
-      "track": "the track to promote the user up"
-      "context...": "the contexts to promote the user in"
-      "--dont-add-to-first": "only promote the user if they're already on the track"
+      "track": "o nome do cargo"
+      "context...": "o contexto para promover o usuário em"
+      "--dont-add-to-first": "só promova o usuário se ele já no cargo"
   user-demote:
-    description: "Demotes the user down a track"
+    description: "Rebaixe um usuário no cargo"
     args:
-      "track": "the track to demote the user down"
-      "context...": "the contexts to demote the user in"
-      "--dont-remove-from-first": "prevent the user from being removed from the first group"
+      "track": "o nome do cargo"
+      "context...": "o contexto para promover o usuário em"
+      "--dont-remove-from-first": "previne que o usuário seja removido do primeiro grupo"
   user-clone:
-    description: "Clone the user"
+    description: "Clone o usuário"
     args:
-      "user": "the name/uuid of the user to clone onto"
+      "user": "o nome/uuid do usuário para clonar"
   group-info:
-    description: "Gives info about the group"
+    description: "Dá informações sobre o grupo"
   group-listmembers:
-    description: "Show the users/groups who inherit from this group"
+    description: "Mostra os usuários / grupos que herdam deste grupo"
     args:
-      "page": "the page to view"
+      "page": "a página a ser vista"
   group-setweight:
-    description: "Set the groups weight"
+    description: "Defina o peso do grupo"
     args:
-      "weight": "the weight to set"
+      "weight": "peso a ser definido"
   group-set-display-name:
-    description: "Set the groups display name"
+    description: "Defina o nome de exibição dos grupos"
     args:
-      "name": "the name to set"
-      "context...": "the contexts to set the name in"
+      "name": "o nome a ser definido"
+      "context...": "o contexto para promover o usuário em"
   group-rename:
-    description: "Rename the group"
+    description: "Renomeia um grupo"
     args:
-      "name": "the new name"
+      "name": "o novo nome"
   group-clone:
-    description: "Clone the group"
+    description: "Clona um grupo"
     args:
-      "name": "the name of the group to clone onto"
+      "name": "o nome do grupo para clonar"
   holder-editor:
-    description: "Opens the web permission editor"
+    description: "Abre o editor de permissão da webr"
   holder-showtracks:
-    description: "Lists the tracks that the object is on"
+    description: "Lista as trilhas em que o objeto está"
   holder-clear:
-    description: "Removes all permissions, parents and meta"
+    description: "Remove todas as permissões, pais e meta"
     args:
-      "context...": "the contexts to filter by"
+      "context...": "os contextos para filtrar"
   permission:
-    description: "Edit permissions"
+    description: "Editar permissões"
   parent:
-    description: "Edit inheritances"
+    description: "Editar heranças"
   meta:
-    description: "Edit metadata values"
+    description: "Editar valores de metadados"
   permission-info:
-    description: "Lists the permission nodes the object has"
+    description: "Lista os nós de permissão que o objeto possui"
     args:
-      "page": "the page to view"
-      "sort mode": "how to sort the entries"
+      "page": "a página a ser vista"
+      "sort mode": "como classificar as entradas"
   permission-set:
-    description: "Sets a permission for the object"
+    description: "Define uma permissão para o objeto"
     args:
-      "node": "the permission node to set"
-      "true|false": "the value of the node"
-      "context...": "the contexts to add the permission in"
+      "node": "a permissão a ser definida"
+      "true|false": "o valor do nó"
+      "context...": "os contextos para adicionar a permissão em"
   permission-unset:
-    description: "Unsets a permission for the object"
+    description: "Desativa uma permissão para o objeto"
     args:
-      "node": "the permission node to unset"
-      "context...": "the contexts to remove the permission in"
+      "node": "o nó de permissão para desativar"
+      "context...": "os contextos para adicionar a permissão em"
   permission-settemp:
-    description: "Sets a permission for the object temporarily"
+    description: "Define uma permissão para o objeto temporariamente"
     args:
-      "node": "the permission node to set"
-      "true|false": "the value of the node"
-      "duration": "the duration until the permission node expires"
-      "temporary modifier": "how the temporary permission should be applied"
-      "context...": "the contexts to add the permission in"
+      "node": "o nó de permissão para definir"
+      "true|false": "o valor do nó"
+      "duration": "a duração até que o nó de permissão expire"
+      "temporary modifier": "como a permissão temporária deve ser aplicada"
+      "context...": "os contextos para adicionar a permissão em"
   permission-unsettemp:
-    description: "Unsets a temporary permission for the object"
+    description: "Cancela uma permissão temporária para o objeto"
     args:
-      "node": "the permission node to unset"
-      "context...": "the contexts to remove the permission in"
+      "node": "o nó de permissão para desarmar"
+      "context...": "os contextos para remover a permissão em"
   permission-check:
-    description: "Checks to see if the object has a certain permission node"
+    description: "Verifica se o objeto tem um certo nó de permissão"
     args:
-      "node": "the permission node to check for"
-      "context...": "the contexts to check in"
+      "node": "o nó de permissão para verificar"
+      "context...": "os contextos para verificar"
   permission-check-inherits:
-    description: "Checks to see if the object inherits a certain permission node"
+    description: "Verifica se o objeto herda um determinado nó de permissão"
     args:
-      "node": "the permission node to check for"
-      "context...": "the contexts to check in"
+      "node": "o nó de permissão para verificar"
+      "context...": "os contextos para verificar"
   permission-clear:
-    description: "Clears all permissions"
+    description: "Limpa todas as permissões"
     args:
-      "context...": "the contexts to filter by"
+      "context...": "os contextos para filtrar"
   parent-info:
-    description: "Lists the groups that this object inherits from"
+    description: "Lista os grupos dos quais este objeto herda"
     args:
-      "page": "the page to view"
-      "sort mode": "how to sort the entries"
+      "page": "a página para ver"
+      "sort mode": "como classificar as entradas"
   parent-set:
-    description: "Removes all other groups the object inherits already and adds them to the one given"
+    description: "Remove todos os outros grupos que o objeto já herda e adiciona-os ao dado"
     args:
-      "group": "the group to set to"
-      "context...": "the contexts to set the group in"
+      "group": "o grupo para definir"
+      "context...": "os contextos para definir o grupo em"
   parent-add:
-    description: "Sets another group for the object to inherit permissions from"
+    description: "Define outro grupo para o objeto herdar as permissões"
     args:
-      "group": "the group to inherit from"
-      "context...": "the contexts to inherit the group in"
+      "group": "o grupo de onde herdar"
+      "context...": "os contextos para herdar o grupo em"
   parent-remove:
-    description: "Removes a previously set inheritance rule"
+    description: "Remove uma regra de herança definida anteriormente"
     args:
-      "group": "the group to remove"
-      "context...": "the contexts to remove the group in"
+      "group": "o grupo a ser removido"
+      "context...": "os contextos para remover o grupo em"
   parent-set-track:
-    description: "Removes all other groups the object inherits from already on the given track and adds them to the one given"
+    description: "Remove todos os outros grupos dos quais o objeto herda já no cargo dado e adiciona-os ao dado"
     args:
-      "track": "the track to set on"
-      "group": "the group to set to, or a number relating to the position of the group on the given track"
-      "context...": "the contexts to set the group in"
+      "track": "o cargo para definir"
+      "group": "o grupo para definir, ou um número relacionado à posição do grupo no cargo"
+      "context...": "os contextos para definir o grupo em"
   parent-add-temp:
-    description: "Sets another group for the object to inherit permissions from temporarily"
+    description: "Define outro grupo para o objeto herdar permissões temporariamente"
     args:
-      "group": "the group to inherit from"
-      "duration": "the duration of the group membership"
-      "temporary modifier": "how the temporary permission should be applied"
-      "context...": "the contexts to inherit the group in"
+      "group": "o grupo de onde herdar"
+      "duration": "a duração da adesão ao grupo"
+      "temporary modifier": "como a permissão temporária deve ser aplicada"
+      "context...": "os contextos para herdar o grupo em"
   parent-remove-temp:
-    description: "Removes a previously set temporary inheritance rule"
+    description: "Remove uma regra de herança temporária definida anteriormente"
     args:
-      "group": "the group to remove"
-      "context...": "the contexts to remove the group in"
+      "group": "o grupo a ser removido"
+      "context...": "os contextos para remover o grupo em"
   parent-clear:
-    description: "Clears all parents"
+    description: "Limpa todos os pais"
     args:
-      "context...": "the contexts to filter by"
+      "context...": "os contextos para filtrar"
   parent-clear-track:
-    description: "Clears all parents on a given track"
+    description: "Limpa todos os pais de um cargo"
     args:
-      "track": "the track to remove on"
-      "context...": "the contexts to filter by"
+      "track": "o cargo para se remover"
+      "context...": "os contextos para filtrar"
   meta-info:
-    description: "Shows all chat meta"
+    description: "Mostra todas as meta do chat"
   meta-set:
-    description: "Sets a meta value"
+    description: "Define um meta valor"
     args:
-      "key": "the key to set"
-      "value": "the value to set"
-      "context...": "the contexts to add the meta pair in"
+      "key": "a chave para definir"
+      "value": "o valor para se definir"
+      "context...": "os contextos para adicionar o par meta em"
   meta-unset:
-    description: "Unsets a meta value"
+    description: "Desfaz um valor meta"
     args:
-      "key": "the key to unset"
-      "context...": "the contexts to remove the meta pair in"
+      "key": "a chave para desarmar"
+      "context...": "os contextos para remover o par de meta em"
   meta-settemp:
-    description: "Sets a meta value temporarily"
+    description: "Define um valor meta temporariamente"
     args:
-      "key": "the key to set"
-      "value": "the value to set"
-      "duration": "the duration until the meta value expires"
-      "context...": "the contexts to add the meta pair in"
+      "key": "a chave para definir"
+      "value": "o valor para se definir"
+      "duration": "a duração até que o meta valor expire"
+      "context...": "os contextos para adicionar o par meta em"
   meta-unsettemp:
-    description: "Unsets a temporary meta value"
+    description: "Remove um valor meta temporário"
     args:
-      "key": "the key to unset"
-      "context...": "the contexts to remove the meta pair in"
+      "key": "a chave para desativar"
+      "context...": "os contextos para remover o par de meta em"
   meta-addprefix:
-    description: "Adds a prefix"
+    description: "Adiciona um prefixo"
     args:
-      "priority": "the priority to add the prefix at"
-      "prefix": "the prefix string"
-      "context...": "the contexts to add the prefix in"
+      "priority": "a prioridade para adicionar o prefixo em"
+      "prefix": "a string de prefixo"
+      "context...": "os contextos para adicionar o prefixo em"
   meta-addsuffix:
-    description: "Adds a suffix"
+    description: "Adiciona um sufixo"
     args:
-      "priority": "the priority to add the suffix at"
-      "suffix": "the suffix string"
-      "context...": "the contexts to add the suffix in"
+      "priority": "a prioridade para adicionar o sufixo em"
+      "suffix": "a string de sufixo"
+      "context...": "os contextos para adicionar o sufixo em"
   meta-setprefix:
-    description: "Sets a prefix"
+    description: "Define um prefixo"
     args:
-      "priority": "the priority to set the prefix at"
-      "prefix": "the prefix string"
-      "context...": "the contexts to set the prefix in"
+      "priority": "a prioridade para definir o prefixo em"
+      "prefix": "a string de prefixo"
+      "context...": "os contextos para definir o prefixo em"
   meta-setsuffix:
-    description: "Sets a suffix"
+    description: "Define um sufixo"
     args:
-      "priority": "the priority to set the suffix at"
-      "suffix": "the suffix string"
-      "context...": "the contexts to set the suffix in"
+      "priority": "a prioridade para definir o sufixo em"
+      "suffix": "a string de sufixo"
+      "context...": "os contextos para definir o sufixo em"
   meta-removeprefix:
-    description: "Removes a prefix"
+    description: "Remove um prefixo"
     args:
-      "priority": "the priority to remove the prefix at"
-      "prefix": "the prefix string"
-      "context...": "the contexts to remove the prefix in"
+      "priority": "a prioridade para remover o prefixo em"
+      "prefix": "a string de prefixo"
+      "context...": "os contextos para remover o prefixo em"
   meta-removesuffix:
-    description: "Removes a suffix"
+    description: "Remove um sufixo"
     args:
-      "priority": "the priority to remove the suffix at"
-      "suffix": "the suffix string"
-      "context...": "the contexts to remove the suffix in"
+      "priority": "a prioridade para remover o sufixo em"
+      "suffix": "a string de sufixo"
+      "context...": "os contextos para remover o sufixo em"
   meta-addtemp-prefix:
-    description: "Adds a prefix temporarily"
+    description: "Adiciona um prefixo temporariamente"
     args:
-      "priority": "the priority to add the prefix at"
-      "prefix": "the prefix string"
-      "duration": "the duration until the prefix expires"
-      "context...": "the contexts to add the prefix in"
+      "priority": "a prioridade para adicionar o prefixo em"
+      "prefix": "a string de prefixo"
+      "duration": "a duração até que o prefixo expire"
+      "context...": "os contextos para adicionar o prefixo em"
   meta-addtemp-suffix:
-    description: "Adds a suffix temporarily"
+    description: "Adiciona um sufixo temporariamente"
     args:
-      "priority": "the priority to add the suffix at"
-      "suffix": "the suffix string"
-      "duration": "the duration until the suffix expires"
-      "context...": "the contexts to add the suffix in"
+      "priority": "a prioridade para adicionar o sufixo em"
+      "suffix": "a string de sufixo"
+      "duration": "a duração até que o sufixo expire"
+      "context...": "os contextos para adicionar o sufixo em"
   meta-settemp-prefix:
-    description: "Sets a prefix temporarily"
+    description: "Define um prefixo temporariamente"
     args:
-      "priority": "the priority to set the prefix at"
-      "prefix": "the prefix string"
-      "duration": "the duration until the prefix expires"
-      "context...": "the contexts to set the prefix in"
+      "priority": "a prioridade para definir o prefixo em"
+      "prefix": "a string de prefixo"
+      "duration": "a duração até que o prefixo expire"
+      "context...": "os contextos para definir o prefixo em"
   meta-settemp-suffix:
-    description: "Sets a suffix temporarily"
+    description: "Define um sufixo temporariamente"
     args:
-      "priority": "the priority to set the suffix at"
-      "suffix": "the suffix string"
-      "duration": "the duration until the suffix expires"
-      "context...": "the contexts to set the suffix in"
+      "priority": "a prioridade para definir o sufixo em"
+      "suffix": "a string de sufixo"
+      "duration": "a duração até que o sufixo expire"
+      "context...": "os contextos para definir o sufixo em"
   meta-removetemp-prefix:
-    description: "Removes a temporary prefix"
+    description: "Remove um prefixo temporário"
     args:
-      "priority": "the priority to remove the prefix at"
-      "prefix": "the prefix string"
-      "context...": "the contexts to remove the prefix in"
+      "priority": "uma prioridade para remover o prefixo em"
+      "prefix": "a string de prefixo"
+      "context...": "os contextos para remover o prefixo em"
   meta-removetemp-suffix:
-    description: "Removes a temporary suffix"
+    description: "Remove um sufixo temporário"
     args:
-      "priority": "the priority to remove the suffix at"
-      "suffix": "the suffix string"
-      "context...": "the contexts to remove the suffix in"
+      "priority": "a prioridade para remover o sufixo em"
+      "suffix": "a string de sufixo"
+      "context...": "os contextos para remover o sufixo em"
   meta-clear:
-    description: "Clears all meta"
+    description: "Limpa todos os metas"
     args:
-      "type": "the type of meta to remove"
-      "context...": "the contexts to filter by"
+      "type": "o tipo de meta a ser removido"
+      "context...": "os contextos para filtrar"
   track-info:
-    description: "Gives info about the track"
+    description: "Dá informação sobre o cargo"
   track-append:
-    description: "Appends a group onto the end of the track"
+    description: "Acrescenta outros grupos no final do cargo"
     args:
-      "group": "the group to append"
+      "group": "o grupo a acrescentar"
   track-insert:
-    description: "Inserts a group at a given position along the track"
+    description: "Insere um grupo em uma determinada posição ao longo do cargo"
     args:
-      "group": "the group to insert"
-      "position": "the position to insert the group at (the first position on the track is 1)"
+      "group": "o grupo para inserir"
+      "position": "a posição para inserir o grupo (a primeira posição no cargo é 1)"
   track-remove:
-    description: "Removes a group from the track"
+    description: "Remove um grupo do cargo"
     args:
-      "group": "the group to remove"
+      "group": "o grupo a ser removido"
   track-clear:
-    description: "Clears the groups on the track"
+    description: "Limpa os grupos no cargo"
   track-rename:
-    description: "Rename the track"
+    description: "Renomeia o cargo"
     args:
-      "name": "the new name"
+      "name": "no novo nome"
   track-clone:
-    description: "Clone the track"
+    description: "Duplica o cargo"
     args:
-      "name": "the name of the track to clone onto"
+      "name": "o nome do cargo para clonar"
   log-recent:
-    description: "View recent actions"
+    description: "Ver ações recentes"
     args:
-      "user": "the name/uuid of the user to filter by"
-      "page": "the page number to view"
+      "user": "o nome / uuid do usuário para filtrar"
+      "page": "o número da página para ver"
   log-search:
-    description: "Search the log for an entry"
+    description: "Procure no log por uma entrada"
     args:
-      "query": "the query to search by"
-      "page": "the page number to view"
+      "query": "a consulta para pesquisar por"
+      "page": "o número da página para ver"
   log-notify:
-    description: "Toggle log notifications"
+    description: "Alternar notificações de registro"
     args:
-      "on|off": "whether to toggle on or off"
+      "on|off": "se deve ligar ou desligar"
   log-user-history:
-    description: "View a user's history"
+    description: "Ver o histórico de um usuário"
     args:
-      "user": "the name/uuid of the user"
-      "page": "the page number to view"
+      "user": "o nome / uuid do usuário"
+      "page": "o número da página para ver"
   log-group-history:
-    description: "View an group's history"
+    description: "Ver o histórico de um grupo"
     args:
-      "group": "the name of the group"
-      "page": "the page number to view"
+      "group": "O nome do grupo"
+      "page": "o número da página para ver"
   log-track-history:
-    description: "View a track's history"
+    description: "Vê o histórico de um cargo"
     args:
-      "track": "the name of the track"
-      "page": "the page number to view"
+      "track": "o nome do cargo"
+      "page": "o número da página para ver"
   sponge:
-    description: "Edit extra Sponge data"
+    description: "Editar dados extras do Sponge"
     usage: "/%s sponge <collection> <subject>"
     args:
-      "collection": "the collection to query"
-      "subject": "the subject to modify"
+      "collection": "a coleção para consultar"
+      "subject": "o assunto para modificar"
   sponge-permission-info:
-    description: "Shows info about the subject's permissions"
+    description: "Mostra informações sobre as permissões do assunto"
     args:
-      "contexts...": "the contexts to filter by"
+      "contexts...": "os contextos para filtrar"
   sponge-permission-set:
-    description: "Sets a permission for the Subject"
+    description: "Define uma permissão para o assunto"
     args:
-      "node": "the permission node to set"
-      "tristate": "the value to set the permission to"
-      "contexts...": "the contexts to set the permission in"
+      "node": "o nó de permissão para definir"
+      "tristate": "o valor para definir a permissão para"
+      "contexts...": "os contextos para definir a permissão em"
   sponge-permission-clear:
-    description: "Clears the Subjects permissions"
+    description: "Limpa as permissões de assuntos"
     args:
-      "contexts...": "the contexts to clear permissions in"
+      "contexts...": "os contextos para limpar as permissões em"
   sponge-parent-info:
-    description: "Shows info about the subject's parents"
+    description: "Mostra informações sobre os pais do sujeito"
     args:
-      "contexts...": "the contexts to filter by"
+      "contexts...": "os contextos para filtrar"
   sponge-parent-add:
-    description: "Adds a parent to the Subject"
+    description: "Adiciona um pai ao assunto"
     args:
-      "collection": "the subject collection where the parent Subject is"
-      "subject": "the name of the parent Subject"
-      "contexts...": "the contexts to add the parent in"
+      "collection": "a coleção de assuntos onde o assunto pai é"
+      "subject": "o nome do sujeito pai"
+      "contexts...": "os contextos para adicionar o pai em"
   sponge-parent-remove:
-    description: "Removes a parent from the Subject"
+    description: "Remove um pai do assunto"
     args:
-      "collection": "the subject collection where the parent Subject is"
-      "subject": "the name of the parent Subject"
-      "contexts...": "the contexts to remove the parent in"
+      "collection": "a coleção de assuntos onde o assunto pai é"
+      "subject": "o nome do sujeito pai"
+      "contexts...": "os contextos para remover o pai em"
   sponge-parent-clear:
-    description: "Clears the Subjects parents"
+    description: "Limpa os pais dos assuntos"
     args:
-      "contexts...": "the contexts to clear parents in"
+      "contexts...": "os contextos para liberar os pais em"
   sponge-option-info:
-    description: "Shows info about the subject's options"
+    description: "Mostra informações sobre as opções do assunto"
     args:
-      "contexts...": "the contexts to filter by"
+      "contexts...": "os contextos para filtrar"
   sponge-option-set:
-    description: "Sets an option for the Subject"
+    description: "Define uma opção para o assunto"
     args:
-      "key": "the key to set"
-      "value": "the value to set the key to"
-      "contexts...": "the contexts to set the option in"
+      "key": "a chave para definir"
+      "value": "o valor para definir a chave para"
+      "contexts...": "os contextos para definir a opção em"
   sponge-option-unset:
-    description: "Unsets an option for the Subject"
+    description: "Desativa uma opção para o assunto"
     args:
-      "key": "the key to unset"
-      "contexts...": "the contexts to unset the key in"
+      "key": "a chave para desativar"
+      "contexts...": "os contextos para remover a chave em"
   sponge-option-clear:
-    description: "Clears the Subjects options"
+    description: "Limpa as opções de assuntos"
     args:
-      "contexts...": "the contexts to clear options in"
+      "contexts...": "os contextos para limpar as opções em"
   migration-command:
-    description: "Migration command"
+    description: "Comando de migração"
   migration-groupmanager:
-    description: "Migration command"
+    description: "Comando de migração"
     args:
-      "migrate as global": "if world permissions should be ignored, and just migrated as global"
+      "migrate as global": "se as permissões mundiais devem ser ignoradas e apenas migradas como globais"
   migration-powerfulperms:
-    description: "Migration command"
+    description: "Comando de migração"
     args:
-      "address": "the address of the PP database"
-      "database": "the name of the PP database"
-      "username": "the username to log into the DB"
-      "password": "the password to log into the DB"
-      "db table": "the name of the PP table where player data is stored"
+      "address": "o endereço do banco de dados PP"
+      "database": "o nome do banco de dados PP"
+      "username": "o nome de usuário para entrar no banco de dados"
+      "password": "a senha para entrar no banco de dados"
+      "db table": "o nome da tabela PP onde os dados do jogador são armazenados"
